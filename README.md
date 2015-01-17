@@ -6,4 +6,4 @@ The goal is to write a schema that is flexible enough to ultimately be used with
 
 We include a sample or test web request that follows the schema (``target_gene_test_request.json``) which can be validated with the included Python script (``target_gene_request_validation.py``) with the installation of the ``jsonschema`` package.
 
-An initial pass at a specification for Targetscope entities and predicates is described in the ``targetscope_predicate_specification_outline.doc`` document. This document helps describe terminology used in the schema and in web service requests.
+An initial pass at a specification for Targetscope entities and predicates is described in the ``targetscope_predicate_specification_outline.doc`` document. This document helps describe terminology used in the schema and in web service requests. Predicates are very much like BEDOPS set and map operations described in the documentation for ``bedops`` and ``bedmap`` binaries (see the [BEDOPS documentation](http://bedops.readthedocs.org/en/latest/) for more detail).
