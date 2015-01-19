@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Targetscope by alexpreynolds</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>Targetscope</h1>
+        <p>Client-side targetscope project resources</p>
+
+        <p class="view"><a href="https://github.com/alexpreynolds/targetscope">View the Project on GitHub <small>alexpreynolds/targetscope</small></a></p>
+
+
+        <ul>
+          <li><a href="https://github.com/alexpreynolds/targetscope/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/alexpreynolds/targetscope/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/alexpreynolds/targetscope">View On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
+      <section>
+        <h1>
+<a id="targetscope" class="anchor" href="#targetscope" aria-hidden="true"><span class="octicon octicon-link"></span></a>targetscope</h1>
+
+<p>We use the <a href="http://json-schema.org/">JSON Schema v0.4</a> specification to write an initial schema document (<code>target_gene_schema.json</code>) that describes an object graph of inputs, outputs, and a vocabulary of intermediate operations ("predicates" and options) used for a subset of functionality in the Targetscope application.</p>
+
+<p>The goal is to write a schema that is flexible enough to ultimately be used with the full application, as well as to be usable now with a web service to validate incoming requests.</p>
+
+<p>We include a sample or test web request that follows the schema (<code>target_gene_test_request.json</code>) which can be validated with the included Python script (<code>target_gene_request_validation.py</code>) with the installation of the <code>jsonschema</code> package.</p>
+
+<p>An initial pass at a specification for Targetscope entities and predicates is described in the <code>targetscope_predicate_specification_outline.doc</code> document. This document helps describe terminology used in the schema and in web service requests. Predicates are very much like BEDOPS set and map operations described in the documentation for <code>bedops</code> and <code>bedmap</code> binaries (see the <a href="http://bedops.readthedocs.org/en/latest/">BEDOPS documentation</a> for more detail).</p>
+      </section>
+      <footer>
+        <p>This project is maintained by <a href="https://github.com/alexpreynolds">alexpreynolds</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <script src="javascripts/scale.fix.js"></script>
+    
+  </body>
+</html>
