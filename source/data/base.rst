@@ -12,4 +12,4 @@ Score
 |                    | *Strand*, 1+ *Metadata*, 1+ *Set*)                    |
 +--------------------+-------------------------------------------------------+
 
-*Score* adds an integer or decimal numerical attribute to *Element*, *Interaction* or *Set* compound types. 
+*Score* adds an integer or decimal numerical attribute to *Element*, *Interaction* or *Set* :ref:`compound` types. 
