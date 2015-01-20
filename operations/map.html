@@ -65,6 +65,34 @@
             
   <div class="section" id="map">
 <span id="ops-map"></span><h1>Map<a class="headerlink" href="#map" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="element-set-onto-element-set">
+<span id="ops-map-element-onto-element"></span><h2>Element set onto element set<a class="headerlink" href="#element-set-onto-element-set" title="Permalink to this headline">¶</a></h2>
+<dl class="docutils">
+<dt><strong>Input</strong></dt>
+<dd>1 or 2 <a class="reference internal" href="../data/compound.html#compound-element"><em>Element</em></a> <a class="reference internal" href="../data/compound.html#compound-set"><em>Sets</em></a>; overlap criteria (integer/bases or float/percentage); report operator(s)</dd>
+<dt><strong>Output</strong></dt>
+<dd><a class="reference internal" href="../data/compound.html#compound-element"><em>Element</em></a> <a class="reference internal" href="../data/compound.html#compound-set"><em>Sets</em></a></dd>
+<dt><strong>CLI example</strong></dt>
+<dd><code class="docutils literal"><span class="pre">bedmap</span> <span class="pre">--echo</span> <span class="pre">--echo-map</span> <span class="pre">--bp-ovr</span> <span class="pre">1</span> <span class="pre">ref.bed</span> <span class="pre">map.bed</span> <span class="pre">&gt;</span> <span class="pre">ref_with_mapped_map.bed</span></code></dd>
+</dl>
+<p>This operation maps elements in one &#8220;map&#8221; <a class="reference internal" href="../data/compound.html#compound-set"><em>set</em></a> to <a class="reference internal" href="../data/compound.html#compound-element"><em>elements</em></a> in another &#8220;reference&#8221; set, if mapped elements meet the specified overlap criteria.</p>
+<p>For instance, take the following command:</p>
+<div class="highlight-python"><div class="highlight"><pre>$ bedmap --echo --echo-map --bp-ovr 1 ref.bed map.bed &gt; ref_with_mapped_map.bed
+</pre></div>
+</div>
+<p>This command associates elements in the file <code class="docutils literal"><span class="pre">map.bed</span></code> with each element in <code class="docutils literal"><span class="pre">ref.bed</span></code>, where each map element overlaps a reference element by one or more bases. The <code class="docutils literal"><span class="pre">--echo-map</span></code> operation reports all map elements that associate with a reference element.</p>
+<p>The result of this most basic mapping example is a set of reference elements, where each reference element has another element set associated with it.</p>
+<p>Some reference elements may associate with map sets with elements. Other reference elements may associate with an empty set, if the overlap criteria means that there are no overlapping (no mappable) elements.</p>
+<p>In this example, we report the reference set elements along with all mapped elements. However, we may use operators to only report mapped elements:</p>
+<div class="highlight-python"><div class="highlight"><pre>$ bedmap --echo-map --bp-ovr 1 ref.bed map.bed | sort-bed - &gt; mapped_map.bed
+</pre></div>
+</div>
+<p>Alternative arguments to <code class="docutils literal"><span class="pre">bedmap</span></code> may summarize or &#8220;report&#8221; attributes about mapped elements. Discussion of these follow.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">The default overlap criteria that is used by <code class="docutils literal"><span class="pre">bedmap</span></code> is one or more bases.</p>
+</div>
+</div>
 </div>
 
 
@@ -76,6 +104,14 @@
             <p class="logo"><a href="../index.html">
               <img class="logo" src="../_static/logo.png" alt="Logo"/>
             </a></p>
+  <h3><a href="../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Map</a><ul>
+<li><a class="reference internal" href="#element-set-onto-element-set">Element set onto element set</a></li>
+</ul>
+</li>
+</ul>
+
   <h4>Previous topic</h4>
   <p class="topless"><a href="interaction.html"
                         title="previous chapter">Interaction</a></p>
