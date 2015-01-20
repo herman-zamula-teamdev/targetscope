@@ -18,4 +18,4 @@ Union
 
 This operation takes the union of :ref:`Elements <compound_element>` in a set, yielding one set made up of each of the input elements. Each Element in the output set preserves its basic :ref:`Score <base_score>`, :ref:`Name <base_name>`, *etc.* attributes. The union of one input set is the set itself.
 
-.. image:: ../ops_set_union.png
+.. image:: ../../ops_set_union.png
