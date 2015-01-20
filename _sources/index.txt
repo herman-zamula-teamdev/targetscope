@@ -19,9 +19,7 @@ An initial pass at a specification for *targetscope* entities and predicates is 
    :numbered:
 
    glossary.rst
-   data/base.rst
-   data/compound.rst
-
+   data/index.rst
 
 Indices and tables
 ==================
