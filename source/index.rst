@@ -1,7 +1,7 @@
-.. targetscope documentation master file, created by
-   sphinx-quickstart on Mon Jan 19 13:19:12 2015.
-   You can adapt this file completely to your liking, but it should at least
-   contain the root `toctree` directive.
+.. _home:
+
+About
+=====
 
 We provide a specification for *targetscope* entities and predicates, which helps describe terminology used in the (JSON) schema and in web service requests used by the *targetscope* front-end. 
 
