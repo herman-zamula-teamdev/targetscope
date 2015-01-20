@@ -9,11 +9,11 @@ Range operations
 Adjust
 ======
 
-Input :
+**Input**
       1 or 2 integers for “left” and “right” :ref:`ranges <base_range>`; :ref:`Element <compound_element>` :ref:`Set <compound_set>`
-Output :
+**Output**
       :ref:`Element <compound_element>` :ref:`Set <compound_set>`
-CLI example :
+**CLI example**
       ``bedops --range L:R --everything ElemSetA > ElemSetB``
 
 This operation shrinks or grows :ref:`Elements <compound_element>` by specified integer values. 

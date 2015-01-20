@@ -26,6 +26,7 @@
     <script type="text/javascript" src="https://c328740.ssl.cf1.rackcdn.com/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <link rel="top" title="Targetscope API" href="../index.html" />
     <link rel="up" title="Data" href="index.html" />
+    <link rel="next" title="Operations" href="../operations/index.html" />
     <link rel="prev" title="Base types" href="base.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <link rel="stylesheet" href="../_static/custom_style.css" type="text/css" />
@@ -40,6 +41,10 @@
         <li>
           &larr;
           <a href="base.html" title="Previous document">Base types</a>
+        </li>
+        <li>
+          <a href="../operations/index.html" title="Next document">Operations</a>
+          &rarr;
         </li>
     </ul>
   </nav>
@@ -62,23 +67,12 @@
 <span id="compound"></span><h1>Compound types<a class="headerlink" href="#compound-types" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="element">
 <span id="compound-element"></span><h2>Element<a class="headerlink" href="#element" title="Permalink to this headline">¶</a></h2>
-<table border="1" class="docutils">
-<colgroup>
-<col width="27%" />
-<col width="73%" />
-</colgroup>
-<tbody valign="top">
-<tr class="row-odd"><td><strong>Data</strong></td>
-<td><a class="reference internal" href="base.html#base-range"><em>Range</em></a> (optional: 1 or more
-<a class="reference internal" href="base.html#base-name"><em>Name</em></a>; 1 <a class="reference internal" href="base.html#base-score"><em>Score</em></a>;
-1 <a class="reference internal" href="base.html#base-strand"><em>Strand</em></a>, 1+ <a class="reference internal" href="base.html#base-metadata"><em>Metadata</em></a>, 1+ <em>Set</em>)</td>
-</tr>
-<tr class="row-even"><td><strong>Examples</strong></td>
-<td>Target gene promoter, gene annotation record, DHS
-peak, transcription factor hit</td>
-</tr>
-</tbody>
-</table>
+<dl class="docutils">
+<dt><strong>Data</strong></dt>
+<dd><a class="reference internal" href="base.html#base-range"><em>Range</em></a> (optional: 1 or more <a class="reference internal" href="base.html#base-name"><em>Name</em></a>; 1 <a class="reference internal" href="base.html#base-score"><em>Score</em></a>; 1 <a class="reference internal" href="base.html#base-strand"><em>Strand</em></a>, 1+ <a class="reference internal" href="base.html#base-metadata"><em>Metadata</em></a>, 1+ <em>Set</em>)</dd>
+<dt><strong>Examples</strong></dt>
+<dd>Target gene promoter, gene annotation record, DHS peak, transcription factor hit</dd>
+</dl>
 <p>Operations can be applied on an <em>Element</em> or on a <em>Set</em> of <em>Elements</em>.</p>
 <div class="topic">
 <p class="topic-title first">Example 1</p>
@@ -111,21 +105,12 @@ chr17   126    138      +V_RP58_01          5.58617e-06     +       CAAACATCTGTC
 </div>
 <div class="section" id="interaction">
 <span id="compound-interaction"></span><h2>Interaction<a class="headerlink" href="#interaction" title="Permalink to this headline">¶</a></h2>
-<table border="1" class="docutils">
-<colgroup>
-<col width="27%" />
-<col width="73%" />
-</colgroup>
-<tbody valign="top">
-<tr class="row-odd"><td><strong>Data</strong></td>
-<td>2 <em>Elements</em>; 1 <a class="reference internal" href="base.html#base-score"><em>Score</em></a>; 1
-<a class="reference internal" href="base.html#base-name"><em>Name</em></a>; 1 <a class="reference internal" href="base.html#base-strand"><em>Strand</em></a>; optional, 1+ <a class="reference internal" href="base.html#base-metadata"><em>Metadata</em></a></td>
-</tr>
-<tr class="row-even"><td><strong>Example</strong></td>
-<td>Long-range interaction</td>
-</tr>
-</tbody>
-</table>
+<dl class="docutils">
+<dt><strong>Data</strong></dt>
+<dd>2 <em>Elements</em>; 1 <a class="reference internal" href="base.html#base-score"><em>Score</em></a>; 1 <a class="reference internal" href="base.html#base-name"><em>Name</em></a>; 1 <a class="reference internal" href="base.html#base-strand"><em>Strand</em></a>; optional, 1+ <a class="reference internal" href="base.html#base-metadata"><em>Metadata</em></a></dd>
+<dt><strong>Example</strong></dt>
+<dd>Long-range interaction</dd>
+</dl>
 <p>An interaction pair is a special <em>Set</em> that defines a connection between two <em>Element</em> values. For the <em>targetscope</em> application specifically, this can be a gene promoter <em>Element</em> and a distal DHS peak <em>Element</em>.</p>
 <p>Operations can be applied on an interaction or on a grouping of interactions.</p>
 <div class="topic">
@@ -157,24 +142,12 @@ chr17  38498614        38498615 RARA   20         +|chr17       38498520        
 </div>
 <div class="section" id="set">
 <span id="compound-set"></span><h2>Set<a class="headerlink" href="#set" title="Permalink to this headline">¶</a></h2>
-<table border="1" class="docutils">
-<colgroup>
-<col width="27%" />
-<col width="73%" />
-</colgroup>
-<tbody valign="top">
-<tr class="row-odd"><td><strong>Data</strong></td>
-<td>1+ <a class="reference internal" href="base.html#base-name"><em>Name</em></a>; 0+ ref:<cite>Metadata
-&lt;base_metadata&gt;</cite>, 0+ <em>Elements</em>,
-<em>Interactions</em> or <em>Sets</em></td>
-</tr>
-<tr class="row-even"><td><strong>Examples</strong></td>
-<td>DHS peaks for a particular cell type or sequencing
-experiment, promoters, transcription factor binding
-sites, other sets</td>
-</tr>
-</tbody>
-</table>
+<dl class="docutils">
+<dt><strong>Data</strong></dt>
+<dd>1+ <a class="reference internal" href="base.html#base-name"><em>Name</em></a>; 0+ ref:<cite>Metadata &lt;base_metadata&gt;</cite>, 0+ <em>Elements</em>, <em>Interactions</em>, or <em>Sets</em></dd>
+<dt><strong>Examples</strong></dt>
+<dd>DHS peaks for a particular cell type or sequencing experiment, promoters, transcription factor binding sites, other sets</dd>
+</dl>
 <p>Examples of <em>Sets</em> include the &#8220;target gene&#8221; (a set of promoter <em>Elements</em>) or groups of multiple interactions for a given promoter <em>Element</em>.</p>
 <p>A <em>Set</em> could also be made up of base types, like a set of unique <a class="reference internal" href="base.html#base-name"><em>Name</em></a> values, etc.</p>
 <p><em>Sets</em> could go by other descriptive names. An <em>Experiment</em> is one type of a set, which contains a specific type of <em>Element</em> values. A set of <em>Experiments</em> can be grouped into another set called a <em>Category</em>. For instance, one <em>Category</em> of cell types might be called &#8220;ectoderm&#8221;, which includes various cell line-specific <em>Experiments</em> with names like &#8220;BE2_C&#8221;, &#8220;HMEC&#8221;, &#8220;Hela&#8221;, etc. In turn, each of those <em>Experiments</em> contains DHS peaks that are specific to that cell line.</p>
@@ -183,17 +156,10 @@ sites, other sets</td>
 </div>
 <div class="section" id="array">
 <span id="compound-array"></span><h2>Array<a class="headerlink" href="#array" title="Permalink to this headline">¶</a></h2>
-<table border="1" class="docutils">
-<colgroup>
-<col width="27%" />
-<col width="73%" />
-</colgroup>
-<tbody valign="top">
-<tr class="row-odd"><td><strong>Data</strong></td>
-<td>1+ <a class="reference internal" href="base.html#base-name"><em>Name</em></a>; 0+ base types</td>
-</tr>
-</tbody>
-</table>
+<dl class="docutils">
+<dt><strong>Data</strong></dt>
+<dd>1+ <a class="reference internal" href="base.html#base-name"><em>Name</em></a>; 0+ base types</dd>
+</dl>
 <p>Examples of <em>Arrays</em> are ordered lists of base types (<a class="reference internal" href="base.html#base-score"><em>Score</em></a>, <a class="reference internal" href="base.html#base-name"><em>Name</em></a>, <a class="reference internal" href="base.html#base-strand"><em>Strand</em></a>, <a class="reference internal" href="base.html#base-metadata"><em>Metadata</em></a>).</p>
 </div>
 </div>
@@ -221,6 +187,9 @@ sites, other sets</td>
   <h4>Previous topic</h4>
   <p class="topless"><a href="base.html"
                         title="previous chapter">Base types</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="../operations/index.html"
+                        title="next chapter">Operations</a></p>
 <div class="sourcelink">
   <a href="../_sources/data/compound.txt" rel="nofollow">
     Show page source
@@ -250,6 +219,10 @@ sites, other sets</td>
         <li>
           &larr;
           <a href="base.html" title="Previous document">Base types</a>
+        </li>
+        <li>
+          <a href="../operations/index.html" title="Next document">Operations</a>
+          &rarr;
         </li>
     </ul>
   </nav>

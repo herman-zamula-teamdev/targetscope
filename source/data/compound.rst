@@ -9,15 +9,10 @@ Compound types
 Element
 =======
 
-+--------------------+-------------------------------------------------------+
-| **Data**           | :ref:`Range <base_range>` (optional: 1 or more        |
-|                    | :ref:`Name <base_name>`; 1 :ref:`Score <base_score>`; |
-|                    | 1 :ref:`Strand <base_strand>`, 1+ :ref:`Metadata      |
-|                    | <base_metadata>`, 1+ *Set*)                           |
-+--------------------+-------------------------------------------------------+
-| **Examples**       | Target gene promoter, gene annotation record, DHS     |
-|                    | peak, transcription factor hit                        |
-+--------------------+-------------------------------------------------------+
+**Data**
+        :ref:`Range <base_range>` (optional: 1 or more :ref:`Name <base_name>`; 1 :ref:`Score <base_score>`; 1 :ref:`Strand <base_strand>`, 1+ :ref:`Metadata <base_metadata>`, 1+ *Set*)
+**Examples**
+        Target gene promoter, gene annotation record, DHS peak, transcription factor hit
 
 Operations can be applied on an *Element* or on a *Set* of *Elements*.
 
@@ -57,14 +52,10 @@ Operations can be applied on an *Element* or on a *Set* of *Elements*.
 Interaction
 ===========
 
-+--------------------+-------------------------------------------------------+
-| **Data**           | 2 *Elements*; 1 :ref:`Score <base_score>`; 1          |
-|                    | :ref:`Name <base_name>`; 1 :ref:`Strand               |
-|                    | <base_strand>`; optional, 1+ :ref:`Metadata           |
-|                    | <base_metadata>`                                      |
-+--------------------+-------------------------------------------------------+
-| **Example**        | Long-range interaction                                |
-+--------------------+-------------------------------------------------------+
+**Data**
+        2 *Elements*; 1 :ref:`Score <base_score>`; 1 :ref:`Name <base_name>`; 1 :ref:`Strand <base_strand>`; optional, 1+ :ref:`Metadata <base_metadata>`
+**Example**
+        Long-range interaction
 
 An interaction pair is a special *Set* that defines a connection between two *Element* values. For the *targetscope* application specifically, this can be a gene promoter *Element* and a distal DHS peak *Element*. 
 
@@ -105,15 +96,10 @@ Operations can be applied on an interaction or on a grouping of interactions.
 Set
 ===
 
-+--------------------+-------------------------------------------------------+
-| **Data**           | 1+ :ref:`Name <base_name>`; 0+ ref:`Metadata          |
-|                    | <base_metadata>`, 0+ *Elements*,                      |
-|                    | *Interactions* or *Sets*                              |
-+--------------------+-------------------------------------------------------+
-| **Examples**       | DHS peaks for a particular cell type or sequencing    |
-|                    | experiment, promoters, transcription factor binding   |
-|                    | sites, other sets                                     |
-+--------------------+-------------------------------------------------------+
+**Data**
+        1+ :ref:`Name <base_name>`; 0+ ref:`Metadata <base_metadata>`, 0+ *Elements*, *Interactions*, or *Sets*
+**Examples**
+        DHS peaks for a particular cell type or sequencing experiment, promoters, transcription factor binding sites, other sets
 
 Examples of *Sets* include the "target gene" (a set of promoter *Elements*) or groups of multiple interactions for a given promoter *Element*. 
 
@@ -131,8 +117,7 @@ Some operations can be applied on a *Set*, depending on what features the set of
 Array
 =====
 
-+--------------------+-------------------------------------------------------+
-| **Data**           | 1+ :ref:`Name <base_name>`; 0+ base types             |
-+--------------------+-------------------------------------------------------+
+**Data**
+        1+ :ref:`Name <base_name>`; 0+ base types
 
 Examples of *Arrays* are ordered lists of base types (:ref:`Score <base_score>`, :ref:`Name <base_name>`, :ref:`Strand <base_strand>`, :ref:`Metadata <base_metadata>`). 
