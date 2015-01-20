@@ -8,12 +8,12 @@ In the process of building a framework to run the *targetscope* application, we 
 We start with the larger problem described in the :ref:`target gene-to-TFBS <example_tfbs>` document:
 
 **Inputs**
-        1. Target gene :ref:`transcription start sites <compound_element>` (TSSs)
-        2. All correlated :ref:`interactions <compound_interaction>` (pairings of promoter :ref:`regions <compound_element>` and distal element regions)
+        1. :ref:`Set <compound_set>` of target gene :ref:`transcription start sites <compound_element>` (TSSs)
+        2. :ref:`Set <compound_set>` of all correlated :ref:`interactions <compound_interaction>` (pairings of promoter :ref:`regions <compound_element>` and distal element regions)
 
 **Outputs**
-        1. Target gene TSSs, filtered on the :ref:`gene name <base_name>` RARA ("RARA TSSs")
-        2. All correlated interactions that are filtered on the set of RARA TSSs
+        1. :ref:`Set <compound_set>` of target gene TSSs, filtered on the :ref:`gene name <base_name>` RARA ("RARA TSSs")
+        2. :ref:`Set <compound_set>` of all correlated :ref:`interactions <compound_interaction>` that are filtered on the set of RARA TSSs
 
 **Operations**
         1. :ref:`Filter operation <ops_filter>` that creates "RARA TSSs" set
