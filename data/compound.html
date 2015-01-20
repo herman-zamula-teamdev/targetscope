@@ -73,7 +73,7 @@
 <dt><strong>Examples</strong></dt>
 <dd>Target gene promoter, gene annotation record, DHS peak, transcription factor hit</dd>
 </dl>
-<p>Operations can be applied on an <em>Element</em> or on a <em>Set</em> of <em>Elements</em>.</p>
+<p><a class="reference internal" href="../operations/index.html#ops"><em>Operations</em></a> can be applied on an <em>Element</em> or on a <em>Set</em> of <em>Elements</em>.</p>
 <div class="topic">
 <p class="topic-title first">Example 1</p>
 <p>Here, we filter a set of transcription start sites for target gene <strong>RARA</strong>:</p>
@@ -112,7 +112,7 @@ chr17   126    138      +V_RP58_01          5.58617e-06     +       CAAACATCTGTC
 <dd>Long-range interaction</dd>
 </dl>
 <p>An interaction pair is a special <em>Set</em> that defines a connection between two <em>Element</em> values. For the <em>targetscope</em> application specifically, this can be a gene promoter <em>Element</em> and a distal DHS peak <em>Element</em>.</p>
-<p>Operations can be applied on an interaction or on a grouping of interactions.</p>
+<p><a class="reference internal" href="../operations/index.html#ops"><em>Operations</em></a> can be applied on an interaction or on a grouping of interactions.</p>
 <div class="topic">
 <p class="topic-title first">Example</p>
 <p>Here is an example of interactions centered around the gene <strong>RARA</strong>, in a BED format used for internal visualization. This is a special form of BED6, where the ID field contains a condensed form of the second pair of the interaction pairing, along with the interaction correlation score:</p>
@@ -152,7 +152,7 @@ chr17  38498614        38498615 RARA   20         +|chr17       38498520        
 <p>A <em>Set</em> could also be made up of base types, like a set of unique <a class="reference internal" href="base.html#base-name"><em>Name</em></a> values, etc.</p>
 <p><em>Sets</em> could go by other descriptive names. An <em>Experiment</em> is one type of a set, which contains a specific type of <em>Element</em> values. A set of <em>Experiments</em> can be grouped into another set called a <em>Category</em>. For instance, one <em>Category</em> of cell types might be called &#8220;ectoderm&#8221;, which includes various cell line-specific <em>Experiments</em> with names like &#8220;BE2_C&#8221;, &#8220;HMEC&#8221;, &#8220;Hela&#8221;, etc. In turn, each of those <em>Experiments</em> contains DHS peaks that are specific to that cell line.</p>
 <p>A <em>Category</em> could group other categories. For example, a category called &#8220;karyotype&#8221; could contain three subcategories called &#8220;cancer&#8221;, &#8220;normal&#8221; and &#8220;unassigned&#8221;. Each of the three subcategories could contain cell-line specific <em>Experiments</em> that contain data for cancerous cell lines, normal cell lines, and cell lines unassigned to the cancerous or normal subsets.</p>
-<p>Some operations can be applied on a <em>Set</em>, depending on what features the set offers or exposes.</p>
+<p>Some <a class="reference internal" href="../operations/index.html#ops"><em>operations</em></a> can be applied on a <em>Set</em>, depending on what features the set offers or exposes.</p>
 </div>
 <div class="section" id="array">
 <span id="compound-array"></span><h2>Array<a class="headerlink" href="#array" title="Permalink to this headline">¶</a></h2>

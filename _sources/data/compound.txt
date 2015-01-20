@@ -14,7 +14,7 @@ Element
 **Examples**
         Target gene promoter, gene annotation record, DHS peak, transcription factor hit
 
-Operations can be applied on an *Element* or on a *Set* of *Elements*.
+:ref:`Operations <ops>` can be applied on an *Element* or on a *Set* of *Elements*.
 
 .. topic:: Example 1
 
@@ -59,7 +59,7 @@ Interaction
 
 An interaction pair is a special *Set* that defines a connection between two *Element* values. For the *targetscope* application specifically, this can be a gene promoter *Element* and a distal DHS peak *Element*. 
 
-Operations can be applied on an interaction or on a grouping of interactions.
+:ref:`Operations <ops>` can be applied on an interaction or on a grouping of interactions.
 
 .. topic:: Example
 
@@ -109,7 +109,7 @@ A *Set* could also be made up of base types, like a set of unique :ref:`Name <ba
 
 A *Category* could group other categories. For example, a category called "karyotype" could contain three subcategories called "cancer", "normal" and "unassigned". Each of the three subcategories could contain cell-line specific *Experiments* that contain data for cancerous cell lines, normal cell lines, and cell lines unassigned to the cancerous or normal subsets.
 
-Some operations can be applied on a *Set*, depending on what features the set offers or exposes.
+Some :ref:`operations <ops>` can be applied on a *Set*, depending on what features the set offers or exposes.
 
 .. _compound_array:
 
