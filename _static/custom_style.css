@@ -7,11 +7,9 @@ span.pre {
 }
 
 a {
-    color: #00f;
-    text-decoration: none;
+    color: #00f !important;
 }
 
 a:visited {
-    color: #20e;
-    text-decoration: none;
+    color: #20e !important;
 }
