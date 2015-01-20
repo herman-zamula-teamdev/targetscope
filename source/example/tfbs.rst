@@ -8,7 +8,7 @@ This figure describes a complete operational pipeline to retrieve the names of t
 .. image:: ../../_static/tfbs_rara.png
    :width: 99%
 
-Reading from left to right, we start with the :ref:`Element <compound_element>` :ref:`Set <compound_set>` of target gene transcription start sites (TSSs). We filter these on the :ref:`name <base_name>` **RARA** to retrieve an element set of **RARA** -specific TSSs.
+Reading from left to right, we start with the :ref:`Element <compound_element>` :ref:`Set <compound_set>` of target gene transcription start sites (TSSs). We :ref:`filter <ops_filter_name>` these on the :ref:`name <base_name>` **RARA** to retrieve an element set of **RARA** -specific TSSs.
 
 Next, we :ref:`map this element set against the promoter elements of our Interaction Set <ops_map_element_onto_interaction>` of all interactions. This gives us all the **RARA** -specific interactions, which we filter to retrieve an element set of DHS peaks.
 
