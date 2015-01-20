@@ -93,3 +93,7 @@ This operation summarizes attributes of an :ref:`Element <compound_element>` :re
 |                |                   | the :ref:`Ranges <base_range>` in the |                                 |
 |                |                   | input set                             |                                 |
 +----------------+-------------------+---------------------------------------+---------------------------------+
+| bases-uniq     | NA                | Report the unique (non-overlapping)   | :ref:`Score <base_score>`       |
+|                |                   | number of bases in the :ref:`Ranges   |                                 |
+|                |                   | <base_range>` in the input set        |                                 |
++----------------+-------------------+---------------------------------------+---------------------------------+
