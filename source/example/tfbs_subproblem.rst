@@ -20,4 +20,4 @@ We start with the larger problem described in the :ref:`target gene-to-TFBS <exa
         2. :ref:`Map operation <ops_map>` that finds all RARA TSSs that overlap interaction promoter regions
 
 .. image:: ../../_static/tfbs_rara_subproblem.png
-   :width: 99%
+   :width: 50%
