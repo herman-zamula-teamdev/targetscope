@@ -59,7 +59,7 @@ This is identical to mapping an :ref:`Element <compound_element>` :ref:`Set <com
 
 For instance, let's say we want a list of :ref:`Interactions <compound_interaction>`, whose promoter components overlap with some genes of interest.
 
-We start with an :ref:`Interaction <compound_interaction>` :ref:`Set <compound_set>` that pairs promoter components with DHS peak components. For this example, the index of the promoter component in this set is "0" and the index of the DHS peak component is "1".
+We start with an :ref:`Interaction <compound_interaction>` :ref:`Set <compound_set>` that pairs promoter components with DHS peak components. For this example, the index of the promoter component in this set is ``0`` and the index of the DHS peak component is ``1``.
 
 We also start with an element set of transcription start sites (TSSs) for target genes. These contain genomic :ref:`Ranges <base_range>` and gene :ref:`Names <base_name>`.
 
