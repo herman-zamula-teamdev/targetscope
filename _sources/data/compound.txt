@@ -3,6 +3,8 @@
 Compound types
 ==============
 
+These types are formed by joining one or more :ref:`base <base>` data types in a larger, functional container.
+
 .. _compound_element:
 
 =======
