@@ -12,6 +12,6 @@ Reading from left to right, we start with the :ref:`Element <compound_element>` 
 
 Next, we :ref:`map this element set against the promoter elements of our Interaction Set <ops_map_element_onto_interaction>` of all interactions. This gives us all the **RARA** -specific interactions, which we :ref:`filter <ops_filter_component>` to retrieve an element set of DHS peaks.
 
-Subsequently, we apply an :ref:`inclusive element <ops_set_inclusive_filter>` filter against this set of DHS peaks and an element set of transcription factor binding sites. We apply overlap criteria of 100% to ensure that the transcription factor binding site lies entirely within the DHS peak.
+Subsequently, we apply an :ref:`inclusive element <ops_set_inclusive_filter>` set operation against this set of DHS peaks and an element set of transcription factor binding sites. We apply overlap criteria of 100% to ensure that the transcription factor binding site lies entirely within the DHS peak.
 
 Finally, we have an element set of transcription factor binding sites that lie within DHS peaks. We apply a :ref:`report filter <ops_map_summary>` on the :ref:`Name <base_name>` attribute, to retrieve a final result: an ordered list of unique transcription factor names.
