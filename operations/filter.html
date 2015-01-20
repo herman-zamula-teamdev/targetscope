@@ -68,11 +68,11 @@
 <div class="section" id="score">
 <span id="op-filter-score"></span><h2>Score<a class="headerlink" href="#score" title="Permalink to this headline">¶</a></h2>
 <dl class="docutils">
-<dt>Input :</dt>
+<dt><strong>Input</strong></dt>
 <dd>1 <a class="reference internal" href="../data/base.html#base-score"><em>Score</em></a>; 1 <a class="reference internal" href="../data/compound.html#compound-element"><em>Element</em></a> <a class="reference internal" href="../data/compound.html#compound-set"><em>Set</em></a>; relational operator; 1 Boolean value</dd>
-<dt>Output :</dt>
+<dt><strong>Output</strong></dt>
 <dd><a class="reference internal" href="../data/compound.html#compound-element"><em>Element</em></a> <a class="reference internal" href="../data/compound.html#compound-set"><em>Set</em></a></dd>
-<dt>CLI example :</dt>
+<dt><strong>CLI example</strong></dt>
 <dd><code class="docutils literal"><span class="pre">awk</span> <span class="pre">‘($5</span> <span class="pre">&gt;</span> <span class="pre">threshold)’</span> <span class="pre">foo.bed</span> <span class="pre">&gt;</span> <span class="pre">foo_thresholded.bed</span></code></dd>
 </dl>
 <p>This operation filters <a class="reference internal" href="../data/compound.html#compound-element"><em>Elements</em></a> with <a class="reference internal" href="../data/base.html#base-score"><em>Score</em></a> components by the specified numerical value and relational operator. A false Boolean value allows specifying the inverse of the operation.</p>
