@@ -66,7 +66,7 @@ An interaction pair is a special *Set* that defines a connection between two *El
 
 Operations can be applied on an interaction or on a grouping of interactions.
 
-.. topic:: Example 1
+.. topic:: Example
 
    Here is an example of interactions centered around the gene **RARA**, in a BED format used for internal visualization. This is a special form of BED6, where the ID field contains a condensed form of the second pair of the interaction pairing, along with the interaction correlation score:
    ::
