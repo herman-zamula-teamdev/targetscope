@@ -163,3 +163,5 @@ This operation summarizes attributes of an :ref:`Element <compound_element>` :re
 | variance       | NA                | Report variance of :ref:`Scores       | :ref:`Score <base_score>`       |
 |                |                   | <base_score>` in input set            |                                 |
 +----------------+-------------------+---------------------------------------+---------------------------------+
+
+|
