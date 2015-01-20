@@ -82,7 +82,7 @@
 </div>
 <p>This command associates elements in the file <code class="docutils literal"><span class="pre">map.bed</span></code> with each element in <code class="docutils literal"><span class="pre">ref.bed</span></code>, where each map element overlaps a reference element by one or more bases. The <code class="docutils literal"><span class="pre">--echo-map</span></code> operation reports all map elements that associate with a reference element.</p>
 <p>The result of this most basic mapping example is a set of reference elements, where each reference element has another element set associated with it:</p>
-<a class="reference internal image-reference" href="../_images/ops_map_element_onto_element.png"><img alt="../_images/ops_map_element_onto_element.png" src="../_images/ops_map_element_onto_element.png" style="width: 75%;" /></a>
+<a class="reference internal image-reference" href="../_images/ops_map_element_onto_element.png"><img alt="../_images/ops_map_element_onto_element.png" src="../_images/ops_map_element_onto_element.png" style="width: 50%;" /></a>
 <p>Some reference elements may associate with map sets with elements. Other reference elements may associate with an empty set, if the overlap criteria means that there are no overlapping (no mappable) elements.</p>
 <p>In this example, we report the reference set elements along with all mapped elements. However, we may use operators to only report mapped elements:</p>
 <div class="highlight-python"><div class="highlight"><pre>$ bedmap --echo-map --bp-ovr 1 ref.bed map.bed | sort-bed - &gt; mapped_map.bed

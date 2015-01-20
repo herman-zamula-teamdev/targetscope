@@ -29,7 +29,7 @@ This command associates elements in the file ``map.bed`` with each element in ``
 The result of this most basic mapping example is a set of reference elements, where each reference element has another element set associated with it:
 
 .. image:: ../../_static/ops_map_element_onto_element.png
-   :width: 75%
+   :width: 50%
 
 Some reference elements may associate with map sets with elements. Other reference elements may associate with an empty set, if the overlap criteria means that there are no overlapping (no mappable) elements.
 
