@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Target gene to transcription factor binding sites &mdash; Targetscope API</title>
+    <title>Target gene-to-TFBS &mdash; Targetscope API</title>
     
     <link rel="stylesheet" href="../_static/better.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
@@ -14,7 +14,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../',
-        VERSION:     'v1.0.1',
+        VERSION:     'v1.1.0',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -26,7 +26,7 @@
     <script type="text/javascript" src="https://c328740.ssl.cf1.rackcdn.com/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <link rel="top" title="Targetscope API" href="../index.html" />
     <link rel="up" title="Example" href="index.html" />
-    <link rel="next" title="Data" href="../data/index.html" />
+    <link rel="next" title="Target gene-to-TFBS subproblem" href="tfbs_subproblem.html" />
     <link rel="prev" title="Example" href="index.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <link rel="stylesheet" href="../_static/custom_style.css" type="text/css" />
@@ -43,7 +43,7 @@
           <a href="index.html" title="Previous document">Example</a>
         </li>
         <li>
-          <a href="../data/index.html" title="Next document">Data</a>
+          <a href="tfbs_subproblem.html" title="Next document">Target gene-to-TFBS subproblem</a>
           &rarr;
         </li>
     </ul>
@@ -63,9 +63,9 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <div class="section" id="target-gene-to-transcription-factor-binding-sites">
-<span id="example-tfbs"></span><h1>Target gene to transcription factor binding sites<a class="headerlink" href="#target-gene-to-transcription-factor-binding-sites" title="Permalink to this headline">¶</a></h1>
-<p>This figure describes a complete operational pipeline to retrieve the names of transcription factors which lie within DHS peaks, which are associated with interactions whose promoters overlap <strong>RARA</strong> transcription start sites:</p>
+  <div class="section" id="target-gene-to-tfbs">
+<span id="example-tfbs"></span><h1>Target gene-to-TFBS<a class="headerlink" href="#target-gene-to-tfbs" title="Permalink to this headline">¶</a></h1>
+<p>This figure describes a complete operational pipeline to retrieve the binding sites and names of transcription factors which lie within DHS peaks, which are associated with interactions whose promoters overlap <strong>RARA</strong> transcription start sites:</p>
 <a class="reference internal image-reference" href="../_images/tfbs_rara.png"><img alt="../_images/tfbs_rara.png" src="../_images/tfbs_rara.png" style="width: 99%;" /></a>
 <p>Reading from left to right, we start with the <a class="reference internal" href="../data/compound.html#compound-element"><em>Element</em></a> <a class="reference internal" href="../data/compound.html#compound-set"><em>Set</em></a> of target gene transcription start sites (TSSs). We <a class="reference internal" href="../operations/filter.html#ops-filter-name"><em>filter</em></a> these on the <a class="reference internal" href="../data/base.html#base-name"><em>name</em></a> <strong>RARA</strong> to retrieve an element set of <strong>RARA</strong> -specific TSSs.</p>
 <p>Next, we <a class="reference internal" href="../operations/map.html#ops-map-element-onto-interaction"><em>map this element set against the promoter elements of our Interaction Set</em></a> of all interactions. This gives us all the <strong>RARA</strong> -specific interactions, which we <a class="reference internal" href="../operations/filter.html#ops-filter-component"><em>filter</em></a> to retrieve an element set of DHS peaks.</p>
@@ -86,8 +86,8 @@
   <p class="topless"><a href="index.html"
                         title="previous chapter">Example</a></p>
   <h4>Next topic</h4>
-  <p class="topless"><a href="../data/index.html"
-                        title="next chapter">Data</a></p>
+  <p class="topless"><a href="tfbs_subproblem.html"
+                        title="next chapter">Target gene-to-TFBS subproblem</a></p>
 <div class="sourcelink">
   <a href="../_sources/example/tfbs.txt" rel="nofollow">
     Show page source
@@ -119,7 +119,7 @@
           <a href="index.html" title="Previous document">Example</a>
         </li>
         <li>
-          <a href="../data/index.html" title="Next document">Data</a>
+          <a href="tfbs_subproblem.html" title="Next document">Target gene-to-TFBS subproblem</a>
           &rarr;
         </li>
     </ul>
