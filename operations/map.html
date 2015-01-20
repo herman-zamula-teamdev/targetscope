@@ -152,6 +152,117 @@ input set</td>
 number of bases in the <a class="reference internal" href="../data/base.html#base-range"><em>Ranges</em></a> in the input set</td>
 <td><a class="reference internal" href="../data/base.html#base-score"><em>Score</em></a></td>
 </tr>
+<tr class="row-even"><td>count</td>
+<td>NA</td>
+<td>Report the number of :ref:<a href="#id1"><span class="problematic" id="id2">`</span></a>Elements
+in the input set</td>
+<td><a class="reference internal" href="../data/base.html#base-score"><em>Score</em></a></td>
+</tr>
+<tr class="row-odd"><td>cv</td>
+<td>NA</td>
+<td>Report the coefficient of variation:
+the standard deviation of <a class="reference internal" href="../data/base.html#base-score"><em>Score</em></a> values in the input set
+divided by their mean</td>
+<td><a class="reference internal" href="../data/base.html#base-score"><em>Score</em></a></td>
+</tr>
+<tr class="row-even"><td><a href="#id3"><span class="problematic" id="id4">*</span></a>k*th</td>
+<td><em>i</em></td>
+<td>Report the value at the <em>k*th
+fraction of :ref:`Score &lt;base_score&gt;`
+values, where *i</em> = 0.5 reports the
+median (0 &lt; i &lt;= 1)</td>
+<td><a class="reference internal" href="../data/base.html#base-score"><em>Score</em></a></td>
+</tr>
+<tr class="row-odd"><td>mad</td>
+<td><em>mult</em></td>
+<td>Report the median absolute deviation
+of <a class="reference internal" href="../data/base.html#base-score"><em>Score</em></a> values,
+multiplied by <em>mult</em></td>
+<td><a class="reference internal" href="../data/base.html#base-score"><em>Score</em></a></td>
+</tr>
+<tr class="row-even"><td>max</td>
+<td>NA</td>
+<td>Report highest <a class="reference internal" href="../data/base.html#base-score"><em>Score</em></a> in input set</td>
+<td><a class="reference internal" href="../data/base.html#base-score"><em>Score</em></a></td>
+</tr>
+<tr class="row-odd"><td>max-element</td>
+<td>NA</td>
+<td>Report highest-scoring :ref:<a href="#id5"><span class="problematic" id="id6">`</span></a>Element
+in input set (ties go to random
+element)</td>
+<td><a class="reference internal" href="../data/compound.html#compound-set"><em>Set</em></a></td>
+</tr>
+<tr class="row-even"><td>mean</td>
+<td>NA</td>
+<td>Report arithmetic mean of :ref:<a href="#id7"><span class="problematic" id="id8">`</span></a>Score
+values in input set</td>
+<td><a class="reference internal" href="../data/base.html#base-score"><em>Score</em></a></td>
+</tr>
+<tr class="row-odd"><td>median</td>
+<td>NA</td>
+<td>Report median <a class="reference internal" href="../data/base.html#base-score"><em>Score</em></a> value from input set</td>
+<td><a class="reference internal" href="../data/base.html#base-score"><em>Score</em></a></td>
+</tr>
+<tr class="row-even"><td>min</td>
+<td>NA</td>
+<td>Report lowest <a class="reference internal" href="../data/base.html#base-score"><em>Score</em></a> value from input set</td>
+<td><a class="reference internal" href="../data/base.html#base-score"><em>Score</em></a></td>
+</tr>
+<tr class="row-odd"><td>min-element</td>
+<td>NA</td>
+<td>Report lowest-scoring <a class="reference internal" href="../data/compound.html#compound-element"><em>Element</em></a> in input set
+(ties go to random element)</td>
+<td><a class="reference internal" href="../data/compound.html#compound-set"><em>Set</em></a></td>
+</tr>
+<tr class="row-even"><td>name</td>
+<td>NA</td>
+<td>Report an ordered list of :ref:<a href="#id9"><span class="problematic" id="id10">`</span></a>Names
+in the input set</td>
+<td><a class="reference internal" href="../data/compound.html#compound-array"><em>Array</em></a></td>
+</tr>
+<tr class="row-odd"><td>name-uniq</td>
+<td>NA</td>
+<td>Report the unique <a class="reference internal" href="../data/base.html#base-name"><em>Name</em></a> values in the input set</td>
+<td><a class="reference internal" href="../data/compound.html#compound-array"><em>Array</em></a></td>
+</tr>
+<tr class="row-even"><td>range</td>
+<td>NA</td>
+<td>Report all <a class="reference internal" href="../data/base.html#base-range"><em>Ranges</em></a>
+of <a class="reference internal" href="../data/compound.html#compound-element"><em>Elements</em></a>
+in input set</td>
+<td><a class="reference internal" href="../data/compound.html#compound-array"><em>Array</em></a></td>
+</tr>
+<tr class="row-odd"><td>size</td>
+<td>NA</td>
+<td>Report sizes of each <a class="reference internal" href="../data/compound.html#compound-element"><em>Element</em></a> in input set</td>
+<td><a class="reference internal" href="../data/compound.html#compound-array"><em>Array</em></a></td>
+</tr>
+<tr class="row-even"><td>stdev</td>
+<td>NA</td>
+<td>Report standard deviation of
+<a class="reference internal" href="../data/base.html#base-score"><em>Scores</em></a> in input
+set</td>
+<td><a class="reference internal" href="../data/base.html#base-score"><em>Score</em></a></td>
+</tr>
+<tr class="row-odd"><td>sum</td>
+<td>NA</td>
+<td>Report sum of <a class="reference internal" href="../data/base.html#base-score"><em>Scores</em></a> in input set</td>
+<td><a class="reference internal" href="../data/base.html#base-score"><em>Score</em></a></td>
+</tr>
+<tr class="row-even"><td>tmean</td>
+<td><em>low</em>, <em>high</em></td>
+<td>Report arithmetic mean, removing
+outliers as defined by the fractions
+<em>low</em> and <em>high</em> (0 &lt;= <em>low</em> &lt;= 1,
+0 &lt;= <em>high</em> &lt;= 1, <em>low</em> + <em>high</em> &lt;=
+1)</td>
+<td><a class="reference internal" href="../data/base.html#base-score"><em>Score</em></a></td>
+</tr>
+<tr class="row-odd"><td>variance</td>
+<td>NA</td>
+<td>Report variance of <a class="reference internal" href="../data/base.html#base-score"><em>Scores</em></a> in input set</td>
+<td><a class="reference internal" href="../data/base.html#base-score"><em>Score</em></a></td>
+</tr>
 </tbody>
 </table>
 </div>
