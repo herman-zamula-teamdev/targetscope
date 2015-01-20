@@ -69,8 +69,9 @@
 </colgroup>
 <tbody valign="top">
 <tr class="row-odd"><td><strong>Data</strong></td>
-<td><em>Range</em> (optional: 1 or more <em>Name</em>; 1 <em>Score</em>; 1
-<em>Strand</em>, 1+ <em>Metadata</em>, 1+ <em>Set</em>)</td>
+<td><a class="reference internal" href="base.html#base-range"><em>Range</em></a> (optional: 1 or more
+<a class="reference internal" href="base.html#base-name"><em>Name</em></a>; 1 <a class="reference internal" href="base.html#base-score"><em>Score</em></a>;
+1 <a class="reference internal" href="base.html#base-strand"><em>Strand</em></a>, 1+ <a class="reference internal" href="base.html#base-metadata"><em>Metadata</em></a>, 1+ <em>Set</em>)</td>
 </tr>
 <tr class="row-even"><td><strong>Examples</strong></td>
 <td>Target gene promoter, gene annotation record, DHS
@@ -92,7 +93,7 @@ chr17   38501492  38501493      RARA    150     +
 chr17   38507638  38507639      RARA    3       +
 </pre></div>
 </div>
-<p>Therefore, the set of <strong>RARA</strong> transcription start sites is on chromosome 17, with the Ranges of <code class="docutils literal"><span class="pre">[38465445,</span> <span class="pre">38465446)</span></code>, <code class="docutils literal"><span class="pre">[38474532,</span> <span class="pre">38474533)</span></code>, <em>etc.</em> The <em>Name</em> value is <strong>RARA</strong>. The <em>Scores</em> are varied. The <em>Strand</em> value of each is <code class="docutils literal"><span class="pre">+</span></code>. Each of these makes up an <em>Element</em>.</p>
+<p>Therefore, the set of <strong>RARA</strong> transcription start sites is on chromosome 17, with the <a class="reference internal" href="base.html#base-range"><em>Ranges</em></a> of <code class="docutils literal"><span class="pre">[38465445,</span> <span class="pre">38465446)</span></code>, <code class="docutils literal"><span class="pre">[38474532,</span> <span class="pre">38474533)</span></code>, <em>etc.</em> The <a class="reference internal" href="base.html#base-name"><em>Name</em></a> value is <strong>RARA</strong>. The <a class="reference internal" href="base.html#base-score"><em>Scores</em></a> are varied. The <a class="reference internal" href="base.html#base-strand"><em>Strand</em></a> value of each is <code class="docutils literal"><span class="pre">+</span></code>. Each of these makes up an <em>Element</em>.</p>
 </div>
 <div class="topic">
 <p class="topic-title first">Example 2</p>
@@ -105,7 +106,7 @@ chr17   125    141      -V_TAL1BETAITF2_01  9.97644e-06     -       CTGGACAGATGT
 chr17   126    138      +V_RP58_01          5.58617e-06     +       CAAACATCTGTC...
 </pre></div>
 </div>
-<p>The fourth column of this file is the TRANSFAC name of the transcription factor (TRANSFAC is the name of a database of transcription factors — there are other databases; <em>e.g.</em>, Jaspar and UniPROBE). Note here that the start character of the ID field matches the strand field on which the factor is located, and that the seventh column contains the reference sequence at that range.</p>
+<p>The fourth column of this file is the TRANSFAC name of the transcription factor (TRANSFAC is the name of a database of transcription factors — there are other databases; <em>e.g.</em>, Jaspar and UniPROBE). Note here that the start character of the <a class="reference internal" href="base.html#base-name"><em>ID field</em></a> matches the <a class="reference internal" href="base.html#base-strand"><em>strand</em></a> field on which the factor is located, and that the seventh column contains the reference sequence at that range.</p>
 </div>
 </div>
 <div class="section" id="interaction">
@@ -117,8 +118,8 @@ chr17   126    138      +V_RP58_01          5.58617e-06     +       CAAACATCTGTC
 </colgroup>
 <tbody valign="top">
 <tr class="row-odd"><td><strong>Data</strong></td>
-<td>2 <em>Elements</em>; 1 <em>Score</em>; 1 <em>Name</em>; 1 <em>Strand</em>;
-optional, 1+ <em>Metadata</em></td>
+<td>2 <em>Elements</em>; 1 <a class="reference internal" href="base.html#base-score"><em>Score</em></a>; 1
+<a class="reference internal" href="base.html#base-name"><em>Name</em></a>; 1 <a class="reference internal" href="base.html#base-strand"><em>Strand</em></a>; optional, 1+ <a class="reference internal" href="base.html#base-metadata"><em>Metadata</em></a></td>
 </tr>
 <tr class="row-even"><td><strong>Example</strong></td>
 <td>Long-range interaction</td>
@@ -163,7 +164,8 @@ chr17  38498614        38498615 RARA   20         +|chr17       38498520        
 </colgroup>
 <tbody valign="top">
 <tr class="row-odd"><td><strong>Data</strong></td>
-<td>1+ <em>Name</em>; 0+ <em>Metadata</em>, 0+ <em>Elements</em>,
+<td>1+ <a class="reference internal" href="base.html#base-name"><em>Name</em></a>; 0+ ref:<cite>Metadata
+&lt;base_metadata&gt;</cite>, 0+ <em>Elements</em>,
 <em>Interactions</em> or <em>Sets</em></td>
 </tr>
 <tr class="row-even"><td><strong>Examples</strong></td>
@@ -188,7 +190,7 @@ sites, other sets</td>
 </colgroup>
 <tbody valign="top">
 <tr class="row-odd"><td><strong>Data</strong></td>
-<td>1+ <em>Name</em>; 0+ base types</td>
+<td>1+ <a class="reference internal" href="base.html#base-name"><em>Name</em></a>; 0+ base types</td>
 </tr>
 </tbody>
 </table>

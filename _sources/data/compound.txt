@@ -10,8 +10,10 @@ Element
 =======
 
 +--------------------+-------------------------------------------------------+
-| **Data**           | *Range* (optional: 1 or more *Name*; 1 *Score*; 1     |
-|                    | *Strand*, 1+ *Metadata*, 1+ *Set*)                    |
+| **Data**           | :ref:`Range <base_range>` (optional: 1 or more        |
+|                    | :ref:`Name <base_name>`; 1 :ref:`Score <base_score>`; |
+|                    | 1 :ref:`Strand <base_strand>`, 1+ :ref:`Metadata      |
+|                    | <base_metadata>`, 1+ *Set*)                           |
 +--------------------+-------------------------------------------------------+
 | **Examples**       | Target gene promoter, gene annotation record, DHS     |
 |                    | peak, transcription factor hit                        |
@@ -33,7 +35,7 @@ Operations can be applied on an *Element* or on a *Set* of *Elements*.
         chr17   38501492  38501493      RARA    150     +
         chr17   38507638  38507639      RARA    3       +
 
-   Therefore, the set of **RARA** transcription start sites is on chromosome 17, with the Ranges of ``[38465445, 38465446)``, ``[38474532, 38474533)``, *etc.* The *Name* value is **RARA**. The *Scores* are varied. The *Strand* value of each is ``+``. Each of these makes up an *Element*.
+   Therefore, the set of **RARA** transcription start sites is on chromosome 17, with the :ref:`Ranges <base_range>` of ``[38465445, 38465446)``, ``[38474532, 38474533)``, *etc.* The :ref:`Name <base_name>` value is **RARA**. The :ref:`Scores <base_score>` are varied. The :ref:`Strand <base_strand>` value of each is ``+``. Each of these makes up an *Element*.
 
 .. topic:: Example 2
 
@@ -47,7 +49,7 @@ Operations can be applied on an *Element* or on a *Set* of *Elements*.
         chr17   125    141      -V_TAL1BETAITF2_01  9.97644e-06     -       CTGGACAGATGTTTGT
         chr17   126    138      +V_RP58_01          5.58617e-06     +       CAAACATCTGTC...
 
-   The fourth column of this file is the TRANSFAC name of the transcription factor (TRANSFAC is the name of a database of transcription factors — there are other databases; *e.g.*, Jaspar and UniPROBE). Note here that the start character of the ID field matches the strand field on which the factor is located, and that the seventh column contains the reference sequence at that range.
+   The fourth column of this file is the TRANSFAC name of the transcription factor (TRANSFAC is the name of a database of transcription factors — there are other databases; *e.g.*, Jaspar and UniPROBE). Note here that the start character of the :ref:`ID field <base_name>` matches the :ref:`strand <base_strand>` field on which the factor is located, and that the seventh column contains the reference sequence at that range.
 
 .. _compound_interaction:
 
@@ -56,8 +58,10 @@ Interaction
 ===========
 
 +--------------------+-------------------------------------------------------+
-| **Data**           | 2 *Elements*; 1 *Score*; 1 *Name*; 1 *Strand*;        |
-|                    | optional, 1+ *Metadata*                               |
+| **Data**           | 2 *Elements*; 1 :ref:`Score <base_score>`; 1          |
+|                    | :ref:`Name <base_name>`; 1 :ref:`Strand               |
+|                    | <base_strand>`; optional, 1+ :ref:`Metadata           |
+|                    | <base_metadata>`                                      |
 +--------------------+-------------------------------------------------------+
 | **Example**        | Long-range interaction                                |
 +--------------------+-------------------------------------------------------+
@@ -102,7 +106,8 @@ Set
 ===
 
 +--------------------+-------------------------------------------------------+
-| **Data**           | 1+ *Name*; 0+ *Metadata*, 0+ *Elements*,              |
+| **Data**           | 1+ :ref:`Name <base_name>`; 0+ ref:`Metadata          |
+|                    | <base_metadata>`, 0+ *Elements*,                      |
 |                    | *Interactions* or *Sets*                              |
 +--------------------+-------------------------------------------------------+
 | **Examples**       | DHS peaks for a particular cell type or sequencing    |
@@ -127,7 +132,7 @@ Array
 =====
 
 +--------------------+-------------------------------------------------------+
-| **Data**           | 1+ *Name*; 0+ base types                              |
+| **Data**           | 1+ :ref:`Name <base_name>`; 0+ base types             |
 +--------------------+-------------------------------------------------------+
 
 Examples of *Arrays* are ordered lists of base types (:ref:`Score <base_score>`, :ref:`Name <base_name>`, :ref:`Strand <base_strand>`, :ref:`Metadata <base_metadata>`). 
