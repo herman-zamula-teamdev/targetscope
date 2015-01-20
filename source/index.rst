@@ -3,7 +3,7 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-We provide a specification for *targetscope* entities and predicates, which helps describe terminology used in the (JSON) schema and in web service requests. 
+We provide a specification for *targetscope* entities and predicates, which helps describe terminology used in the (JSON) schema and in web service requests used by the *targetscope* front-end. 
 
 :ref:`Predicates <ops>` are modeled on BEDOPS set and map operations described in the documentation for ``bedops`` and ``bedmap`` binaries (see the `BEDOPS documentation <http://bedops.readthedocs.org/en/latest/>`_ for more detail), while data elements are derived from columnar data found in BED files, or are composed into :ref:`compound <compound>` elements by using :ref:`base <base>` types as building blocks.
 
