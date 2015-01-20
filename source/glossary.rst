@@ -114,7 +114,7 @@ A set of genomic ranges (representing the gene's promoters) that is the starting
 Transcription factor
 ====================
 
-A transcription factor ("TF") is a protein that binds to DNA and controls how other proteins get made (or, indirectly, how cell signaling occurs). For a given transcription factor's name, we provide a set of locations on the genome (one or more genomic ranges) where that transcription factor binds. Obtaining a set of transcription factor binding sites is the end goal of the target viewer component of Targetscope.
+A transcription factor ("TF") is a protein that binds to DNA and controls how other proteins get made (or, indirectly, how cell signaling occurs). For a given transcription factor's name, we provide a set of locations on the genome (one or more genomic ranges) where that transcription factor binds. Obtaining a set of transcription factor binding sites is the end goal of the target viewer component of *targetscope*.
 
 .. |--| unicode:: U+2013   .. en dash
 .. |---| unicode:: U+2014  .. em dash, trimming surrounding whitespace
