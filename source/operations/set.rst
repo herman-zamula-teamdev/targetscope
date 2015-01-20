@@ -134,7 +134,7 @@ Difference
 **Output**
       :ref:`Element <compound_element>` :ref:`Set <compound_set>`
 **CLI example**
-      ``bedops --difference foo.bed bar1.bed bed2.bed ... > difference.bed``
+      ``bedops --difference foo.bed bar1.bed bar2.bed ... > difference.bed``
 
 This filter creates a new :ref:`set <compound_set>` from :ref:`ranges <base_range>` found in the first input set, excluding overlaps with ranges in the second and subsequent input sets.
 
@@ -143,3 +143,22 @@ Like the :ref:`complement <ops_set_complement>` operation, this calculates new e
 .. image:: ../../_static/ops_set_difference.png
    :width: 99%
 
+.. _ops_set_symmdiff:
+
+====================
+Symmetric difference
+====================
+
+**Input**
+      2 or more :ref:`Element <compound_element>` :ref:`Sets <compound_set>`
+**Output**
+      :ref:`Element <compound_element>` :ref:`Set <compound_set>`
+**CLI example**
+      ``bedops --symmdiff foo.bed bar.bed baz.bed ... > symmdiff.bed``
+
+This filter creates a new :ref:`set <compound_set>` from :ref:`ranges <base_range>` found in the first input set, excluding overlaps with ranges in the second and subsequent input sets, unionized with ranges found in the second input set, excluding overlaps with ranges in all other input sets, etc.
+
+Like the :ref:`complement <ops_set_complement>` operation, this calculates new elements and so name and other attributes of elements in all sets are discarded.
+
+.. image:: ../../_static/ops_set_symmdiff.png
+   :width: 99%
