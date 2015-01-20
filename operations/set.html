@@ -172,8 +172,24 @@
 <dd><code class="docutils literal"><span class="pre">bedops</span> <span class="pre">--symmdiff</span> <span class="pre">foo.bed</span> <span class="pre">bar.bed</span> <span class="pre">baz.bed</span> <span class="pre">...</span> <span class="pre">&gt;</span> <span class="pre">symmdiff.bed</span></code></dd>
 </dl>
 <p>This filter creates a new <a class="reference internal" href="../data/compound.html#compound-set"><em>set</em></a> from <a class="reference internal" href="../data/base.html#base-range"><em>ranges</em></a> found in the first input set, excluding overlaps with ranges in the second and subsequent input sets, unionized with ranges found in the second input set, excluding overlaps with ranges in all other input sets, etc.</p>
-<p>Like the <a class="reference internal" href="#ops-set-complement"><em>complement</em></a> operation, this calculates new elements and so name and other attributes of elements in all sets are discarded.</p>
+<p>Like the <a class="reference internal" href="#ops-set-complement"><em>complement</em></a> operation, this calculates new elements and so <a class="reference internal" href="../data/base.html#base-name"><em>name</em></a> and other attributes of elements in all sets are discarded.</p>
 <a class="reference internal image-reference" href="../_images/ops_set_symmdiff.png"><img alt="../_images/ops_set_symmdiff.png" src="../_images/ops_set_symmdiff.png" style="width: 99%;" /></a>
+</div>
+<div class="section" id="partition">
+<span id="ops-set-partition"></span><h2>Partition<a class="headerlink" href="#partition" title="Permalink to this headline">¶</a></h2>
+<dl class="docutils">
+<dt><strong>Input</strong></dt>
+<dd>1 or more <a class="reference internal" href="../data/compound.html#compound-element"><em>Element</em></a> <a class="reference internal" href="../data/compound.html#compound-set"><em>Sets</em></a></dd>
+<dt><strong>Output</strong></dt>
+<dd><a class="reference internal" href="../data/compound.html#compound-element"><em>Element</em></a> <a class="reference internal" href="../data/compound.html#compound-set"><em>Set</em></a></dd>
+<dt><strong>CLI example</strong></dt>
+<dd><code class="docutils literal"><span class="pre">bedops</span> <span class="pre">--partition</span> <span class="pre">foo.bed</span> <span class="pre">bar.bed</span> <span class="pre">baz.bed</span> <span class="pre">...</span> <span class="pre">&gt;</span> <span class="pre">partition.bed</span></code></dd>
+</dl>
+<p>This filter creates a new <a class="reference internal" href="../data/compound.html#compound-set"><em>set</em></a> from disjoint ranges computed from all input sets. A partition of one set alone will segment any overlapping elements within that set.</p>
+<a class="reference internal image-reference" href="../_images/ops_set_partition.png"><img alt="../_images/ops_set_partition.png" src="../_images/ops_set_partition.png" style="width: 99%;" /></a>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
 </div>
 </div>
 
@@ -196,6 +212,7 @@
 <li><a class="reference internal" href="#complement">Complement</a></li>
 <li><a class="reference internal" href="#difference">Difference</a></li>
 <li><a class="reference internal" href="#symmetric-difference">Symmetric difference</a></li>
+<li><a class="reference internal" href="#partition">Partition</a></li>
 </ul>
 </li>
 </ul>

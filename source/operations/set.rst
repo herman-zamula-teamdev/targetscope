@@ -158,7 +158,27 @@ Symmetric difference
 
 This filter creates a new :ref:`set <compound_set>` from :ref:`ranges <base_range>` found in the first input set, excluding overlaps with ranges in the second and subsequent input sets, unionized with ranges found in the second input set, excluding overlaps with ranges in all other input sets, etc.
 
-Like the :ref:`complement <ops_set_complement>` operation, this calculates new elements and so name and other attributes of elements in all sets are discarded.
+Like the :ref:`complement <ops_set_complement>` operation, this calculates new elements and so :ref:`name <base_name>` and other attributes of elements in all sets are discarded.
 
 .. image:: ../../_static/ops_set_symmdiff.png
    :width: 99%
+
+.. _ops_set_partition:
+
+=========
+Partition
+=========
+
+**Input**
+      1 or more :ref:`Element <compound_element>` :ref:`Sets <compound_set>`
+**Output**
+      :ref:`Element <compound_element>` :ref:`Set <compound_set>`
+**CLI example**
+      ``bedops --partition foo.bed bar.bed baz.bed ... > partition.bed``
+
+This filter creates a new :ref:`set <compound_set>` from disjoint ranges computed from all input sets. A partition of one set alone will segment any overlapping elements within that set.
+
+.. image:: ../../_static/ops_set_partition.png
+   :width: 99%
+
+|
