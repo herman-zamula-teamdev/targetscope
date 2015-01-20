@@ -283,6 +283,3 @@ texinfo_documents = [
 #texinfo_no_detailmenu = False
 
 html_short_title = "Home"
-html_sidebars = {
-    '**': ['globaltoc.html'],
-}
