@@ -70,12 +70,71 @@
 </colgroup>
 <tbody valign="top">
 <tr class="row-odd"><td><strong>Data</strong></td>
-<td><em>Range</em> (optional: 1 or more <em>Name</em>; 1 <em>Score</em>; 1
-<em>Strand</em>, 1+ <em>Metadata</em>, 1+ <em>Set</em>)</td>
+<td>Integer, float, scientific notation</td>
 </tr>
 </tbody>
 </table>
-<p><em>Score</em> adds an integer or decimal numerical attribute to <em>Element</em>, <em>Interaction</em> or <em>Set</em> <a class="reference internal" href="compound.html#compound"><em>Compound types</em></a> types.</p>
+<p><em>Score</em> adds an integer or decimal numerical attribute to <em>Element</em>, <em>Interaction</em> or <em>Set</em> compound types.</p>
+</div>
+<div class="section" id="name">
+<h2>2.2. Name<a class="headerlink" href="#name" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="docutils">
+<colgroup>
+<col width="27%" />
+<col width="73%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><strong>Data</strong></td>
+<td>String</td>
+</tr>
+</tbody>
+</table>
+<p><em>Name</em> adds an identifying attribute to <em>Element</em>, <em>Interaction</em> or <em>Set</em> compound types.</p>
+</div>
+<div class="section" id="strand">
+<h2>2.3. Strand<a class="headerlink" href="#strand" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="docutils">
+<colgroup>
+<col width="27%" />
+<col width="73%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><strong>Data</strong></td>
+<td>Character (+/-/.)</td>
+</tr>
+</tbody>
+</table>
+<p><em>Strand</em> adds an orientation attribute to <em>Element</em> and <em>Interaction</em> compound types.</p>
+</div>
+<div class="section" id="range">
+<h2>2.4. Range<a class="headerlink" href="#range" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="docutils">
+<colgroup>
+<col width="27%" />
+<col width="73%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><strong>Data</strong></td>
+<td>BED3</td>
+</tr>
+</tbody>
+</table>
+<p><em>Range</em> consists of a chromosome name, start and stop index. The chromosome name follows UCSC convention and starts with the string <code class="docutils literal"><span class="pre">chr</span></code>. The start and stop indices are integers greater than or equal to zero. The stop index must be greater than the start index.</p>
+</div>
+<div class="section" id="metadata">
+<h2>2.5. Metadata<a class="headerlink" href="#metadata" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="docutils">
+<colgroup>
+<col width="27%" />
+<col width="73%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><strong>Data</strong></td>
+<td>JSON-formatted string</td>
+</tr>
+</tbody>
+</table>
+<p>The <em>Metadata</em> type adds a free-form, JSON-formatted descriptive attribute to <em>Element</em>, <em>Interaction</em> or <em>Set</em> compound types.</p>
 </div>
 </div>
 
@@ -92,6 +151,10 @@
   <ul>
 <li><a class="reference internal" href="#">2. Base types</a><ul>
 <li><a class="reference internal" href="#score">2.1. Score</a></li>
+<li><a class="reference internal" href="#name">2.2. Name</a></li>
+<li><a class="reference internal" href="#strand">2.3. Strand</a></li>
+<li><a class="reference internal" href="#range">2.4. Range</a></li>
+<li><a class="reference internal" href="#metadata">2.5. Metadata</a></li>
 </ul>
 </li>
 </ul>
