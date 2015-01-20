@@ -7,6 +7,14 @@ Base types
 Score
 =====
 
+.. csv-table:: Data
+   :header: "Type", "Description"
+   :widths: 20, 40
+
+   "Integer", "-"
+   "Float", "-"
+   "Scientific notation", "-"
+
 +--------------------+-------------------------------------------------------+
 | **Data**           | Integer, float, scientific notation                   |
 +--------------------+-------------------------------------------------------+
