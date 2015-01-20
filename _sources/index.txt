@@ -9,15 +9,10 @@ We provide a specification for *targetscope* entities and predicates, which help
 
 The :ref:`TFBS example <example_tfbs>` describes a complete pipeline of predicates and data entities used to find the binding sites of a transcription factor. This example describes one way (in broad terms) how the components of this specification document could be used to construct and perform tasks in the *targetscope* application.
 
-We use the `JSON Schema v0.4 <http://json-schema.org/>`_ specification to write an initial schema document (``target_gene_schema.json``) that describes a directed acyclic object graph of inputs, outputs, and a vocabulary of intermediate operations ("predicates" and options) used for a subset of functionality in the *targetscope* application.
-
-The goal is to write a schema that is flexible enough to ultimately be used with the full application, as well as to be usable now with a web service to validate incoming requests.
-
-We include a test web request that follows the schema (``target_gene_test_request.json``) which can be validated with the included Python script (``target_gene_request_validation.py``) with the installation of the `jsonschema <http://json-schema.org>`_ Python package.
-
 .. toctree::
    :maxdepth: 3
 
+   schema/index.rst
    example/index.rst
    data/index.rst
    operations/index.rst
