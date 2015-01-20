@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Data &mdash; Targetscope API</title>
+    <title>Target gene to transcription factor binding sites &mdash; Targetscope API</title>
     
     <link rel="stylesheet" href="../_static/better.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
@@ -25,8 +25,9 @@
     <script type="text/javascript" src="../_static/doctools.js"></script>
     <script type="text/javascript" src="https://c328740.ssl.cf1.rackcdn.com/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <link rel="top" title="Targetscope API" href="../index.html" />
-    <link rel="next" title="Base types" href="base.html" />
-    <link rel="prev" title="Target gene to transcription factor binding sites" href="../example/tfbs.html" />
+    <link rel="up" title="Example" href="index.html" />
+    <link rel="next" title="Data" href="../data/index.html" />
+    <link rel="prev" title="Example" href="index.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <link rel="stylesheet" href="../_static/custom_style.css" type="text/css" />
   </head>
@@ -39,17 +40,20 @@
     <ul>
         <li>
           &larr;
-          <a href="../example/tfbs.html" title="Previous document">Target gene to transcription factor binding sites</a>
+          <a href="index.html" title="Previous document">Example</a>
         </li>
         <li>
-          <a href="base.html" title="Next document">Base types</a>
+          <a href="../data/index.html" title="Next document">Data</a>
           &rarr;
         </li>
     </ul>
   </nav>
   <nav id="breadcrumbs">
     <ul>
-      <li><a href="../index.html">Home</a></li> 
+      <li><a href="../index.html">Home</a></li>
+      <li>
+        <a href="index.html">Example</a>
+      </li> 
     </ul>
   </nav>
   </div>  
@@ -59,27 +63,14 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <div class="section" id="data">
-<h1>Data<a class="headerlink" href="#data" title="Permalink to this headline">¶</a></h1>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="base.html">Base types</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="base.html#score">Score</a></li>
-<li class="toctree-l2"><a class="reference internal" href="base.html#name">Name</a></li>
-<li class="toctree-l2"><a class="reference internal" href="base.html#strand">Strand</a></li>
-<li class="toctree-l2"><a class="reference internal" href="base.html#range">Range</a></li>
-<li class="toctree-l2"><a class="reference internal" href="base.html#metadata">Metadata</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="compound.html">Compound types</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="compound.html#element">Element</a></li>
-<li class="toctree-l2"><a class="reference internal" href="compound.html#interaction">Interaction</a></li>
-<li class="toctree-l2"><a class="reference internal" href="compound.html#set">Set</a></li>
-<li class="toctree-l2"><a class="reference internal" href="compound.html#array">Array</a></li>
-</ul>
-</li>
-</ul>
-</div>
+  <div class="section" id="target-gene-to-transcription-factor-binding-sites">
+<span id="tfbs"></span><h1>Target gene to transcription factor binding sites<a class="headerlink" href="#target-gene-to-transcription-factor-binding-sites" title="Permalink to this headline">¶</a></h1>
+<p>This figure describes a complete operation to retrieve the names of transcription factors which lie within DHS peaks, which are associated with interactions whose promoters overlap <strong>RARA</strong> transcription start sites:</p>
+<a class="reference internal image-reference" href="../_images/tfbs_rara.png"><img alt="../_images/tfbs_rara.png" src="../_images/tfbs_rara.png" style="width: 99%;" /></a>
+<p>Reading from left to right, we start with the <a class="reference internal" href="../data/compound.html#compound-element"><em>Element</em></a> <a class="reference internal" href="../data/compound.html#compound-set"><em>Set</em></a> of target gene transcription start sites (TSSs). We filter these on the <a class="reference internal" href="../data/base.html#base-name"><em>name</em></a> <strong>RARA</strong> to retrieve an element set of <strong>RARA</strong> -specific TSSs.</p>
+<p>Next, we <a class="reference internal" href="../operations/map.html#ops-map-element-onto-interaction"><em>map this element set against the promoter elements of our Interaction Set</em></a> of all interactions. This gives us all the <strong>RARA</strong> -specific interactions, which we filter to retrieve an element set of DHS peaks.</p>
+<p>Subsequently, we apply an <a class="reference internal" href="../operations/set.html#ops-set-inclusive-filter"><em>inclusive element</em></a> filter against this set of DHS peaks and an element set of transcription factor binding sites. We apply overlap criteria of 100% to ensure that the transcription factor binding site lies entirely within the DHS peak.</p>
+<p>Finally, we have an element set of transcription factor binding sites that lie within DHS peaks. We apply a <a class="reference internal" href="../operations/map.html#ops-map-summary"><em>report filter</em></a> on the <a class="reference internal" href="../data/base.html#base-name"><em>Name</em></a> attribute, to retrieve a final result: an ordered list of unique transcription factor names.</p>
 </div>
 
 
@@ -92,13 +83,13 @@
               <img class="logo" src="../_static/logo.png" alt="Logo"/>
             </a></p>
   <h4>Previous topic</h4>
-  <p class="topless"><a href="../example/tfbs.html"
-                        title="previous chapter">Target gene to transcription factor binding sites</a></p>
+  <p class="topless"><a href="index.html"
+                        title="previous chapter">Example</a></p>
   <h4>Next topic</h4>
-  <p class="topless"><a href="base.html"
-                        title="next chapter">Base types</a></p>
+  <p class="topless"><a href="../data/index.html"
+                        title="next chapter">Data</a></p>
 <div class="sourcelink">
-  <a href="../_sources/data/index.txt" rel="nofollow">
+  <a href="../_sources/example/tfbs.txt" rel="nofollow">
     Show page source
   </a>
 </div>
@@ -125,17 +116,20 @@
     <ul>
         <li>
           &larr;
-          <a href="../example/tfbs.html" title="Previous document">Target gene to transcription factor binding sites</a>
+          <a href="index.html" title="Previous document">Example</a>
         </li>
         <li>
-          <a href="base.html" title="Next document">Base types</a>
+          <a href="../data/index.html" title="Next document">Data</a>
           &rarr;
         </li>
     </ul>
   </nav>
   <nav id="breadcrumbs">
     <ul>
-      <li><a href="../index.html">Home</a></li> 
+      <li><a href="../index.html">Home</a></li>
+      <li>
+        <a href="index.html">Example</a>
+      </li> 
     </ul>
   </nav>
   </div>

@@ -1,0 +1,6 @@
+Example
+=======
+
+.. toctree::
+
+   tfbs.rst
