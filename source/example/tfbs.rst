@@ -1,4 +1,4 @@
-.. _tfbs:
+.. _example_tfbs:
 
 Target gene to transcription factor binding sites
 =================================================
