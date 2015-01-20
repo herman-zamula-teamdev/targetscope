@@ -147,6 +147,20 @@
 <p>The complement of one set excludes the start- and end-pieces of a chromosome. To include those ranges, one can calculate the difference operation between the input set and a &#8220;full chromosome&#8221; <a class="reference internal" href="../data/compound.html#compound-element"><em>Element</em></a>, taking the first and last elements of the result. Those two elements would be unioned with the complement of the input set to get the full extents set.</p>
 <a class="reference internal image-reference" href="../_images/ops_set_complement.png"><img alt="../_images/ops_set_complement.png" src="../_images/ops_set_complement.png" style="width: 99%;" /></a>
 </div>
+<div class="section" id="difference">
+<span id="ops-set-difference"></span><h2>Difference<a class="headerlink" href="#difference" title="Permalink to this headline">¶</a></h2>
+<dl class="docutils">
+<dt><strong>Input</strong></dt>
+<dd>2 or more <a class="reference internal" href="../data/compound.html#compound-element"><em>Element</em></a> <a class="reference internal" href="../data/compound.html#compound-set"><em>Sets</em></a></dd>
+<dt><strong>Output</strong></dt>
+<dd><a class="reference internal" href="../data/compound.html#compound-element"><em>Element</em></a> <a class="reference internal" href="../data/compound.html#compound-set"><em>Set</em></a></dd>
+<dt><strong>CLI example</strong></dt>
+<dd><code class="docutils literal"><span class="pre">bedops</span> <span class="pre">--difference</span> <span class="pre">foo.bed</span> <span class="pre">bar1.bed</span> <span class="pre">bed2.bed</span> <span class="pre">...</span> <span class="pre">&gt;</span> <span class="pre">difference.bed</span></code></dd>
+</dl>
+<p>This filter creates a new <a class="reference internal" href="../data/compound.html#compound-set"><em>set</em></a> from <a class="reference internal" href="../data/base.html#base-range"><em>ranges</em></a> found in the first input set, excluding overlaps with ranges in the second and subsequent input sets.</p>
+<p>Like the <a class="reference internal" href="#ops-set-complement"><em>complement</em></a> operation, this calculates new elements and so <a class="reference internal" href="../data/base.html#base-name"><em>name</em></a> and other attributes of elements in the first set are discarded.</p>
+<a class="reference internal image-reference" href="../_images/ops_set_difference.png"><img alt="../_images/ops_set_difference.png" src="../_images/ops_set_difference.png" style="width: 99%;" /></a>
+</div>
 </div>
 
 
@@ -166,6 +180,7 @@
 <li><a class="reference internal" href="#inclusive-filter">Inclusive filter</a></li>
 <li><a class="reference internal" href="#exclusive-filter">Exclusive filter</a></li>
 <li><a class="reference internal" href="#complement">Complement</a></li>
+<li><a class="reference internal" href="#difference">Difference</a></li>
 </ul>
 </li>
 </ul>

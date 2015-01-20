@@ -122,3 +122,24 @@ The complement of one set excludes the start- and end-pieces of a chromosome. To
 
 .. image:: ../../_static/ops_set_complement.png
    :width: 99%
+
+.. _ops_set_difference:
+
+==========
+Difference
+==========
+
+**Input**
+      2 or more :ref:`Element <compound_element>` :ref:`Sets <compound_set>`
+**Output**
+      :ref:`Element <compound_element>` :ref:`Set <compound_set>`
+**CLI example**
+      ``bedops --difference foo.bed bar1.bed bed2.bed ... > difference.bed``
+
+This filter creates a new :ref:`set <compound_set>` from :ref:`ranges <base_range>` found in the first input set, excluding overlaps with ranges in the second and subsequent input sets.
+
+Like the :ref:`complement <ops_set_complement>` operation, this calculates new elements and so :ref:`name <base_name>` and other attributes of elements in the first set are discarded.
+
+.. image:: ../../_static/ops_set_difference.png
+   :width: 99%
+
