@@ -3,7 +3,7 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-About
+Home
 =======================================
 
 We use the `JSON Schema v0.4 <http://json-schema.org/>`_ specification to write an initial schema document (``target_gene_schema.json``) that describes a directed acyclic object graph of inputs, outputs, and a vocabulary of intermediate operations ("predicates" and options) used for a subset of functionality in the *targetscope* application.
