@@ -78,6 +78,24 @@
 <p>This operation takes the union of <a class="reference internal" href="../data/compound.html#compound-element"><em>Elements</em></a> in a set, yielding one set made up of each of the input elements. Each Element in the output set preserves its basic <a class="reference internal" href="../data/base.html#base-score"><em>Score</em></a>, <a class="reference internal" href="../data/base.html#base-name"><em>Name</em></a>, <em>etc.</em> attributes. The union of one input set is the set itself.</p>
 <a class="reference internal image-reference" href="../_images/ops_set_union.png"><img alt="../_images/ops_set_union.png" src="../_images/ops_set_union.png" style="width: 99%;" /></a>
 </div>
+<div class="section" id="merge">
+<span id="ops-set-merge"></span><h2>Merge<a class="headerlink" href="#merge" title="Permalink to this headline">¶</a></h2>
+<dl class="docutils">
+<dt><strong>Input</strong></dt>
+<dd>1 or more <a class="reference internal" href="../data/compound.html#compound-element"><em>Element</em></a> <a class="reference internal" href="../data/compound.html#compound-set"><em>Sets</em></a></dd>
+<dt><strong>Output</strong></dt>
+<dd><a class="reference internal" href="../data/compound.html#compound-element"><em>Element</em></a> <a class="reference internal" href="../data/compound.html#compound-set"><em>Set</em></a></dd>
+<dt><strong>CLI example</strong></dt>
+<dd><code class="docutils literal"><span class="pre">bedops</span> <span class="pre">--merge</span> <span class="pre">foo1.bed</span> <span class="pre">foo2.bed</span> <span class="pre">...</span> <span class="pre">&gt;</span> <span class="pre">merge.bed</span></code></dd>
+</dl>
+<p>This operation takes the merge of <a class="reference internal" href="../data/base.html#base-range"><em>Ranges</em></a> of input <a class="reference internal" href="../data/compound.html#compound-element"><em>Elements</em></a> in a set, yielding one set made up of new <a class="reference internal" href="../data/compound.html#compound-element"><em>Element</em></a> values calculated from the ranges.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Because this result is calculated, each new <a class="reference internal" href="../data/compound.html#compound-element"><em>Element</em></a> in the output set loses any input attributes.</p>
+</div>
+<p>The merge of one input set is the set of contiguous ranges of overlapping input elements.</p>
+<a class="reference internal image-reference" href="../_images/ops_set_merge.png"><img alt="../_images/ops_set_merge.png" src="../_images/ops_set_merge.png" style="width: 99%;" /></a>
+</div>
 </div>
 
 
@@ -93,6 +111,7 @@
   <ul>
 <li><a class="reference internal" href="#">Set</a><ul>
 <li><a class="reference internal" href="#union">Union</a></li>
+<li><a class="reference internal" href="#merge">Merge</a></li>
 </ul>
 </li>
 </ul>
