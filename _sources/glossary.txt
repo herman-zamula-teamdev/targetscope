@@ -31,15 +31,15 @@ A BED record must minimally have three columns that define the genomic range of 
 
 BED records could be provided in any order. However, our analyses make use of `BEDOPS <https://github.com/bedops/bedops>`_ tools, which require a lexicographical sorting on the chromosome column, followed by numerical sort on the start and stop indices. BEDOPS includes a command-line tool called ``sort-bed`` to apply this ordering on BED records.
 
-..  Example::
+.. Example::
 
-    *Example of sorted BED6 data:*
-    ::
+   *Example of sorted BED6 data:*
+   ::
 
-      chr1    1000      2000 foo      0       +
-      chr17   100       200  bar      1       -
-      chr2    300       500  baz      3.14    -
-      chrX    100       400  bing     2       +
+     chr1    1000      2000 foo      0       +
+     chr17   100       200  bar      1       -
+     chr2    300       500  baz      3.14    -
+     chrX    100       400  bing     2       +
 
 Where data are not available for the fourth through sixth columns, it is conventional to use a period as a placeholder.
 
