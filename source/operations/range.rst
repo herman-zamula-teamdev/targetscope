@@ -1,7 +1,7 @@
 .. _ops_range:
 
-Range operations
-================
+Range
+=====
 
 .. _ops_range_adjust:
 

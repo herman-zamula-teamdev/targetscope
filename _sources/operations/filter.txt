@@ -1,7 +1,7 @@
 .. _ops_filter:
 
-Filter operations
-=================
+Filter
+======
 
 .. _ops_filter_score:
 
