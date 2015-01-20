@@ -98,7 +98,7 @@ This operation summarizes attributes of an :ref:`Element <compound_element>` :re
 |                |                   | <base_range>` in the input set        |                                 |
 +----------------+-------------------+---------------------------------------+---------------------------------+
 | count          | NA                | Report the number of :ref:`Elements   | :ref:`Score <base_score>`       |
-|                |                   | in the input set                      |                                 |
+|                |                   | <compound_element>` in the input set  |                                 |
 +----------------+-------------------+---------------------------------------+---------------------------------+
 | cv             | NA                | Report the coefficient of variation:  | :ref:`Score <base_score>`       |
 |                |                   | the standard deviation of :ref:`Score |                                 |
