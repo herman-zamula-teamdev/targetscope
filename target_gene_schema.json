@@ -5,6 +5,7 @@
   "type" : "object",
   "properties" : {
     "version" : {
+      "description" : "Schema version associated with request",
       "enum" : [
         "v1.0.0",
         "v1.1.0"
