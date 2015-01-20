@@ -1,0 +1,195 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Glossary &mdash; targetscope v1.0.1 documentation</title>
+    
+    <link rel="stylesheet" href="_static/better.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     'v1.0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="https://c328740.ssl.cf1.rackcdn.com/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="top" title="targetscope v1.0.1 documentation" href="index.html" />
+    <link rel="prev" title="About" href="index.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="_static/custom_style.css" type="text/css" />
+  </head>
+  <body role="document">
+    <header id="pageheader"><h1><a href="index.html ">
+        targetscope v1.0.1 documentation
+    </a></h1></header>
+  <div class="related top">
+  <nav id="rellinks">
+    <ul>
+        <li>
+          &larr;
+          <a href="index.html" title="Previous document">About</a>
+        </li>
+    </ul>
+  </nav>
+  <nav id="breadcrumbs">
+    <ul>
+      <li><a href="index.html">targetscope v1.0.1 documentation</a></li> 
+    </ul>
+  </nav>
+  </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="glossary">
+<span id="id1"></span><h1>Glossary<a class="headerlink" href="#glossary" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="bed">
+<h2>BED<a class="headerlink" href="#bed" title="Permalink to this headline">¶</a></h2>
+<p>BED is short for <em>Browser Extensible Display</em>. It is a tab-delimited text format that can span three or more columns, used to represent zero-indexed, half-open elements or areas of interest:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="27%" />
+<col width="18%" />
+<col width="33%" />
+<col width="22%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Column index</th>
+<th class="head">Name</th>
+<th class="head">Type</th>
+<th class="head">Nickname</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>1</td>
+<td>Chromosome</td>
+<td>String</td>
+<td>BED3, 4, 5, 6+</td>
+</tr>
+<tr class="row-odd"><td>2</td>
+<td>Start index</td>
+<td>Integer (i &gt;= 0)</td>
+<td>BED3, 4, 5, 6+</td>
+</tr>
+<tr class="row-even"><td>3</td>
+<td>Stop index</td>
+<td>Integer (j &gt; i)</td>
+<td>BED3, 4, 5, 6+</td>
+</tr>
+<tr class="row-odd"><td>4</td>
+<td>ID</td>
+<td>String</td>
+<td>BED4, 5, 6+</td>
+</tr>
+<tr class="row-even"><td>5</td>
+<td>Score</td>
+<td>Float</td>
+<td>BED5, 6+</td>
+</tr>
+<tr class="row-odd"><td>6</td>
+<td>Strand</td>
+<td>Character (&#8220;+&#8221; or &#8220;-&#8221;)</td>
+<td>BED6+</td>
+</tr>
+<tr class="row-even"><td>7+</td>
+<td>Metadata</td>
+<td>String</td>
+<td>Various</td>
+</tr>
+</tbody>
+</table>
+<p>A BED record must minimally have three columns that define the genomic range of that record. Variants of BED with more than six columns exist. Records with more than six columns generally have display metadata associated with them, or represent specialized annotations.</p>
+<p>BED records could be provided in any order. However, our analyses make use of <a class="reference external" href="https://github.com/bedops/bedops">BEDOPS</a> tools, which require a lexicographical sorting on the chromosome column, followed by numerical sort on the start and stop indices. BEDOPS includes a command-line tool called <code class="docutils literal"><span class="pre">sort-bed</span></code> to apply this ordering on BED records.</p>
+<p><em>Example of sorted BED6 data:</em></p>
+<div class="highlight-python"><div class="highlight"><pre>chr1    1000      2000 foo      0       +
+chr17   100       200  bar      1       -
+chr2    300       500  baz      3.14    -
+chrX    100       400  bing     2       +
+</pre></div>
+</div>
+<p>Where data are not available for the fourth through sixth columns, it is conventional to use a period as a placeholder.</p>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="index.html">
+              <img class="logo" src="_static/logo.png" alt="Logo"/>
+            </a></p>
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Glossary</a><ul>
+<li><a class="reference internal" href="#bed">BED</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="index.html"
+                        title="previous chapter">About</a></p>
+<div class="sourcelink">
+  <a href="_sources/glossary.txt" rel="nofollow">
+    Show page source
+  </a>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+  <div class="related bottom">
+  <nav id="rellinks">
+    <ul>
+        <li>
+          &larr;
+          <a href="index.html" title="Previous document">About</a>
+        </li>
+    </ul>
+  </nav>
+  <nav id="breadcrumbs">
+    <ul>
+      <li><a href="index.html">targetscope v1.0.1 documentation</a></li> 
+    </ul>
+  </nav>
+  </div>
+  <footer id="pagefooter">&copy; 2015, Alex Reynolds.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a>
+      1.3b2
+        with the <a href="http://github.com/irskep/sphinx-better-theme">
+          better</a> theme.
+
+  </footer>
+
+  
+  </body>
+</html>
