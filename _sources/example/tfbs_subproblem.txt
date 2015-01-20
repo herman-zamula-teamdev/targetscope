@@ -19,5 +19,9 @@ We start with the larger problem described in the :ref:`target gene-to-TFBS <exa
         1. :ref:`Filter operation <ops_filter>` that creates "RARA TSSs" set
         2. :ref:`Map operation <ops_map>` that finds all RARA TSSs that overlap interaction promoter regions
 
+Here is a graphical overview of the pipeline:
+
 .. image:: ../../_static/tfbs_rara_subproblem.png
    :width: 50%
+
+One of the two outputs is in the middle of the pipeline. The web service will generate a list of intermediate dependencies and push them to the next step of analysis, as needed.
