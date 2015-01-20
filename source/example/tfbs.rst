@@ -10,7 +10,7 @@ This figure describes a complete operational pipeline to retrieve the names of t
 
 Reading from left to right, we start with the :ref:`Element <compound_element>` :ref:`Set <compound_set>` of target gene transcription start sites (TSSs). We :ref:`filter <ops_filter_name>` these on the :ref:`name <base_name>` **RARA** to retrieve an element set of **RARA** -specific TSSs.
 
-Next, we :ref:`map this element set against the promoter elements of our Interaction Set <ops_map_element_onto_interaction>` of all interactions. This gives us all the **RARA** -specific interactions, which we filter to retrieve an element set of DHS peaks.
+Next, we :ref:`map this element set against the promoter elements of our Interaction Set <ops_map_element_onto_interaction>` of all interactions. This gives us all the **RARA** -specific interactions, which we :ref:`filter <ops_filter_component>` to retrieve an element set of DHS peaks.
 
 Subsequently, we apply an :ref:`inclusive element <ops_set_inclusive_filter>` filter against this set of DHS peaks and an element set of transcription factor binding sites. We apply overlap criteria of 100% to ensure that the transcription factor binding site lies entirely within the DHS peak.
 
