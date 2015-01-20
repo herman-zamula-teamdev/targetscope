@@ -96,6 +96,26 @@
 <p>The merge of one input set is the set of contiguous ranges of overlapping input elements.</p>
 <a class="reference internal image-reference" href="../_images/ops_set_merge.png"><img alt="../_images/ops_set_merge.png" src="../_images/ops_set_merge.png" style="width: 99%;" /></a>
 </div>
+<div class="section" id="inclusive-filter">
+<span id="ops-set-inclusive-filter"></span><h2>Inclusive filter<a class="headerlink" href="#inclusive-filter" title="Permalink to this headline">¶</a></h2>
+<dl class="docutils">
+<dt><strong>Input</strong></dt>
+<dd>2 or more <a class="reference internal" href="../data/compound.html#compound-element"><em>Element</em></a> <a class="reference internal" href="../data/compound.html#compound-set"><em>Sets</em></a>; integer (base) or float (percentage) overlap parameter</dd>
+<dt><strong>Output</strong></dt>
+<dd><a class="reference internal" href="../data/compound.html#compound-element"><em>Element</em></a> <a class="reference internal" href="../data/compound.html#compound-set"><em>Sets</em></a></dd>
+<dt><strong>CLI example</strong></dt>
+<dd><code class="docutils literal"><span class="pre">bedops</span> <span class="pre">--element-of</span> <span class="pre">-1</span> <span class="pre">foo.bed</span> <span class="pre">bar1.bed</span> <span class="pre">bar2.bed</span> <span class="pre">...</span> <span class="pre">&gt;</span> <span class="pre">inclusive_filter.bed</span></code></dd>
+</dl>
+<p>This filter creates a new <a class="reference internal" href="../data/compound.html#compound-set"><em>set</em></a> from <a class="reference internal" href="../data/compound.html#compound-element"><em>elements</em></a> in the first set, where <a class="reference internal" href="../data/base.html#base-range"><em>range</em></a> components of elements in the second (and subsequent) sets overlap the first set&#8217;s elements by the specified integer or float value.</p>
+<p>If that value is an integer, overlap is calculated as a measure of required overlap of bases in the elements&#8217; <a class="reference internal" href="../data/base.html#base-range"><em>range</em></a> components. If that value is a percentage, overlap is calculated as a required minimum fraction of overlap between ranges.</p>
+<p>If there are more than two <a class="reference internal" href="../data/compound.html#compound-set"><em>sets</em></a> specified as input, the second and subsequent <a class="reference internal" href="../data/compound.html#compound-set"><em>sets</em></a> are first merged into an intermediate set. The first set is then filtered against this intermediate set using the specified overlap threshold.</p>
+<p>Because the output set is made up of elements from the first set, those <a class="reference internal" href="../data/compound.html#compound-element"><em>elements</em></a> should preserve all additional attributes (<a class="reference internal" href="../data/base.html#base-name"><em>Name</em></a>, <a class="reference internal" href="../data/base.html#base-score"><em>Score</em></a>, <em>etc.</em>) where applicable.</p>
+<p>The ordering of sets in this operation matters; <em>e.g.</em>, compare these two inclusion operations, where the two sets are in different order.</p>
+<p>In the first example, we filter set A against set B:</p>
+<a class="reference internal image-reference" href="../_images/ops_set_inclusive_filter_ab.png"><img alt="../_images/ops_set_inclusive_filter_ab.png" src="../_images/ops_set_inclusive_filter_ab.png" style="width: 99%;" /></a>
+<p>In the second example, we filter set B against set A:</p>
+<a class="reference internal image-reference" href="../_images/ops_set_inclusive_filter_ba.png"><img alt="../_images/ops_set_inclusive_filter_ba.png" src="../_images/ops_set_inclusive_filter_ba.png" style="width: 99%;" /></a>
+</div>
 </div>
 
 
@@ -112,6 +132,7 @@
 <li><a class="reference internal" href="#">Set</a><ul>
 <li><a class="reference internal" href="#union">Union</a></li>
 <li><a class="reference internal" href="#merge">Merge</a></li>
+<li><a class="reference internal" href="#inclusive-filter">Inclusive filter</a></li>
 </ul>
 </li>
 </ul>
