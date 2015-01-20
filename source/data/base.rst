@@ -3,6 +3,8 @@
 Base types
 ==========
 
+This page defines basic ("primitive") data types in use for the *targetscope* application.
+
 .. _base_score:
 
 =====
