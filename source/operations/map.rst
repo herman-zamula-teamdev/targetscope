@@ -105,8 +105,8 @@ This operation summarizes attributes of an :ref:`Element <compound_element>` :re
 |                |                   | <base_score>` values in the input set |                                 |
 |                |                   | divided by their mean                 |                                 |
 +----------------+-------------------+---------------------------------------+---------------------------------+
-| *k*th          | *i*               | Report the value at the *k*th         | :ref:`Score <base_score>`       |
-|                |                   | fraction of                           |                                 |
+| *k* th         | *i*               | Report the value at the *k* th        | :ref:`Score <base_score>`       |
+|                |                   | fraction of :ref:`Score <base_score>` |                                 |
 |                |                   | values, where *i* = 0.5 reports the   |                                 |
 |                |                   | median (0 < i <= 1)                   |                                 |
 +----------------+-------------------+---------------------------------------+---------------------------------+
