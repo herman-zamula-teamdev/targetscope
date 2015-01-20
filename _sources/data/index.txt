@@ -3,5 +3,5 @@ Data
 
 .. toctree::
 
-   data/base.rst
-   data/compound.rst
+   base.rst
+   compound.rst
