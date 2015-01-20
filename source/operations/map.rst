@@ -122,7 +122,7 @@ This operation summarizes attributes of an :ref:`Element <compound_element>` :re
 |                |                   | (ties go to random element)           |                                 |
 +----------------+-------------------+---------------------------------------+---------------------------------+
 | mean           | NA                | Report arithmetic mean of :ref:`Score | :ref:`Score <base_score>`       |
-|                |                   | values in input set                   |                                 |
+|                |                   | <base_score>` values in input set     |                                 |
 +----------------+-------------------+---------------------------------------+---------------------------------+
 | median         | NA                | Report median :ref:`Score             | :ref:`Score <base_score>`       |
 |                |                   | <base_score>` value from input set    |                                 |
