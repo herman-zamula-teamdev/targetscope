@@ -18,6 +18,7 @@ An initial pass at a specification for *targetscope* entities and predicates is 
    :maxdepth: 2
 
    glossary.rst
+   data
 
 
 Indices and tables
