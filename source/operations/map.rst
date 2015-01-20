@@ -55,7 +55,7 @@ Element set onto interaction set
 **Output**
       :ref:`Interaction <compound_interaction>` :ref:`Set <compound_set>`
 
-This is identical to mapping an :ref:`Element <compound_element>` :ref:`Set <compound_set> against another element set, with the same default overlap criteria, except that we specify which of the two components of the :ref:`Interaction <compound_interaction>` we would like to treat as the reference set to map our input element set against.
+This is identical to mapping an :ref:`Element <compound_element>` :ref:`Set <compound_set>` against another element set, with the same default overlap criteria, except that we specify which of the two components of the :ref:`Interaction <compound_interaction>` we would like to treat as the reference set to map our input element set against.
 
 For instance, let's say we want a list of :ref:`Interactions <compound_interaction>`, whose promoter components overlap with some genes of interest.
 
