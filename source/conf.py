@@ -54,7 +54,7 @@ copyright = u'2015, Alex Reynolds'
 # built documents.
 #
 # The short X.Y version.
-version = 'v1.0.1'
+version = 'v1.0'
 # The full version, including alpha/beta/rc tags.
 release = 'v1.0.1'
 
@@ -124,7 +124,7 @@ html_theme = 'better'
 
 # The name of an image file (relative to this directory) to place at the top
 # of the sidebar.
-#html_logo = None
+html_logo = "../logo.png"
 
 # The name of an image file (within the static path) to use as favicon of the
 # docs.  This file should be a Windows icon file (.ico) being 16x16 or 32x32
