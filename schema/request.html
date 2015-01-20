@@ -66,14 +66,14 @@
   <div class="section" id="request">
 <span id="schema-request"></span><h1>Request<a class="headerlink" href="#request" title="Permalink to this headline">¶</a></h1>
 <p>We use the <a class="reference external" href="http://json-schema.org/">JSON Schema v0.4</a> specification to write an initial schema document (<code class="docutils literal"><span class="pre">target_gene_schema.json</span></code>) that describes a <a class="reference external" href="http://en.wikipedia.org/wiki/Directed_acyclic_graph">directed acyclic object graph</a> of inputs, outputs, and a vocabulary of intermediate operations (<a class="reference internal" href="../operations/index.html#ops"><em>predicates</em></a> and <a class="reference internal" href="../data/index.html#data"><em>options</em></a>) used for accessing functionality in the <em>targetscope</em> application.</p>
-<p>The schema aims to be flexible enough to be used with the full application, as well as to be usable now with a web service to validate incoming sample requests.</p>
+<p>The schema aims to be flexible enough to be extended for use with the full application, as well as to be usable now with a web service to validate incoming sample requests.</p>
 <div class="section" id="json-schema">
 <h2>JSON Schema<a class="headerlink" href="#json-schema" title="Permalink to this headline">¶</a></h2>
-<p>Refer to the <code class="docutils literal"><span class="pre">target_gene_schema.json</span></code> file for the current <em>targetscope</em> schema.</p>
+<p>Refer to the <code class="docutils literal"><span class="pre">target_gene_schema.json</span></code> file (<a class="reference external" href="https://github.com/alexpreynolds/targetscope/blob/master/target_gene_schema.json">GitHub link</a>) for the current <em>targetscope</em> schema.</p>
 </div>
 <div class="section" id="validation">
 <h2>Validation<a class="headerlink" href="#validation" title="Permalink to this headline">¶</a></h2>
-<p>We include a test web request that follows the schema (<code class="docutils literal"><span class="pre">target_gene_test_request.json</span></code>) which can be validated with the included Python script (<code class="docutils literal"><span class="pre">target_gene_request_validation.py</span></code>) with the installation of the <a class="reference external" href="http://json-schema.org">jsonschema</a> Python package.</p>
+<p>We include a test web request that follows the schema (<code class="docutils literal"><span class="pre">target_gene_test_request.json</span></code>, <a class="reference external" href="https://github.com/alexpreynolds/targetscope/blob/master/target_gene_test_request.json">GitHub link</a>) which can be validated with the included Python script (<code class="docutils literal"><span class="pre">target_gene_request_validation.py</span></code>, <a class="reference external" href="https://github.com/alexpreynolds/targetscope/blob/master/target_gene_request_validation.py">GitHub link</a>) with the installation of the <a class="reference external" href="http://json-schema.org">jsonschema</a> Python package.</p>
 <div class="topic">
 <p class="topic-title first">Example</p>
 <div class="highlight-python"><div class="highlight"><pre>$ python

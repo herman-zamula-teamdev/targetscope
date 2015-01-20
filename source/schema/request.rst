@@ -5,19 +5,19 @@ Request
 
 We use the `JSON Schema v0.4 <http://json-schema.org/>`_ specification to write an initial schema document (``target_gene_schema.json``) that describes a `directed acyclic object graph <http://en.wikipedia.org/wiki/Directed_acyclic_graph>`_ of inputs, outputs, and a vocabulary of intermediate operations (:ref:`predicates <ops>` and :ref:`options <data>`) used for accessing functionality in the *targetscope* application.
 
-The schema aims to be flexible enough to be used with the full application, as well as to be usable now with a web service to validate incoming sample requests.
+The schema aims to be flexible enough to be extended for use with the full application, as well as to be usable now with a web service to validate incoming sample requests.
 
 ===========
 JSON Schema
 ===========
 
-Refer to the ``target_gene_schema.json`` file for the current *targetscope* schema.
+Refer to the ``target_gene_schema.json`` file (`GitHub link <https://github.com/alexpreynolds/targetscope/blob/master/target_gene_schema.json>`_) for the current *targetscope* schema.
 
 ==========
 Validation
 ==========
 
-We include a test web request that follows the schema (``target_gene_test_request.json``) which can be validated with the included Python script (``target_gene_request_validation.py``) with the installation of the `jsonschema <http://json-schema.org>`_ Python package.
+We include a test web request that follows the schema (``target_gene_test_request.json``, `GitHub link <https://github.com/alexpreynolds/targetscope/blob/master/target_gene_test_request.json>`_) which can be validated with the included Python script (``target_gene_request_validation.py``, `GitHub link <https://github.com/alexpreynolds/targetscope/blob/master/target_gene_request_validation.py>`_) with the installation of the `jsonschema <http://json-schema.org>`_ Python package.
 
 .. topic:: Example
 
