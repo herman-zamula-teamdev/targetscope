@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Glossary &mdash; Targetscope API</title>
+    <title>1. Glossary &mdash; Targetscope API</title>
     
     <link rel="stylesheet" href="_static/better.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
@@ -25,6 +25,7 @@
     <script type="text/javascript" src="_static/doctools.js"></script>
     <script type="text/javascript" src="https://c328740.ssl.cf1.rackcdn.com/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <link rel="top" title="Targetscope API" href="index.html" />
+    <link rel="next" title="2. Base types" href="data/base.html" />
     <link rel="prev" title="About" href="index.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <link rel="stylesheet" href="_static/custom_style.css" type="text/css" />
@@ -39,6 +40,10 @@
         <li>
           &larr;
           <a href="index.html" title="Previous document">About</a>
+        </li>
+        <li>
+          <a href="data/base.html" title="Next document">2. Base types</a>
+          &rarr;
         </li>
     </ul>
   </nav>
@@ -55,9 +60,9 @@
           <div class="body" role="main">
             
   <div class="section" id="glossary">
-<span id="id1"></span><h1>Glossary<a class="headerlink" href="#glossary" title="Permalink to this headline">¶</a></h1>
+<span id="id1"></span><h1>1. Glossary<a class="headerlink" href="#glossary" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="bed">
-<h2>BED<a class="headerlink" href="#bed" title="Permalink to this headline">¶</a></h2>
+<h2>1.1. BED<a class="headerlink" href="#bed" title="Permalink to this headline">¶</a></h2>
 <p>BED is short for <em>Browser Extensible Display</em>. It is a tab-delimited text format that can span three or more columns, used to represent zero-indexed, half-open elements or areas of interest:</p>
 <table border="1" class="docutils">
 <colgroup>
@@ -125,39 +130,39 @@ chrX    100       400  bing     2       +
 <p>Where data are not available for the fourth through sixth columns, it is conventional to use a period as a placeholder.</p>
 </div>
 <div class="section" id="id2">
-<h2>BEDOPS<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<h2>1.2. BEDOPS<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
 <p>Toolkit for management of and applying set and statistical operations on BED files (see: <a class="reference external" href="https://github.com/bedops/bedops">https://github.com/bedops/bedops</a>).</p>
 </div>
 <div class="section" id="dhs-peak">
-<h2>DHS peak<a class="headerlink" href="#dhs-peak" title="Permalink to this headline">¶</a></h2>
+<h2>1.3. DHS peak<a class="headerlink" href="#dhs-peak" title="Permalink to this headline">¶</a></h2>
 <p>Genomic range that (for this purpose) is the source of a long-range interaction with a target gene. Contains (or overlaps) transcription factors of interest.</p>
 </div>
 <div class="section" id="gene">
-<h2>Gene<a class="headerlink" href="#gene" title="Permalink to this headline">¶</a></h2>
+<h2>1.4. Gene<a class="headerlink" href="#gene" title="Permalink to this headline">¶</a></h2>
 <p>A set of genomic ranges that has some function for an organism and is copied from one generation to the next.</p>
 </div>
 <div class="section" id="gene-annotation">
-<h2>Gene annotation<a class="headerlink" href="#gene-annotation" title="Permalink to this headline">¶</a></h2>
+<h2>1.5. Gene annotation<a class="headerlink" href="#gene-annotation" title="Permalink to this headline">¶</a></h2>
 <p>A set of genomic ranges that usually specifies the coordinates of a gene&#8217;s components (<em>e.g.</em>, in eukaryotes like humans, exons and introns).</p>
 </div>
 <div class="section" id="gene-promoter">
-<h2>Gene promoter<a class="headerlink" href="#gene-promoter" title="Permalink to this headline">¶</a></h2>
+<h2>1.6. Gene promoter<a class="headerlink" href="#gene-promoter" title="Permalink to this headline">¶</a></h2>
 <p>A genomic range that contains a transcription start site element.</p>
 </div>
 <div class="section" id="genomic-range">
-<h2>Genomic range<a class="headerlink" href="#genomic-range" title="Permalink to this headline">¶</a></h2>
+<h2>1.7. Genomic range<a class="headerlink" href="#genomic-range" title="Permalink to this headline">¶</a></h2>
 <p>Minimally, a chromosome name and a start/stop coordinate pair. Analogous to a BED3 element.</p>
 </div>
 <div class="section" id="long-range-interaction">
-<h2>Long-range interaction<a class="headerlink" href="#long-range-interaction" title="Permalink to this headline">¶</a></h2>
+<h2>1.8. Long-range interaction<a class="headerlink" href="#long-range-interaction" title="Permalink to this headline">¶</a></h2>
 <p>A pair of genomic ranges that connect a target gene&#8217;s promoter with an overlapping DHS.</p>
 </div>
 <div class="section" id="target-gene">
-<h2>Target gene<a class="headerlink" href="#target-gene" title="Permalink to this headline">¶</a></h2>
+<h2>1.9. Target gene<a class="headerlink" href="#target-gene" title="Permalink to this headline">¶</a></h2>
 <p>A set of genomic ranges (representing the gene&#8217;s promoters) that is the starting point for analyses. Filters or predicates are applied on this initial input set, which expand the regions covered over the genome to search for TFs.</p>
 </div>
 <div class="section" id="transcription-factor">
-<h2>Transcription factor<a class="headerlink" href="#transcription-factor" title="Permalink to this headline">¶</a></h2>
+<h2>1.10. Transcription factor<a class="headerlink" href="#transcription-factor" title="Permalink to this headline">¶</a></h2>
 <p>A transcription factor (&#8220;TF&#8221;) is a protein that binds to DNA and controls how other proteins get made (or, indirectly, how cell signaling occurs). For a given transcription factor&#8217;s name, we provide a set of locations on the genome (one or more genomic ranges) where that transcription factor binds. Obtaining a set of transcription factor binding sites is the end goal of the target viewer component of Targetscope.</p>
 </div>
 </div>
@@ -173,17 +178,17 @@ chrX    100       400  bing     2       +
             </a></p>
   <h3><a href="index.html">Table Of Contents</a></h3>
   <ul>
-<li><a class="reference internal" href="#">Glossary</a><ul>
-<li><a class="reference internal" href="#bed">BED</a></li>
-<li><a class="reference internal" href="#id2">BEDOPS</a></li>
-<li><a class="reference internal" href="#dhs-peak">DHS peak</a></li>
-<li><a class="reference internal" href="#gene">Gene</a></li>
-<li><a class="reference internal" href="#gene-annotation">Gene annotation</a></li>
-<li><a class="reference internal" href="#gene-promoter">Gene promoter</a></li>
-<li><a class="reference internal" href="#genomic-range">Genomic range</a></li>
-<li><a class="reference internal" href="#long-range-interaction">Long-range interaction</a></li>
-<li><a class="reference internal" href="#target-gene">Target gene</a></li>
-<li><a class="reference internal" href="#transcription-factor">Transcription factor</a></li>
+<li><a class="reference internal" href="#">1. Glossary</a><ul>
+<li><a class="reference internal" href="#bed">1.1. BED</a></li>
+<li><a class="reference internal" href="#id2">1.2. BEDOPS</a></li>
+<li><a class="reference internal" href="#dhs-peak">1.3. DHS peak</a></li>
+<li><a class="reference internal" href="#gene">1.4. Gene</a></li>
+<li><a class="reference internal" href="#gene-annotation">1.5. Gene annotation</a></li>
+<li><a class="reference internal" href="#gene-promoter">1.6. Gene promoter</a></li>
+<li><a class="reference internal" href="#genomic-range">1.7. Genomic range</a></li>
+<li><a class="reference internal" href="#long-range-interaction">1.8. Long-range interaction</a></li>
+<li><a class="reference internal" href="#target-gene">1.9. Target gene</a></li>
+<li><a class="reference internal" href="#transcription-factor">1.10. Transcription factor</a></li>
 </ul>
 </li>
 </ul>
@@ -191,6 +196,9 @@ chrX    100       400  bing     2       +
   <h4>Previous topic</h4>
   <p class="topless"><a href="index.html"
                         title="previous chapter">About</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="data/base.html"
+                        title="next chapter">2. Base types</a></p>
 <div class="sourcelink">
   <a href="_sources/glossary.txt" rel="nofollow">
     Show page source
@@ -220,6 +228,10 @@ chrX    100       400  bing     2       +
         <li>
           &larr;
           <a href="index.html" title="Previous document">About</a>
+        </li>
+        <li>
+          <a href="data/base.html" title="Next document">2. Base types</a>
+          &rarr;
         </li>
     </ul>
   </nav>
