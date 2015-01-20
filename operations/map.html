@@ -81,7 +81,8 @@
 </pre></div>
 </div>
 <p>This command associates elements in the file <code class="docutils literal"><span class="pre">map.bed</span></code> with each element in <code class="docutils literal"><span class="pre">ref.bed</span></code>, where each map element overlaps a reference element by one or more bases. The <code class="docutils literal"><span class="pre">--echo-map</span></code> operation reports all map elements that associate with a reference element.</p>
-<p>The result of this most basic mapping example is a set of reference elements, where each reference element has another element set associated with it.</p>
+<p>The result of this most basic mapping example is a set of reference elements, where each reference element has another element set associated with it:</p>
+<a class="reference internal image-reference" href="../_images/ops_map_element_onto_element.png"><img alt="../_images/ops_map_element_onto_element.png" src="../_images/ops_map_element_onto_element.png" style="width: 99%;" /></a>
 <p>Some reference elements may associate with map sets with elements. Other reference elements may associate with an empty set, if the overlap criteria means that there are no overlapping (no mappable) elements.</p>
 <p>In this example, we report the reference set elements along with all mapped elements. However, we may use operators to only report mapped elements:</p>
 <div class="highlight-python"><div class="highlight"><pre>$ bedmap --echo-map --bp-ovr 1 ref.bed map.bed | sort-bed - &gt; mapped_map.bed
@@ -92,6 +93,64 @@
 <p class="first admonition-title">Note</p>
 <p class="last">The default overlap criteria that is used by <code class="docutils literal"><span class="pre">bedmap</span></code> is one or more bases.</p>
 </div>
+</div>
+<div class="section" id="element-set-onto-interaction-set">
+<span id="ops-map-element-onto-interaction"></span><h2>Element set onto interaction set<a class="headerlink" href="#element-set-onto-interaction-set" title="Permalink to this headline">¶</a></h2>
+<dl class="docutils">
+<dt><strong>Input</strong></dt>
+<dd>1 <a class="reference internal" href="../data/compound.html#compound-element"><em>Element</em></a> <a class="reference internal" href="../data/compound.html#compound-set"><em>Set</em></a>; 1 <a class="reference internal" href="../data/compound.html#compound-interaction"><em>Interaction</em></a> <a class="reference internal" href="../data/compound.html#compound-set"><em>Set</em></a>; index of desired interaction component to act as reference set; overlap criteria (integer/bases or float/percentage); report operator(s)</dd>
+<dt><strong>Output</strong></dt>
+<dd><a class="reference internal" href="../data/compound.html#compound-interaction"><em>Interaction</em></a> <a class="reference internal" href="../data/compound.html#compound-set"><em>Set</em></a></dd>
+</dl>
+<p>This is identical to mapping an <a class="reference internal" href="../data/compound.html#compound-element"><em>Element</em></a> <em class="xref std std-ref">Set</em> we would like to treat as the reference set to map our input element set against.</p>
+<p>For instance, let&#8217;s say we want a list of <a class="reference internal" href="../data/compound.html#compound-interaction"><em>Interactions</em></a>, whose promoter components overlap with some genes of interest.</p>
+<p>We start with an <a class="reference internal" href="../data/compound.html#compound-interaction"><em>Interaction</em></a> <a class="reference internal" href="../data/compound.html#compound-set"><em>Set</em></a> that pairs promoter components with DHS peak components. For this example, the index of the promoter component in this set is &#8220;0&#8221; and the index of the DHS peak component is &#8220;1&#8221;.</p>
+<p>We also start with an element set of transcription start sites (TSSs) for target genes. These contain genomic <a class="reference internal" href="../data/base.html#base-range"><em>Ranges</em></a> and gene <a class="reference internal" href="../data/base.html#base-name"><em>Names</em></a>.</p>
+<p>For this map operation, we specify an index of <code class="docutils literal"><span class="pre">0</span></code> to retrieve the set of interactions whose promoter components&#8217; ranges are overlapped by the TSS ranges.</p>
+</div>
+<div class="section" id="summary-report">
+<h2>Summary report<a class="headerlink" href="#summary-report" title="Permalink to this headline">¶</a></h2>
+<dl class="docutils">
+<dt><strong>Input</strong></dt>
+<dd>1 <a class="reference internal" href="../data/compound.html#compound-element"><em>Element</em></a> <a class="reference internal" href="../data/compound.html#compound-set"><em>Set</em></a>; summary operator</dd>
+<dt><strong>Output</strong></dt>
+<dd><a class="reference internal" href="../data/compound.html#compound-set"><em>Set</em></a>, <a class="reference internal" href="../data/compound.html#compound-array"><em>Array</em></a> or <a class="reference internal" href="../data/base.html#base"><em>base type</em></a></dd>
+<dt><strong>CLI example</strong></dt>
+<dd><code class="docutils literal"><span class="pre">bedmap</span> <span class="pre">--mean</span> <span class="pre">--bp-ovr</span> <span class="pre">1</span> <span class="pre">ref.bed</span> <span class="pre">map.bed</span> <span class="pre">&gt;</span> <span class="pre">mean_map_signal_over_refs.bed</span></code></dd>
+</dl>
+<p>This operation summarizes attributes of an <a class="reference internal" href="../data/compound.html#compound-element"><em>Element</em></a> <a class="reference internal" href="../data/compound.html#compound-set"><em>Set</em></a>. This summary could be the result of a numerical calculation on <a class="reference internal" href="../data/base.html#base-score"><em>Score</em></a> data, or a listing of <a class="reference internal" href="../data/base.html#base-name"><em>Name</em></a> values.</p>
+<p><em>Examples:</em></p>
+<ul class="simple">
+<li>For all the mappable elements that associate with a reference element, we may want a <a class="reference internal" href="../data/compound.html#compound-set"><em>Set</em></a> of names of those mapped elements, leaving out duplicates.</li>
+<li>For all the mappable elements that associate with a reference element, we want the arithmetic mean and variance of the signal or a <a class="reference internal" href="../data/base.html#base-score"><em>Score</em></a> value derived from mapped elements.</li>
+</ul>
+<table border="1" class="docutils">
+<colgroup>
+<col width="15%" />
+<col width="18%" />
+<col width="36%" />
+<col width="31%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Operation</th>
+<th class="head">Argument</th>
+<th class="head">Description</th>
+<th class="head">Output</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>bases</td>
+<td><ul class="first last simple">
+<li></li>
+</ul>
+</td>
+<td>Report the total number of bases in
+the :ref:<a href="#id1"><span class="problematic" id="id2">`</span></a>Ranges &lt;base_range&gt; in the
+input set</td>
+<td><a class="reference internal" href="../data/base.html#base-score"><em>Score</em></a></td>
+</tr>
+</tbody>
+</table>
 </div>
 </div>
 
@@ -108,6 +167,8 @@
   <ul>
 <li><a class="reference internal" href="#">Map</a><ul>
 <li><a class="reference internal" href="#element-set-onto-element-set">Element set onto element set</a></li>
+<li><a class="reference internal" href="#element-set-onto-interaction-set">Element set onto interaction set</a></li>
+<li><a class="reference internal" href="#summary-report">Summary report</a></li>
 </ul>
 </li>
 </ul>
