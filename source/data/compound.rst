@@ -3,6 +3,8 @@
 Compound types
 ==============
 
+.. _compound_element:
+
 =======
 Element
 =======

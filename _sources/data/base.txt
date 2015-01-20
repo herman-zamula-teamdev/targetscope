@@ -7,19 +7,11 @@ Base types
 Score
 =====
 
-.. csv-table:: Data
-   :header: "Type", "Description"
-   :widths: 20, 40
-
-   "Integer", "-"
-   "Float", "-"
-   "Scientific notation", "-"
-
 +--------------------+-------------------------------------------------------+
 | **Data**           | Integer, float, scientific notation                   |
 +--------------------+-------------------------------------------------------+
 
-*Score* adds an integer or decimal numerical attribute to *Element*, *Interaction* or *Set* compound types. 
+*Score* adds an integer or decimal numerical attribute to :ref:`*Element* <compound_element>`, *Interaction* or *Set* compound types. 
 
 ====
 Name
