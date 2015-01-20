@@ -3,4 +3,4 @@
 Target gene-to-TFBS subproblem
 ==============================
 
-.. include:: https://raw.githubusercontent.com/alexpreynolds/targetscope/master/target_gene_test_request.json
+.. include:: <https://raw.githubusercontent.com/alexpreynolds/targetscope/master/target_gene_test_request.json>
