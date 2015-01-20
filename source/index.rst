@@ -17,8 +17,9 @@ An initial pass at a specification for *targetscope* entities and predicates is 
 .. toctree::
    :maxdepth: 3
 
-   glossary.rst
    data/index.rst
+   operations/index.rst
+   glossary.rst
 
 Indices and tables
 ==================

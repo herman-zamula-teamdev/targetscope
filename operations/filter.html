@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Data &mdash; Targetscope API</title>
+    <title>Filter operations &mdash; Targetscope API</title>
     
     <link rel="stylesheet" href="../_static/better.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
@@ -25,8 +25,9 @@
     <script type="text/javascript" src="../_static/doctools.js"></script>
     <script type="text/javascript" src="https://c328740.ssl.cf1.rackcdn.com/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <link rel="top" title="Targetscope API" href="../index.html" />
-    <link rel="next" title="Base types" href="base.html" />
-    <link rel="prev" title="About" href="../index.html" />
+    <link rel="up" title="Operations" href="index.html" />
+    <link rel="next" title="Set operations" href="set.html" />
+    <link rel="prev" title="Range operations" href="range.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <link rel="stylesheet" href="../_static/custom_style.css" type="text/css" />
   </head>
@@ -39,17 +40,20 @@
     <ul>
         <li>
           &larr;
-          <a href="../index.html" title="Previous document">About</a>
+          <a href="range.html" title="Previous document">Range operations</a>
         </li>
         <li>
-          <a href="base.html" title="Next document">Base types</a>
+          <a href="set.html" title="Next document">Set operations</a>
           &rarr;
         </li>
     </ul>
   </nav>
   <nav id="breadcrumbs">
     <ul>
-      <li><a href="../index.html">Home</a></li> 
+      <li><a href="../index.html">Home</a></li>
+      <li>
+        <a href="index.html">Operations</a>
+      </li> 
     </ul>
   </nav>
   </div>  
@@ -59,26 +63,20 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <div class="section" id="data">
-<h1>Data<a class="headerlink" href="#data" title="Permalink to this headline">¶</a></h1>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="base.html">Base types</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="base.html#score">Score</a></li>
-<li class="toctree-l2"><a class="reference internal" href="base.html#name">Name</a></li>
-<li class="toctree-l2"><a class="reference internal" href="base.html#strand">Strand</a></li>
-<li class="toctree-l2"><a class="reference internal" href="base.html#range">Range</a></li>
-<li class="toctree-l2"><a class="reference internal" href="base.html#metadata">Metadata</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="compound.html">Compound types</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="compound.html#element">Element</a></li>
-<li class="toctree-l2"><a class="reference internal" href="compound.html#interaction">Interaction</a></li>
-<li class="toctree-l2"><a class="reference internal" href="compound.html#set">Set</a></li>
-<li class="toctree-l2"><a class="reference internal" href="compound.html#array">Array</a></li>
-</ul>
-</li>
-</ul>
+  <div class="section" id="filter-operations">
+<span id="op-filter"></span><h1>Filter operations<a class="headerlink" href="#filter-operations" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="score">
+<span id="op-filter-score"></span><h2>Score<a class="headerlink" href="#score" title="Permalink to this headline">¶</a></h2>
+<dl class="docutils">
+<dt>Input :</dt>
+<dd>1 <a class="reference internal" href="../data/base.html#base-score"><em>Score</em></a>; 1 <a class="reference internal" href="../data/compound.html#compound-element"><em>Element</em></a> <a class="reference internal" href="../data/compound.html#compound-set"><em>Set</em></a>; relational operator; 1 Boolean value</dd>
+<dt>Output :</dt>
+<dd><a class="reference internal" href="../data/compound.html#compound-element"><em>Element</em></a> <a class="reference internal" href="../data/compound.html#compound-set"><em>Set</em></a></dd>
+<dt>CLI example :</dt>
+<dd><code class="docutils literal"><span class="pre">awk</span> <span class="pre">‘($5</span> <span class="pre">&gt;</span> <span class="pre">threshold)’</span> <span class="pre">foo.bed</span> <span class="pre">&gt;</span> <span class="pre">foo_thresholded.bed</span></code></dd>
+</dl>
+<p>This operation filters <a class="reference internal" href="../data/compound.html#compound-element"><em>Elements</em></a> with <a class="reference internal" href="../data/base.html#base-score"><em>Score</em></a> components by the specified numerical value and relational operator. A false Boolean value allows specifying the inverse of the operation.</p>
+<p>After filtering, the output set should either be a proper subset of the input, the empty set, or the input itself.</p>
 </div>
 </div>
 
@@ -91,14 +89,22 @@
             <p class="logo"><a href="../index.html">
               <img class="logo" src="../_static/logo.png" alt="Logo"/>
             </a></p>
+  <h3><a href="../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Filter operations</a><ul>
+<li><a class="reference internal" href="#score">Score</a></li>
+</ul>
+</li>
+</ul>
+
   <h4>Previous topic</h4>
-  <p class="topless"><a href="../index.html"
-                        title="previous chapter">About</a></p>
+  <p class="topless"><a href="range.html"
+                        title="previous chapter">Range operations</a></p>
   <h4>Next topic</h4>
-  <p class="topless"><a href="base.html"
-                        title="next chapter">Base types</a></p>
+  <p class="topless"><a href="set.html"
+                        title="next chapter">Set operations</a></p>
 <div class="sourcelink">
-  <a href="../_sources/data/index.txt" rel="nofollow">
+  <a href="../_sources/operations/filter.txt" rel="nofollow">
     Show page source
   </a>
 </div>
@@ -125,17 +131,20 @@
     <ul>
         <li>
           &larr;
-          <a href="../index.html" title="Previous document">About</a>
+          <a href="range.html" title="Previous document">Range operations</a>
         </li>
         <li>
-          <a href="base.html" title="Next document">Base types</a>
+          <a href="set.html" title="Next document">Set operations</a>
           &rarr;
         </li>
     </ul>
   </nav>
   <nav id="breadcrumbs">
     <ul>
-      <li><a href="../index.html">Home</a></li> 
+      <li><a href="../index.html">Home</a></li>
+      <li>
+        <a href="index.html">Operations</a>
+      </li> 
     </ul>
   </nav>
   </div>
