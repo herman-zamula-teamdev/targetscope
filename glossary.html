@@ -113,8 +113,8 @@
 </table>
 <p>A BED record must minimally have three columns that define the genomic range of that record. Variants of BED with more than six columns exist. Records with more than six columns generally have display metadata associated with them, or represent specialized annotations.</p>
 <p>BED records could be provided in any order. However, our analyses make use of <a class="reference external" href="https://github.com/bedops/bedops">BEDOPS</a> tools, which require a lexicographical sorting on the chromosome column, followed by numerical sort on the start and stop indices. BEDOPS includes a command-line tool called <code class="docutils literal"><span class="pre">sort-bed</span></code> to apply this ordering on BED records.</p>
-<div class="admonition-example admonition">
-<p class="first admonition-title">Example</p>
+<div class="admonition-note admonition">
+<p class="first admonition-title">Note</p>
 <p><em>Example of sorted BED6 data:</em></p>
 <div class="last highlight-python"><div class="highlight"><pre>chr1    1000      2000 foo      0       +
 chr17   100       200  bar      1       -
