@@ -1,4 +1,4 @@
-.. _op_interaction:
+.. _ops_interaction:
 
 Interaction operations
 ======================

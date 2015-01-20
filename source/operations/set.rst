@@ -1,4 +1,4 @@
-.. _op_set:
+.. _ops_set:
 
 Set operations
 ==============

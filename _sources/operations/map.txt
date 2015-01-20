@@ -1,4 +1,4 @@
-.. _op_map:
+.. _ops_map:
 
 Map operations
 ==============

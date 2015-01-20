@@ -1,9 +1,9 @@
-.. _op_range:
+.. _ops_range:
 
 Range operations
 ================
 
-.. _op_range_adjust:
+.. _ops_range_adjust:
 
 ======
 Adjust

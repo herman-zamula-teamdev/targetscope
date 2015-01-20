@@ -1,9 +1,9 @@
-.. _op_filter:
+.. _ops_filter:
 
 Filter operations
 =================
 
-.. _op_filter_score:
+.. _ops_filter_score:
 
 =====
 Score
