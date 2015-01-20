@@ -41,3 +41,57 @@ BED records could be provided in any order. However, our analyses make use of `B
 
 Where data are not available for the fourth through sixth columns, it is conventional to use a period as a placeholder.
 
+======
+BEDOPS
+======
+
+Toolkit for management of and applying set and statistical operations on BED files (see: `https://github.com/bedops/bedops <https://github.com/bedops/bedops>`_).
+
+========
+DHS peak
+========
+
+Genomic range that (for this purpose) is the source of a long-range interaction with a target gene. Contains (or overlaps) transcription factors of interest.
+
+====
+Gene
+====
+
+A set of genomic ranges that has some function for an organism and is copied from one generation to the next.
+
+===============
+Gene annotation
+===============
+
+A set of genomic ranges that usually specifies the coordinates of a gene's components (*e.g.*, in eukaryotes like humans, exons and introns). 
+
+=============
+Gene promoter
+=============
+
+A genomic range that contains a transcription start site element.
+
+=============
+Genomic range
+=============
+
+Minimally, a chromosome name and a start/stop coordinate pair. Analogous to a BED3 element.
+
+======================
+Long-range interaction
+======================
+
+A pair of genomic ranges that connect a target gene's promoter with an overlapping DHS.
+
+===========
+Target gene
+===========
+
+A set of genomic ranges (representing the gene's promoters) that is the starting point for analyses. Filters or predicates are applied on this initial input set, which expand the regions covered over the genome to search for TFs.
+
+====================
+Transcription factor
+====================
+
+A transcription factor ("TF") is a protein that binds to DNA and controls how other proteins get made (or, indirectly, how cell signaling occurs). For a given transcription factor's name, we provide a set of locations on the genome (one or more genomic ranges) where that transcription factor binds. Obtaining a set of transcription factor binding sites is the end goal of the target viewer component of Targetscope.
+
