@@ -7,7 +7,7 @@ We provide a specification for *targetscope* entities and predicates, which help
 
 :ref:`Predicates <ops>` are modeled on BEDOPS set and map operations described in the documentation for ``bedops`` and ``bedmap`` binaries (see the `BEDOPS documentation <http://bedops.readthedocs.org/en/latest/>`_ for more detail), while :ref:`data entities <data>` are derived from columnar data found in BED files, or are composed into :ref:`compound <compound>` elements by using :ref:`base <base>` types as building blocks.
 
-The :ref:`TFBS example <example_tfbs>` describes a complete pipeline of predicates and data entities used to find the binding sites of a transcription factor. This example describes (in broad terms) how the components of this specification document can be used to construct and perform tasks in the *targetscope* application.
+The :ref:`TFBS example <example_tfbs>` describes a complete pipeline of predicates and data entities used to find the binding sites of a transcription factor. This example describes one way (in broad terms) how the components of this specification document could be used to construct and perform tasks in the *targetscope* application.
 
 We use the `JSON Schema v0.4 <http://json-schema.org/>`_ specification to write an initial schema document (``target_gene_schema.json``) that describes a directed acyclic object graph of inputs, outputs, and a vocabulary of intermediate operations ("predicates" and options) used for a subset of functionality in the *targetscope* application.
 
