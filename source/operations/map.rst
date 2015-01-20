@@ -65,7 +65,7 @@ We also start with an element set of transcription start sites (TSSs) for target
 
 For this map operation, we specify an index of ``0`` to retrieve the set of interactions whose promoter components' ranges are overlapped by the TSS ranges.
 
-.. _ops_map_summary
+.. _ops_map_summary:
 
 ==============
 Summary report
@@ -86,10 +86,10 @@ This operation summarizes attributes of an :ref:`Element <compound_element>` :re
 
 * For all the mappable elements that associate with a reference element, we want the arithmetic mean and variance of the signal or a :ref:`Score <base_score>` value derived from mapped elements.
 
-+----------------+-------------------+--------------------------------------+---------------------------------+
-| Operation      |  Argument         | Description                          | Output                          |
-+================+===================+======================================+=================================+
-| bases          | -                 | Report the total number of bases in  | :ref:`Score <base_score>`       |
-|                |                   | the :ref:`Ranges <base_range> in the |                                 |
-|                |                   | input set                            |                                 |
-+----------------+-------------------+--------------------------------------+---------------------------------+
++----------------+-------------------+---------------------------------------+---------------------------------+
+| Operation      |  Argument         | Description                           | Output                          |
++================+===================+=======================================+=================================+
+| bases          | -                 | Report the total number of bases in   | :ref:`Score <base_score>`       |
+|                |                   | the :ref:`Ranges <base_range>` in the |                                 |
+|                |                   | input set                             |                                 |
++----------------+-------------------+---------------------------------------+---------------------------------+
