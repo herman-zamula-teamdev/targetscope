@@ -118,8 +118,8 @@ This operation summarizes attributes of an :ref:`Element <compound_element>` :re
 |                |                   | <base_score>` in input set            |                                 |
 +----------------+-------------------+---------------------------------------+---------------------------------+
 | max-element    | NA                | Report highest-scoring :ref:`Element  | :ref:`Set <compound_set>`       |
-|                |                   | in input set (ties go to random       |                                 |
-|                |                   | element)                              |                                 |
+|                |                   | <compound_element>` in input set      |                                 |
+|                |                   | (ties go to random element)           |                                 |
 +----------------+-------------------+---------------------------------------+---------------------------------+
 | mean           | NA                | Report arithmetic mean of :ref:`Score | :ref:`Score <base_score>`       |
 |                |                   | values in input set                   |                                 |
