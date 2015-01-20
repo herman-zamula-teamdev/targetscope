@@ -97,3 +97,69 @@ This operation summarizes attributes of an :ref:`Element <compound_element>` :re
 |                |                   | number of bases in the :ref:`Ranges   |                                 |
 |                |                   | <base_range>` in the input set        |                                 |
 +----------------+-------------------+---------------------------------------+---------------------------------+
+| count          | NA                | Report the number of :ref:`Elements   | :ref:`Score <base_score>`       |
+|                |                   | in the input set                      |                                 |
++----------------+-------------------+---------------------------------------+---------------------------------+
+| cv             | NA                | Report the coefficient of variation:  | :ref:`Score <base_score>`       |
+|                |                   | the standard deviation of :ref:`Score |                                 |
+|                |                   | <base_score>` values in the input set |                                 |
+|                |                   | divided by their mean                 |                                 |
++----------------+-------------------+---------------------------------------+---------------------------------+
+| *k*th          | *i*               | Report the value at the *k*th         | :ref:`Score <base_score>`       |
+|                |                   | fraction of :ref:`Score <base_score>` |                                 |
+|                |                   | values, where *i* = 0.5 reports the   |                                 |
+|                |                   | median (0 < i <= 1)                   |                                 |
++----------------+-------------------+---------------------------------------+---------------------------------+
+| mad            | *mult*            | Report the median absolute deviation  | :ref:`Score <base_score>`       |
+|                |                   | of :ref:`Score <base_score>` values,  |                                 |
+|                |                   | multiplied by *mult*                  |                                 |
++----------------+-------------------+---------------------------------------+---------------------------------+
+| max            | NA                | Report highest :ref:`Score            | :ref:`Score <base_score>`       |
+|                |                   | <base_score>` in input set            |                                 |
++----------------+-------------------+---------------------------------------+---------------------------------+
+| max-element    | NA                | Report highest-scoring :ref:`Element  | :ref:`Set <compound_set>`       |
+|                |                   | in input set (ties go to random       |                                 |
+|                |                   | element)                              |                                 |
++----------------+-------------------+---------------------------------------+---------------------------------+
+| mean           | NA                | Report arithmetic mean of :ref:`Score | :ref:`Score <base_score>`       |
+|                |                   | values in input set                   |                                 |
++----------------+-------------------+---------------------------------------+---------------------------------+
+| median         | NA                | Report median :ref:`Score             | :ref:`Score <base_score>`       |
+|                |                   | <base_score>` value from input set    |                                 |
++----------------+-------------------+---------------------------------------+---------------------------------+
+| min            | NA                | Report lowest :ref:`Score             | :ref:`Score <base_score>`       |
+|                |                   | <base_score>` value from input set    |                                 |
++----------------+-------------------+---------------------------------------+---------------------------------+
+| min-element    | NA                | Report lowest-scoring :ref:`Element   | :ref:`Set <compound_set>`       |
+|                |                   | <compound_element>` in input set      |                                 |
+|                |                   | (ties go to random element)           |                                 |
++----------------+-------------------+---------------------------------------+---------------------------------+
+| name           | NA                | Report an ordered list of :ref:`Names | :ref:`Array <compound_array>`   |
+|                |                   | in the input set                      |                                 |
++----------------+-------------------+---------------------------------------+---------------------------------+
+| name-uniq      | NA                | Report the unique :ref:`Name          | :ref:`Array <compound_array>`   |
+|                |                   | <base_name>` values in the input set  |                                 |
++----------------+-------------------+---------------------------------------+---------------------------------+
+| range          | NA                | Report all :ref:`Ranges <base_range>` | :ref:`Array <compound_array>`   |
+|                |                   | of :ref:`Elements <compound_element>` |                                 |
+|                |                   | in input set                          |                                 |
++----------------+-------------------+---------------------------------------+---------------------------------+
+| size           | NA                | Report sizes of each :ref:`Element    | :ref:`Array <compound_array>`   |
+|                |                   | <compound_element>` in input set      |                                 |
++----------------+-------------------+---------------------------------------+---------------------------------+
+| stdev          | NA                | Report standard deviation of          | :ref:`Score <base_score>`       |
+|                |                   | :ref:`Scores <base_score>` in input   |                                 |
+|                |                   | set                                   |                                 |
++----------------+-------------------+---------------------------------------+---------------------------------+
+| sum            | NA                | Report sum of :ref:`Scores            | :ref:`Score <base_score>`       |
+|                |                   | <base_score>` in input set            |                                 |
++----------------+-------------------+---------------------------------------+---------------------------------+
+| tmean          | *low*, *high*     | Report arithmetic mean, removing      | :ref:`Score <base_score>`       |
+|                |                   | outliers as defined by the fractions  |                                 |
+|                |                   | *low* and *high* (0 <= *low* <= 1,    |                                 |
+|                |                   | 0 <= *high* <= 1, *low* + *high* <=   |                                 |
+|                |                   | 1)                                    |                                 |
++----------------+-------------------+---------------------------------------+---------------------------------+
+| variance       | NA                | Report variance of :ref:`Scores       | :ref:`Score <base_score>`       |
+|                |                   | <base_score>` in input set            |                                 |
++----------------+-------------------+---------------------------------------+---------------------------------+
