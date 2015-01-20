@@ -3,7 +3,7 @@
 Target gene to transcription factor binding sites
 =================================================
 
-This figure describes a complete operation to retrieve the names of transcription factors which lie within DHS peaks, which are associated with interactions whose promoters overlap **RARA** transcription start sites:
+This figure describes a complete operational pipeline to retrieve the names of transcription factors which lie within DHS peaks, which are associated with interactions whose promoters overlap **RARA** transcription start sites:
 
 .. image:: ../../_static/tfbs_rara.png
    :width: 99%
