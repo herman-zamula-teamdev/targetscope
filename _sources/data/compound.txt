@@ -31,7 +31,7 @@ Operations can be applied on an *Element* or on a *Set* of *Elements*.
         chr17   38501492  38501493      RARA    150     +
         chr17   38507638  38507639      RARA    3       +
 
-    Therefore, the set of **RARA** transcription start sites is on chromosome 17, with the Ranges of ``[38465445, 38465446)``, ``[38474532, 38474533)``, *etc.* The *Name* value is **RARA**. The *Scores* are varied. The *Strand* value of each is ``+``. Each of these makes up an *Element*.
+   Therefore, the set of **RARA** transcription start sites is on chromosome 17, with the Ranges of ``[38465445, 38465446)``, ``[38474532, 38474533)``, *etc.* The *Name* value is **RARA**. The *Scores* are varied. The *Strand* value of each is ``+``. Each of these makes up an *Element*.
 
 .. topic:: Example 2
 
