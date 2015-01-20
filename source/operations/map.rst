@@ -108,7 +108,7 @@ This operation summarizes attributes of an :ref:`Element <compound_element>` :re
 | *k* th         | *i*               | Report the value at the *k* th        | :ref:`Score <base_score>`       |
 |                |                   | fraction of :ref:`Score <base_score>` |                                 |
 |                |                   | values, where *i* = 0.5 reports the   |                                 |
-|                |                   | median (0 < i <= 1)                   |                                 |
+|                |                   | median (0 < *i* <= 1)                 |                                 |
 +----------------+-------------------+---------------------------------------+---------------------------------+
 | mad            | *mult*            | Report the median absolute deviation  | :ref:`Score <base_score>`       |
 |                |                   | of :ref:`Score <base_score>` values,  |                                 |
