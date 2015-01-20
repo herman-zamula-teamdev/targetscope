@@ -56,6 +56,55 @@
             
   <div class="section" id="compound-types">
 <span id="compound"></span><h1>3. Compound types<a class="headerlink" href="#compound-types" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="element">
+<h2>3.1. Element<a class="headerlink" href="#element" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="docutils">
+<colgroup>
+<col width="27%" />
+<col width="73%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><strong>Data</strong></td>
+<td><em>Range</em> (optional: 1 or more <em>Name</em>; 1 <em>Score</em>; 1
+<em>Strand</em>, 1+ <em>Metadata</em>, 1+ <em>Set</em>)</td>
+</tr>
+<tr class="row-even"><td><strong>Examples</strong></td>
+<td>Target gene promoter, gene annotation record, DHS
+peak, transcription factor hit</td>
+</tr>
+</tbody>
+</table>
+<p>Operations can be applied on an <em>Element</em> or on a <em>Set</em> of <em>Elements</em>.</p>
+<div class="topic">
+<p class="topic-title first">Example 1</p>
+<p>Here, we filter a set of transcription start sites for target gene <strong>RARA</strong>:</p>
+<div class="highlight-python"><div class="highlight"><pre>    $ grep -w RARA tss.bed
+    chr17   38465445  38465446      RARA    41      +
+    chr17   38474532  38474533      RARA    90      +
+    chr17   38474536  38474537      RARA    15      +
+    chr17   38497639  38497640      RARA    1       +
+    chr17   38498614  38498615      RARA    20      +
+    chr17   38501492  38501493      RARA    150     +
+    chr17   38507638  38507639      RARA    3       +
+
+Therefore, the set of **RARA** transcription start sites is on chromosome 17, with the Ranges of ``[38465445, 38465446)``, ``[38474532, 38474533)``, *etc.* The *Name* value is **RARA**. The *Scores* are varied. The *Strand* value of each is ``+``. Each of these makes up an *Element*.
+</pre></div>
+</div>
+</div>
+<div class="topic">
+<p class="topic-title first">Example 2</p>
+<p>Here we show an example of some transcription factor binding sites, each an <em>Element</em>, also on chromosome 17:</p>
+<div class="highlight-python"><div class="highlight"><pre>$ unstarch chr19 fimo.combined.xfac.1e-5.parsed.starch | more
+chr17   2 23       -V_NRSF_01                                  5.89317e-06      -       TGCAGGAACAGGGTGAGAAGC
+chr17   27         42                                          -V_OCT4_02       5.78775e-06     -       ATTGTCATGCAATTA
+chr17   125        141                                         -V_TAL1BETAE47_01                4.13235e-06     -       CTGGACAGATGTTTGT
+chr17   125        141                                         -V_TAL1BETAITF2_01               9.97644e-06     -       CTGGACAGATGTTTGT
+chr17   126        138                                         +V_RP58_01                       5.58617e-06     +       CAAACATCTGTC...
+</pre></div>
+</div>
+<p>The fourth column of this file is the TRANSFAC name of the transcription factor (TRANSFAC is the name of a database of transcription factors — there are other databases; <em>e.g.</em>, Jaspar and UniPROBE). Note here that the start character of the ID field matches the strand field on which the factor is located, and that the seventh column contains the reference sequence at that range.</p>
+</div>
+</div>
 </div>
 
 
@@ -67,6 +116,14 @@
             <p class="logo"><a href="../index.html">
               <img class="logo" src="../_static/logo.png" alt="Logo"/>
             </a></p>
+  <h3><a href="../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">3. Compound types</a><ul>
+<li><a class="reference internal" href="#element">3.1. Element</a></li>
+</ul>
+</li>
+</ul>
+
   <h4>Previous topic</h4>
   <p class="topless"><a href="base.html"
                         title="previous chapter">2. Base types</a></p>
