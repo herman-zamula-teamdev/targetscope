@@ -3,6 +3,8 @@
 Glossary
 ========
 
+.. _glossary_bed:
+
 ===
 BED
 ===
@@ -42,35 +44,47 @@ BED records could be provided in any order. However, our analyses make use of `B
 
 Where data are not available for the fourth through sixth columns, it is conventional to use a period as a placeholder.
 
+.. _glossary_bedops:
+
 ======
 BEDOPS
 ======
 
 Toolkit for management of and applying set and statistical operations on BED files (see: `https://github.com/bedops/bedops <https://github.com/bedops/bedops>`_).
 
+.. _glossary_dhs_peak:
+
 ========
 DHS peak
 ========
 
-Genomic range that (for this purpose) is the source of a long-range interaction with a target gene. Contains (or overlaps) transcription factors of interest.
+Genomic :ref:`range <base_range>` that (for this purpose) is the source of a long-range :ref:`interaction <compound_interaction>` with a target gene. Contains (or overlaps) transcription factors of interest.
+
+.. _glossary_gene:
 
 ====
 Gene
 ====
 
-A set of genomic ranges that has some function for an organism and is copied from one generation to the next.
+A set of genomic :ref:`ranges <base_range>` that has some function for an organism and is copied from one generation to the next.
+
+.. _glossary_gene_annotation:
 
 ===============
 Gene annotation
 ===============
 
-A set of genomic ranges that usually specifies the coordinates of a gene's components (*e.g.*, in eukaryotes like humans, exons and introns). 
+A set of genomic :ref:`ranges <base_range>` that usually specifies the coordinates of a gene's components (*e.g.*, in eukaryotes like humans, exons and introns). 
+
+.. _glossary_gene_promoter:
 
 =============
 Gene promoter
 =============
 
-A genomic range that contains a transcription start site element.
+A genomic :ref:`range <base_range>` that contains a transcription start site element.
+
+.. _glossary_genomic_range:
 
 =============
 Genomic range
@@ -78,17 +92,23 @@ Genomic range
 
 Minimally, a chromosome name and a start/stop coordinate pair. Analogous to a BED3 element.
 
+.. _glossary_long_range_interaction:
+
 ======================
 Long-range interaction
 ======================
 
 A pair of genomic ranges that connect a target gene's promoter with an overlapping DHS.
 
+.. _glossary_target_gene:
+
 ===========
 Target gene
 ===========
 
 A set of genomic ranges (representing the gene's promoters) that is the starting point for analyses. Filters or predicates are applied on this initial input set, which expand the regions covered over the genome to search for TFs.
+
+.. _glossary_transcription_factor:
 
 ====================
 Transcription factor

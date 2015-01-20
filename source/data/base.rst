@@ -43,7 +43,7 @@ Range
 =====
 
 **Data**
-        BED3
+        :ref:`BED3 <glossary_bed>`
 
 *Range* consists of a chromosome name, start and stop index. The chromosome name follows UCSC convention and starts with the string ``chr``. The start and stop indices are integers greater than or equal to zero. The stop index must be greater than the start index.
 
