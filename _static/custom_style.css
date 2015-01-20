@@ -1,3 +1,7 @@
 img.logo {
     max-width: 100%;
 }
+
+pre {
+    font-size: larger;
+}
