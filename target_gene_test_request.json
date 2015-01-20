@@ -1,4 +1,5 @@
 {
+    "version" : "v1.1.0",
     "dtsubmission": "2014-08-13T00:21:17", 
     "id": "abcd1234", 
     "name": "Test request graph for finding RARA TSSs that associate with interaction promoters", 
@@ -13,7 +14,11 @@
                             "options": [
                                 {
                                     "kind": "filter_interaction_component", 
-                                    "value": "promoter"
+                                    "value": "0"
+                                },
+                                {
+                                    "kind": "set_overlap_bases",
+                                    "value": "1"
                                 }
                             ], 
                             "sets": [

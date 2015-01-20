@@ -4,6 +4,12 @@
   "description" : "A schema to describe a target gene web request graph for Targetscope, building a tree of individual operations, inputs and outputs",
   "type" : "object",
   "properties" : {
+    "version" : {
+      "enum" : [
+        "v1.0.0",
+        "v1.1.0"
+      ]
+    },
     "id" : {
       "description" : "A unique identifier for a target gene request graph instance",
       "type" : "string"
@@ -116,14 +122,26 @@
                                 "filter_chromosome",
                                 "filter_interaction_component",
                                 "set_range_left",
-                                "set_range_right"
+                                "set_range_right",
+                                "set_overlap_bases",
+                                "set_overlap_fraction_both",
+                                "set_overlap_fraction_either",
+                                "set_overlap_fraction_map",
+                                "set_overlap_fraction_ref",
+                                "set_overlap_exact",
+                                "set_overlap_range_start",
+                                "set_overlap_range_stop"
                               ]
                             },
                             "value" : {
                               "description" : "Operation option value",
                               "type" : "string"
                             }
-                          }
+                          },
+                          "required" : [
+                            "value",
+                            "kind"
+                          ]
                         }
                       }
                     }
@@ -172,6 +190,7 @@
   "required" : [
     "id",
     "name",
-    "dtsubmission"
+    "dtsubmission",
+    "version"
   ]
 }
