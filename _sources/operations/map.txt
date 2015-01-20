@@ -135,7 +135,7 @@ This operation summarizes attributes of an :ref:`Element <compound_element>` :re
 |                |                   | (ties go to random element)           |                                 |
 +----------------+-------------------+---------------------------------------+---------------------------------+
 | name           | NA                | Report an ordered list of :ref:`Names | :ref:`Array <compound_array>`   |
-|                |                   | in the input set                      |                                 |
+|                |                   | <base_name>` in the input set         |                                 |
 +----------------+-------------------+---------------------------------------+---------------------------------+
 | name-uniq      | NA                | Report the unique :ref:`Name          | :ref:`Array <compound_array>`   |
 |                |                   | <base_name>` values in the input set  |                                 |
