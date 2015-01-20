@@ -78,6 +78,57 @@
 <p>This operation filters <a class="reference internal" href="../data/compound.html#compound-element"><em>Elements</em></a> with <a class="reference internal" href="../data/base.html#base-score"><em>Score</em></a> components by the specified numerical value and relational operator. A false Boolean value allows specifying the inverse of the operation.</p>
 <p>After filtering, the output set should either be a proper subset of the input, the empty set, or the input itself.</p>
 </div>
+<div class="section" id="name">
+<span id="ops-filter-name"></span><h2>Name<a class="headerlink" href="#name" title="Permalink to this headline">¶</a></h2>
+<dl class="docutils">
+<dt><strong>Input</strong></dt>
+<dd>1 <a class="reference internal" href="../data/base.html#base-name"><em>Name</em></a>; 1 <a class="reference internal" href="../data/compound.html#compound-element"><em>Element</em></a> <a class="reference internal" href="../data/compound.html#compound-set"><em>Set</em></a>; 2 Boolean values</dd>
+<dt><strong>Output</strong></dt>
+<dd><a class="reference internal" href="../data/compound.html#compound-element"><em>Element</em></a> <a class="reference internal" href="../data/compound.html#compound-set"><em>Set</em></a></dd>
+<dt><strong>CLI example</strong></dt>
+<dd><code class="docutils literal"><span class="pre">awk</span> <span class="pre">‘($4</span> <span class="pre">==</span> <span class="pre">&quot;RARA&quot;)’</span> <span class="pre">foo.bed</span> <span class="pre">&gt;</span> <span class="pre">foo_RARA.bed</span></code></dd>
+</dl>
+<p>This operation filters <a class="reference internal" href="../data/compound.html#compound-element"><em>Elements</em></a> with <a class="reference internal" href="../data/base.html#base-name"><em>Name</em></a> components by the specified string value. The first Boolean operator decides if the filtering is an exact or partial match on the input name string. A second, false Boolean value allows specifying the inverse of the operation.</p>
+<p>After filtering, the output set should either be a proper subset of the input, the empty set, or the input itself.</p>
+</div>
+<div class="section" id="strand">
+<span id="ops-filter-strand"></span><h2>Strand<a class="headerlink" href="#strand" title="Permalink to this headline">¶</a></h2>
+<dl class="docutils">
+<dt><strong>Input</strong></dt>
+<dd>1 <a class="reference internal" href="../data/base.html#base-strand"><em>Strand</em></a>; 1 <a class="reference internal" href="../data/compound.html#compound-element"><em>Element</em></a> <a class="reference internal" href="../data/compound.html#compound-set"><em>Set</em></a>; 1 Boolean value</dd>
+<dt><strong>Output</strong></dt>
+<dd><a class="reference internal" href="../data/compound.html#compound-element"><em>Element</em></a> <a class="reference internal" href="../data/compound.html#compound-set"><em>Set</em></a></dd>
+<dt><strong>CLI example</strong></dt>
+<dd><code class="docutils literal"><span class="pre">awk</span> <span class="pre">‘($6==”+”)’</span> <span class="pre">foo.bed</span> <span class="pre">&gt;</span> <span class="pre">foo_forward_stranded.bed</span></code></dd>
+</dl>
+<p>This operation filters <a class="reference internal" href="../data/compound.html#compound-element"><em>Elements</em></a> with <a class="reference internal" href="../data/base.html#base-name"><em>Name</em></a> components by the specified <a class="reference internal" href="../data/base.html#base-strand"><em>Strand</em></a> value. A false Boolean value allows specifying the inverse of the result set (<em>e.g.</em>, all elements but those which are forward-stranded).</p>
+<p>After filtering, the output set should either be a proper subset of the input, the empty set, or the input itself.</p>
+</div>
+<div class="section" id="chromosome">
+<span id="ops-filter-chromosome"></span><h2>Chromosome<a class="headerlink" href="#chromosome" title="Permalink to this headline">¶</a></h2>
+<dl class="docutils">
+<dt><strong>Input</strong></dt>
+<dd><a class="reference internal" href="../data/compound.html#compound-element"><em>Element</em></a> <a class="reference internal" href="../data/compound.html#compound-set"><em>Set</em></a>; string; Boolean</dd>
+<dt><strong>Output</strong></dt>
+<dd><a class="reference internal" href="../data/compound.html#compound-element"><em>Element</em></a> <a class="reference internal" href="../data/compound.html#compound-set"><em>Set</em></a></dd>
+<dt><strong>CLI example</strong></dt>
+<dd><code class="docutils literal"><span class="pre">bedextract</span> <span class="pre">chr17</span> <span class="pre">foo.bed</span> <span class="pre">&gt;</span> <span class="pre">foo_chr17.bed</span></code></dd>
+</dl>
+<p>This operation filters <a class="reference internal" href="../data/compound.html#compound-element"><em>Elements</em></a> with a <a class="reference internal" href="../data/base.html#base-range"><em>Range</em></a> component by the specified, exact chromosome string name. A false Boolean value allows specifying the inverse of the result set (all elements but those on the specified chromosome).</p>
+<p>After filtering, the output set should either be a proper subset of the input, the empty set, or the input itself.</p>
+</div>
+<div class="section" id="component">
+<span id="ops-filter-component"></span><h2>Component<a class="headerlink" href="#component" title="Permalink to this headline">¶</a></h2>
+<dl class="docutils">
+<dt><strong>Input</strong></dt>
+<dd><a class="reference internal" href="../data/compound.html#compound-interaction"><em>Interaction</em></a>; integer (index)</dd>
+<dt><strong>Output</strong></dt>
+<dd><a class="reference internal" href="../data/compound.html#compound-element"><em>Element</em></a> <a class="reference internal" href="../data/compound.html#compound-set"><em>Set</em></a></dd>
+<dt><strong>CLI example</strong></dt>
+<dd>NA</dd>
+</dl>
+<p>This operation filters an <a class="reference internal" href="../data/compound.html#compound-interaction"><em>Interaction</em></a> to return either the first or second <a class="reference internal" href="../data/compound.html#compound-element"><em>Element</em></a> <a class="reference internal" href="../data/compound.html#compound-set"><em>Set</em></a> (promoter or DHS component).</p>
+</div>
 </div>
 
 
@@ -93,6 +144,10 @@
   <ul>
 <li><a class="reference internal" href="#">Filter</a><ul>
 <li><a class="reference internal" href="#score">Score</a></li>
+<li><a class="reference internal" href="#name">Name</a></li>
+<li><a class="reference internal" href="#strand">Strand</a></li>
+<li><a class="reference internal" href="#chromosome">Chromosome</a></li>
+<li><a class="reference internal" href="#component">Component</a></li>
 </ul>
 </li>
 </ul>
