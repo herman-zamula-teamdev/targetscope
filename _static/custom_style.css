@@ -1,11 +1,3 @@
-a.reference, a.external {
-  font-weight: bolder;
-}
-
-a.reference:active, a.external:active {
-  color: #0000ff;                    
-}
-
 img.logo {
   max-width: 100%;
 }
