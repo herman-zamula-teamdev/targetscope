@@ -25,3 +25,102 @@ Here is a graphical overview of the pipeline:
    :width: 50%
 
 One of the two outputs is in the middle of the pipeline. The web service will generate a list of intermediate dependencies and push them to the next step of analysis, as needed.
+
+A web request that embodies these operations, sets and parameters might begin to look like this:
+
+.. code-block:: json
+
+  {
+    "version" : "v1.1.0",
+    "dtsubmission": "2014-08-13T00:21:17", 
+    "id": "abcd1234", 
+    "name": "Test request graph for finding RARA TSSs that associate with interaction promoters", 
+    "operations": [
+        {
+            "id": "map_rara_TSSs_to_interaction_promoters", 
+            "name": "Map RARA TSSs to interaction promoters", 
+            "parameters": [
+                {
+                    "arguments": [
+                        {
+                            "options": [
+                                {
+                                    "kind": "filter_interaction_component", 
+                                    "value": "0"
+                                },
+                                {
+                                    "kind": "set_overlap_bases",
+                                    "value": "1"
+                                }
+                            ], 
+                            "sets": [
+                                {
+                                    "id": "0001_rara_TSSs", 
+                                    "kind": "input_map"
+                                }, 
+                                {
+                                    "id": "0002_all_interactions", 
+                                    "kind": "input_reference"
+                                }, 
+                                {
+                                    "id": "0003_all_interactions_between_rara_tss_and_promoters", 
+                                    "kind": "output"
+                                }
+                            ]
+                        }
+                    ], 
+                    "kind": "element_set_map_on_interaction_set"
+                }
+            ], 
+            "summary": "Build a list of interaction promoters and RARA TSSs which overlap the promoter region"
+        }, 
+        {
+            "id": "element_filter_TSSs", 
+            "name": "Filter TSSs by RARA", 
+            "parameters": [
+                {
+                    "arguments": [
+                        {
+                            "options": [
+                                {
+                                    "kind": "filter_name", 
+                                    "value": "RARA"
+                                }
+                            ], 
+                            "sets": [
+                                {
+                                    "id": "0000_target_gene_TSSs", 
+                                    "kind": "input"
+                                }, 
+                                {
+                                    "id": "0001_rara_TSSs", 
+                                    "kind": "output"
+                                }
+                            ]
+                        }
+                    ], 
+                    "kind": "element_set_filter_name"
+                }
+            ], 
+            "summary": "We take the target gene TSSs and filter them on the name RARA"
+        }
+    ], 
+    "sets": [
+        {
+            "id": "0000_target_gene_TSSs", 
+            "kind": "element"
+        }, 
+        {
+            "id": "0001_rara_TSSs", 
+            "kind": "element"
+        }, 
+        {
+            "id": "0002_all_interactions", 
+            "kind": "interaction"
+        }, 
+        {
+            "id": "0003_all_interactions_between_rara_tss_and_promoters", 
+            "kind": "interaction"
+        }
+    ]
+  }

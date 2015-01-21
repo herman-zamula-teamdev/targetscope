@@ -90,6 +90,103 @@
 <p>Here is a graphical overview of the pipeline:</p>
 <a class="reference internal image-reference" href="../_images/tfbs_rara_subproblem.png"><img alt="../_images/tfbs_rara_subproblem.png" src="../_images/tfbs_rara_subproblem.png" style="width: 50%;" /></a>
 <p>One of the two outputs is in the middle of the pipeline. The web service will generate a list of intermediate dependencies and push them to the next step of analysis, as needed.</p>
+<p>A web request that embodies these operations, sets and parameters might begin to look like this:</p>
+<div class="highlight-json"><div class="highlight"><pre><span class="p">{</span>
+  <span class="nt">&quot;version&quot;</span> <span class="p">:</span> <span class="s2">&quot;v1.1.0&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;dtsubmission&quot;</span><span class="p">:</span> <span class="s2">&quot;2014-08-13T00:21:17&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;abcd1234&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Test request graph for finding RARA TSSs that associate with interaction promoters&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;operations&quot;</span><span class="p">:</span> <span class="p">[</span>
+      <span class="p">{</span>
+          <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;map_rara_TSSs_to_interaction_promoters&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Map RARA TSSs to interaction promoters&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;parameters&quot;</span><span class="p">:</span> <span class="p">[</span>
+              <span class="p">{</span>
+                  <span class="nt">&quot;arguments&quot;</span><span class="p">:</span> <span class="p">[</span>
+                      <span class="p">{</span>
+                          <span class="nt">&quot;options&quot;</span><span class="p">:</span> <span class="p">[</span>
+                              <span class="p">{</span>
+                                  <span class="nt">&quot;kind&quot;</span><span class="p">:</span> <span class="s2">&quot;filter_interaction_component&quot;</span><span class="p">,</span>
+                                  <span class="nt">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span>
+                              <span class="p">},</span>
+                              <span class="p">{</span>
+                                  <span class="nt">&quot;kind&quot;</span><span class="p">:</span> <span class="s2">&quot;set_overlap_bases&quot;</span><span class="p">,</span>
+                                  <span class="nt">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;1&quot;</span>
+                              <span class="p">}</span>
+                          <span class="p">],</span>
+                          <span class="nt">&quot;sets&quot;</span><span class="p">:</span> <span class="p">[</span>
+                              <span class="p">{</span>
+                                  <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;0001_rara_TSSs&quot;</span><span class="p">,</span>
+                                  <span class="nt">&quot;kind&quot;</span><span class="p">:</span> <span class="s2">&quot;input_map&quot;</span>
+                              <span class="p">},</span>
+                              <span class="p">{</span>
+                                  <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;0002_all_interactions&quot;</span><span class="p">,</span>
+                                  <span class="nt">&quot;kind&quot;</span><span class="p">:</span> <span class="s2">&quot;input_reference&quot;</span>
+                              <span class="p">},</span>
+                              <span class="p">{</span>
+                                  <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;0003_all_interactions_between_rara_tss_and_promoters&quot;</span><span class="p">,</span>
+                                  <span class="nt">&quot;kind&quot;</span><span class="p">:</span> <span class="s2">&quot;output&quot;</span>
+                              <span class="p">}</span>
+                          <span class="p">]</span>
+                      <span class="p">}</span>
+                  <span class="p">],</span>
+                  <span class="nt">&quot;kind&quot;</span><span class="p">:</span> <span class="s2">&quot;element_set_map_on_interaction_set&quot;</span>
+              <span class="p">}</span>
+          <span class="p">],</span>
+          <span class="nt">&quot;summary&quot;</span><span class="p">:</span> <span class="s2">&quot;Build a list of interaction promoters and RARA TSSs which overlap the promoter region&quot;</span>
+      <span class="p">},</span>
+      <span class="p">{</span>
+          <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;element_filter_TSSs&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Filter TSSs by RARA&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;parameters&quot;</span><span class="p">:</span> <span class="p">[</span>
+              <span class="p">{</span>
+                  <span class="nt">&quot;arguments&quot;</span><span class="p">:</span> <span class="p">[</span>
+                      <span class="p">{</span>
+                          <span class="nt">&quot;options&quot;</span><span class="p">:</span> <span class="p">[</span>
+                              <span class="p">{</span>
+                                  <span class="nt">&quot;kind&quot;</span><span class="p">:</span> <span class="s2">&quot;filter_name&quot;</span><span class="p">,</span>
+                                  <span class="nt">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;RARA&quot;</span>
+                              <span class="p">}</span>
+                          <span class="p">],</span>
+                          <span class="nt">&quot;sets&quot;</span><span class="p">:</span> <span class="p">[</span>
+                              <span class="p">{</span>
+                                  <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;0000_target_gene_TSSs&quot;</span><span class="p">,</span>
+                                  <span class="nt">&quot;kind&quot;</span><span class="p">:</span> <span class="s2">&quot;input&quot;</span>
+                              <span class="p">},</span>
+                              <span class="p">{</span>
+                                  <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;0001_rara_TSSs&quot;</span><span class="p">,</span>
+                                  <span class="nt">&quot;kind&quot;</span><span class="p">:</span> <span class="s2">&quot;output&quot;</span>
+                              <span class="p">}</span>
+                          <span class="p">]</span>
+                      <span class="p">}</span>
+                  <span class="p">],</span>
+                  <span class="nt">&quot;kind&quot;</span><span class="p">:</span> <span class="s2">&quot;element_set_filter_name&quot;</span>
+              <span class="p">}</span>
+          <span class="p">],</span>
+          <span class="nt">&quot;summary&quot;</span><span class="p">:</span> <span class="s2">&quot;We take the target gene TSSs and filter them on the name RARA&quot;</span>
+      <span class="p">}</span>
+  <span class="p">],</span>
+  <span class="nt">&quot;sets&quot;</span><span class="p">:</span> <span class="p">[</span>
+      <span class="p">{</span>
+          <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;0000_target_gene_TSSs&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;kind&quot;</span><span class="p">:</span> <span class="s2">&quot;element&quot;</span>
+      <span class="p">},</span>
+      <span class="p">{</span>
+          <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;0001_rara_TSSs&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;kind&quot;</span><span class="p">:</span> <span class="s2">&quot;element&quot;</span>
+      <span class="p">},</span>
+      <span class="p">{</span>
+          <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;0002_all_interactions&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;kind&quot;</span><span class="p">:</span> <span class="s2">&quot;interaction&quot;</span>
+      <span class="p">},</span>
+      <span class="p">{</span>
+          <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;0003_all_interactions_between_rara_tss_and_promoters&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;kind&quot;</span><span class="p">:</span> <span class="s2">&quot;interaction&quot;</span>
+      <span class="p">}</span>
+  <span class="p">]</span>
+<span class="p">}</span>
+</pre></div>
+</div>
 </div>
 
 
