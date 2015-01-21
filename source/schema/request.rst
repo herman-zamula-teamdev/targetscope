@@ -33,6 +33,16 @@ _______
 Element
 _______
 
+.. _schema_request_op_kind_element_set_component:
+
+:ref:`element_set_component <ops_set_component>`
+  Creates a new :ref:`Set <compound_set>` of :ref:`Elements <compound_element>` from gaps between the contiguous :ref:`Ranges <base_range>` defined by one or more input Sets.
+
+.. _schema_request_op_kind_element_set_difference:
+
+:ref:`element_set_difference <ops_set_difference>`
+  Creates a new :ref:`Set <compound_set>` from :ref:`Ranges <base_range>` found in the first input Set, excluding overlaps with Ranges in the second and subsequent input Sets.
+
 .. _schema_request_op_kind_element_set_element_of:
 
 :ref:`element_set_element_of <ops_set_inclusive_filter>`
@@ -68,10 +78,20 @@ _______
 :ref:`element_set_not_element_of <ops_set_exclusive_filter>`
   Creates a new :ref:`Set <compound_set>` from elements in the first :ref:`Set <compound_set>`, where :ref:`Range <base_range>` components of :ref:`Elements <compound_element>` in the second (and subsequent) Sets do not overlap the first Set's Elements by the specified integer or float value. 
 
+.. _schema_request_op_kind_element_set_partition:
+
+:ref:`element_set_partition <ops_set_partition>`
+  Creates a new :ref:`Set <compound_set>` from disjoint Ranges computed from all input Sets. A partition of one Set alone will segment any overlapping Elements within that Set.
+
 .. _schema_request_op_kind_element_set_range:
 
 :ref:`element_set_range <ops_range_adjust_element>`
   Symmetrically or asymmetrically shrinks or grows :ref:`Elements <compound_element>` by specified integer parameter(s).
+
+.. _schema_request_op_kind_element_set_symmetric_difference:
+
+:ref:`element_set_symmetric_difference <ops_set_symdiff>`
+  Creates a new :ref:`Set <compound_set>` from :ref:`Ranges <base_range>` found in the first input Set, excluding overlaps with Ranges in the second and subsequent input Sets, unionized with Ranges found in the second input Set, excluding overlaps with Ranges in all other input Sets, etc.
 
 .. _schema_request_op_kind_element_set_union:
 
@@ -92,17 +112,16 @@ ___________
 :ref:`interaction_set_range <ops_interaction_range>`
   Symmetrically or asymmetrically shrinks or grows a component of an :ref:`Interaction <compound_interaction>` in a larger :ref:`Set <compound_set>`.
 
+.. _schema_request_op_kind_interaction_set_union:
+
+:ref:`interaction_set_union <ops_interaction_union>`
+  Takes the union of :ref:`Interactions <compound_interaction>` in a :ref:`Set <compound_set>`, yielding one :ref:`Set <compound_set>` made up of each of the input Interactions.
+
 ::
 
-  "element_set_not_element_of",
-  "element_set_component",
-  "element_set_difference",
-  "element_set_symmetric_difference",
-  "element_set_partition",
   "element_set_map_on_element_set",
   "element_set_map_on_interaction_set",
   "element_set_attributes",
-  "interaction_set_union"
 
 +++++++
 Options

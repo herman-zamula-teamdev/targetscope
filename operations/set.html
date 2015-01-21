@@ -143,8 +143,8 @@
 <dt><strong>CLI example</strong></dt>
 <dd><code class="docutils literal"><span class="pre">bedops</span> <span class="pre">--complement</span> <span class="pre">foo1.bed</span> <span class="pre">foo2.bed</span> <span class="pre">...</span> <span class="pre">&gt;</span> <span class="pre">complement.bed</span></code></dd>
 </dl>
-<p>This filter creates a new <a class="reference internal" href="../data/compound.html#compound-set"><em>set</em></a> of <a class="reference internal" href="../data/compound.html#compound-element"><em>elements</em></a> from gaps between the contiguous <a class="reference internal" href="../data/base.html#base-range"><em>ranges</em></a> defined by one or more input sets.</p>
-<p>The complement of one set excludes the start- and end-pieces of a chromosome. To include those ranges, one can calculate the difference operation between the input set and a &#8220;full chromosome&#8221; <a class="reference internal" href="../data/compound.html#compound-element"><em>Element</em></a>, taking the first and last elements of the result. Those two elements would be unioned with the complement of the input set to get the full extents set.</p>
+<p>This filter creates a new <a class="reference internal" href="../data/compound.html#compound-set"><em>Set</em></a> of <a class="reference internal" href="../data/compound.html#compound-element"><em>Elements</em></a> from gaps between the contiguous <a class="reference internal" href="../data/base.html#base-range"><em>Ranges</em></a> defined by one or more input Sets.</p>
+<p>The complement of one Set excludes the start- and end-pieces of a chromosome. To include those Ranges, one can calculate the difference operation between the input Set and a &#8220;full chromosome&#8221; <a class="reference internal" href="../data/compound.html#compound-element"><em>Element</em></a>, taking the first and last Elements of the result. Those two Elements would be unioned with the complement of the input Set to get the full extents Set.</p>
 <a class="reference internal image-reference" href="../_images/ops_set_complement.png"><img alt="../_images/ops_set_complement.png" src="../_images/ops_set_complement.png" style="width: 99%;" /></a>
 </div>
 <div class="section" id="difference">
@@ -157,8 +157,8 @@
 <dt><strong>CLI example</strong></dt>
 <dd><code class="docutils literal"><span class="pre">bedops</span> <span class="pre">--difference</span> <span class="pre">foo.bed</span> <span class="pre">bar1.bed</span> <span class="pre">bar2.bed</span> <span class="pre">...</span> <span class="pre">&gt;</span> <span class="pre">difference.bed</span></code></dd>
 </dl>
-<p>This filter creates a new <a class="reference internal" href="../data/compound.html#compound-set"><em>set</em></a> from <a class="reference internal" href="../data/base.html#base-range"><em>ranges</em></a> found in the first input set, excluding overlaps with ranges in the second and subsequent input sets.</p>
-<p>Like the <a class="reference internal" href="#ops-set-complement"><em>complement</em></a> operation, this calculates new elements and so <a class="reference internal" href="../data/base.html#base-name"><em>name</em></a> and other attributes of elements in the first set are discarded.</p>
+<p>This filter creates a new <a class="reference internal" href="../data/compound.html#compound-set"><em>Set</em></a> from <a class="reference internal" href="../data/base.html#base-range"><em>Ranges</em></a> found in the first input Set, excluding overlaps with Ranges in the second and subsequent input Sets.</p>
+<p>Like the <a class="reference internal" href="#ops-set-complement"><em>complement</em></a> operation, this calculates new Elements and so <a class="reference internal" href="../data/base.html#base-name"><em>Name</em></a> and other attributes of Elements in the first Set are discarded.</p>
 <a class="reference internal image-reference" href="../_images/ops_set_difference.png"><img alt="../_images/ops_set_difference.png" src="../_images/ops_set_difference.png" style="width: 99%;" /></a>
 </div>
 <div class="section" id="symmetric-difference">
@@ -171,8 +171,8 @@
 <dt><strong>CLI example</strong></dt>
 <dd><code class="docutils literal"><span class="pre">bedops</span> <span class="pre">--symmdiff</span> <span class="pre">foo.bed</span> <span class="pre">bar.bed</span> <span class="pre">baz.bed</span> <span class="pre">...</span> <span class="pre">&gt;</span> <span class="pre">symmdiff.bed</span></code></dd>
 </dl>
-<p>This filter creates a new <a class="reference internal" href="../data/compound.html#compound-set"><em>set</em></a> from <a class="reference internal" href="../data/base.html#base-range"><em>ranges</em></a> found in the first input set, excluding overlaps with ranges in the second and subsequent input sets, unionized with ranges found in the second input set, excluding overlaps with ranges in all other input sets, etc.</p>
-<p>Like the <a class="reference internal" href="#ops-set-complement"><em>complement</em></a> operation, this calculates new elements and so <a class="reference internal" href="../data/base.html#base-name"><em>name</em></a> and other attributes of elements in all sets are discarded.</p>
+<p>This filter creates a new <a class="reference internal" href="../data/compound.html#compound-set"><em>Set</em></a> from <a class="reference internal" href="../data/base.html#base-range"><em>Ranges</em></a> found in the first input Set, excluding overlaps with Ranges in the second and subsequent input Sets, unionized with Ranges found in the second input Set, excluding overlaps with Ranges in all other input Sets, etc.</p>
+<p>Like the <a class="reference internal" href="#ops-set-complement"><em>complement</em></a> operation, this calculates new Elements and so <a class="reference internal" href="../data/base.html#base-name"><em>Name</em></a> and other attributes of elements in all Sets are discarded.</p>
 <a class="reference internal image-reference" href="../_images/ops_set_symmdiff.png"><img alt="../_images/ops_set_symmdiff.png" src="../_images/ops_set_symmdiff.png" style="width: 99%;" /></a>
 </div>
 <div class="section" id="partition">
@@ -185,7 +185,7 @@
 <dt><strong>CLI example</strong></dt>
 <dd><code class="docutils literal"><span class="pre">bedops</span> <span class="pre">--partition</span> <span class="pre">foo.bed</span> <span class="pre">bar.bed</span> <span class="pre">baz.bed</span> <span class="pre">...</span> <span class="pre">&gt;</span> <span class="pre">partition.bed</span></code></dd>
 </dl>
-<p>This filter creates a new <a class="reference internal" href="../data/compound.html#compound-set"><em>set</em></a> from disjoint ranges computed from all input sets. A partition of one set alone will segment any overlapping elements within that set.</p>
+<p>This filter creates a new <a class="reference internal" href="../data/compound.html#compound-set"><em>Set</em></a> from disjoint Ranges computed from all input Sets. A partition of one Set alone will segment any overlapping Elements within that Set.</p>
 <a class="reference internal image-reference" href="../_images/ops_set_partition.png"><img alt="../_images/ops_set_partition.png" src="../_images/ops_set_partition.png" style="width: 99%;" /></a>
 <div class="line-block">
 <div class="line"><br /></div>

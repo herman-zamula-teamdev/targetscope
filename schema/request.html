@@ -78,6 +78,14 @@
 <p>The following are short descriptions of the JSON keywords used to describe an operation-kind. View the linked operation document for the full description and parameter list.</p>
 <div class="section" id="element">
 <h5>Element<a class="headerlink" href="#element" title="Permalink to this headline">¶</a></h5>
+<dl class="docutils" id="schema-request-op-kind-element-set-component">
+<dt><em class="xref std std-ref">element_set_component</em></dt>
+<dd>Creates a new <a class="reference internal" href="../data/compound.html#compound-set"><em>Set</em></a> of <a class="reference internal" href="../data/compound.html#compound-element"><em>Elements</em></a> from gaps between the contiguous <a class="reference internal" href="../data/base.html#base-range"><em>Ranges</em></a> defined by one or more input Sets.</dd>
+</dl>
+<dl class="docutils" id="schema-request-op-kind-element-set-difference">
+<dt><a class="reference internal" href="../operations/set.html#ops-set-difference"><em>element_set_difference</em></a></dt>
+<dd>Creates a new <a class="reference internal" href="../data/compound.html#compound-set"><em>Set</em></a> from <a class="reference internal" href="../data/base.html#base-range"><em>Ranges</em></a> found in the first input Set, excluding overlaps with Ranges in the second and subsequent input Sets.</dd>
+</dl>
 <dl class="docutils" id="schema-request-op-kind-element-set-element-of">
 <dt><a class="reference internal" href="../operations/set.html#ops-set-inclusive-filter"><em>element_set_element_of</em></a></dt>
 <dd>Creates a new <a class="reference internal" href="../data/compound.html#compound-set"><em>Set</em></a> from <a class="reference internal" href="../data/compound.html#compound-element"><em>Elements</em></a> in the first set, where <a class="reference internal" href="../data/base.html#base-range"><em>Range</em></a> components of Elements in the second (and subsequent) Sets overlap the first Set&#8217;s Elements by the specified integer or float value.</dd>
@@ -106,9 +114,17 @@
 <dt><a class="reference internal" href="../operations/set.html#ops-set-exclusive-filter"><em>element_set_not_element_of</em></a></dt>
 <dd>Creates a new <a class="reference internal" href="../data/compound.html#compound-set"><em>Set</em></a> from elements in the first <a class="reference internal" href="../data/compound.html#compound-set"><em>Set</em></a>, where <a class="reference internal" href="../data/base.html#base-range"><em>Range</em></a> components of <a class="reference internal" href="../data/compound.html#compound-element"><em>Elements</em></a> in the second (and subsequent) Sets do not overlap the first Set&#8217;s Elements by the specified integer or float value.</dd>
 </dl>
+<dl class="docutils" id="schema-request-op-kind-element-set-partition">
+<dt><a class="reference internal" href="../operations/set.html#ops-set-partition"><em>element_set_partition</em></a></dt>
+<dd>Creates a new <a class="reference internal" href="../data/compound.html#compound-set"><em>Set</em></a> from disjoint Ranges computed from all input Sets. A partition of one Set alone will segment any overlapping Elements within that Set.</dd>
+</dl>
 <dl class="docutils" id="schema-request-op-kind-element-set-range">
 <dt><a class="reference internal" href="../operations/range.html#ops-range-adjust-element"><em>element_set_range</em></a></dt>
 <dd>Symmetrically or asymmetrically shrinks or grows <a class="reference internal" href="../data/compound.html#compound-element"><em>Elements</em></a> by specified integer parameter(s).</dd>
+</dl>
+<dl class="docutils" id="schema-request-op-kind-element-set-symmetric-difference">
+<dt><em class="xref std std-ref">element_set_symmetric_difference</em></dt>
+<dd>Creates a new <a class="reference internal" href="../data/compound.html#compound-set"><em>Set</em></a> from <a class="reference internal" href="../data/base.html#base-range"><em>Ranges</em></a> found in the first input Set, excluding overlaps with Ranges in the second and subsequent input Sets, unionized with Ranges found in the second input Set, excluding overlaps with Ranges in all other input Sets, etc.</dd>
 </dl>
 <dl class="docutils" id="schema-request-op-kind-element-set-union">
 <dt><a class="reference internal" href="../operations/set.html#ops-set-union"><em>element_set_union</em></a></dt>
@@ -125,15 +141,13 @@
 <dt><a class="reference internal" href="../operations/interaction.html#ops-interaction-range"><em>interaction_set_range</em></a></dt>
 <dd>Symmetrically or asymmetrically shrinks or grows a component of an <a class="reference internal" href="../data/compound.html#compound-interaction"><em>Interaction</em></a> in a larger <a class="reference internal" href="../data/compound.html#compound-set"><em>Set</em></a>.</dd>
 </dl>
-<div class="highlight-python"><div class="highlight"><pre><span class="s">&quot;element_set_not_element_of&quot;</span><span class="p">,</span>
-<span class="s">&quot;element_set_component&quot;</span><span class="p">,</span>
-<span class="s">&quot;element_set_difference&quot;</span><span class="p">,</span>
-<span class="s">&quot;element_set_symmetric_difference&quot;</span><span class="p">,</span>
-<span class="s">&quot;element_set_partition&quot;</span><span class="p">,</span>
-<span class="s">&quot;element_set_map_on_element_set&quot;</span><span class="p">,</span>
+<dl class="docutils" id="schema-request-op-kind-interaction-set-union">
+<dt><a class="reference internal" href="../operations/interaction.html#ops-interaction-union"><em>interaction_set_union</em></a></dt>
+<dd>Takes the union of <a class="reference internal" href="../data/compound.html#compound-interaction"><em>Interactions</em></a> in a <a class="reference internal" href="../data/compound.html#compound-set"><em>Set</em></a>, yielding one <a class="reference internal" href="../data/compound.html#compound-set"><em>Set</em></a> made up of each of the input Interactions.</dd>
+</dl>
+<div class="highlight-python"><div class="highlight"><pre><span class="s">&quot;element_set_map_on_element_set&quot;</span><span class="p">,</span>
 <span class="s">&quot;element_set_map_on_interaction_set&quot;</span><span class="p">,</span>
 <span class="s">&quot;element_set_attributes&quot;</span><span class="p">,</span>
-<span class="s">&quot;interaction_set_union&quot;</span>
 </pre></div>
 </div>
 </div>

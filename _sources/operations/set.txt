@@ -116,9 +116,9 @@ Complement
 **CLI example**
       ``bedops --complement foo1.bed foo2.bed ... > complement.bed``
 
-This filter creates a new :ref:`set <compound_set>` of :ref:`elements <compound_element>` from gaps between the contiguous :ref:`ranges <base_range>` defined by one or more input sets. 
+This filter creates a new :ref:`Set <compound_set>` of :ref:`Elements <compound_element>` from gaps between the contiguous :ref:`Ranges <base_range>` defined by one or more input Sets.
 
-The complement of one set excludes the start- and end-pieces of a chromosome. To include those ranges, one can calculate the difference operation between the input set and a "full chromosome" :ref:`Element <compound_element>`, taking the first and last elements of the result. Those two elements would be unioned with the complement of the input set to get the full extents set.
+The complement of one Set excludes the start- and end-pieces of a chromosome. To include those Ranges, one can calculate the difference operation between the input Set and a "full chromosome" :ref:`Element <compound_element>`, taking the first and last Elements of the result. Those two Elements would be unioned with the complement of the input Set to get the full extents Set.
 
 .. image:: ../../_static/ops_set_complement.png
    :width: 99%
@@ -136,9 +136,9 @@ Difference
 **CLI example**
       ``bedops --difference foo.bed bar1.bed bar2.bed ... > difference.bed``
 
-This filter creates a new :ref:`set <compound_set>` from :ref:`ranges <base_range>` found in the first input set, excluding overlaps with ranges in the second and subsequent input sets.
+This filter creates a new :ref:`Set <compound_set>` from :ref:`Ranges <base_range>` found in the first input Set, excluding overlaps with Ranges in the second and subsequent input Sets.
 
-Like the :ref:`complement <ops_set_complement>` operation, this calculates new elements and so :ref:`name <base_name>` and other attributes of elements in the first set are discarded.
+Like the :ref:`complement <ops_set_complement>` operation, this calculates new Elements and so :ref:`Name <base_name>` and other attributes of Elements in the first Set are discarded.
 
 .. image:: ../../_static/ops_set_difference.png
    :width: 99%
@@ -156,9 +156,9 @@ Symmetric difference
 **CLI example**
       ``bedops --symmdiff foo.bed bar.bed baz.bed ... > symmdiff.bed``
 
-This filter creates a new :ref:`set <compound_set>` from :ref:`ranges <base_range>` found in the first input set, excluding overlaps with ranges in the second and subsequent input sets, unionized with ranges found in the second input set, excluding overlaps with ranges in all other input sets, etc.
+This filter creates a new :ref:`Set <compound_set>` from :ref:`Ranges <base_range>` found in the first input Set, excluding overlaps with Ranges in the second and subsequent input Sets, unionized with Ranges found in the second input Set, excluding overlaps with Ranges in all other input Sets, etc.
 
-Like the :ref:`complement <ops_set_complement>` operation, this calculates new elements and so :ref:`name <base_name>` and other attributes of elements in all sets are discarded.
+Like the :ref:`complement <ops_set_complement>` operation, this calculates new Elements and so :ref:`Name <base_name>` and other attributes of elements in all Sets are discarded.
 
 .. image:: ../../_static/ops_set_symmdiff.png
    :width: 99%
@@ -176,7 +176,7 @@ Partition
 **CLI example**
       ``bedops --partition foo.bed bar.bed baz.bed ... > partition.bed``
 
-This filter creates a new :ref:`set <compound_set>` from disjoint ranges computed from all input sets. A partition of one set alone will segment any overlapping elements within that set.
+This filter creates a new :ref:`Set <compound_set>` from disjoint Ranges computed from all input Sets. A partition of one Set alone will segment any overlapping Elements within that Set.
 
 .. image:: ../../_static/ops_set_partition.png
    :width: 99%
