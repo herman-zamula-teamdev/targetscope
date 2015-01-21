@@ -29,16 +29,6 @@ Kinds
 
 The following are short descriptions of the JSON keywords used to describe operation-kinds. View the linked operation document for the full description and parameter list.
 
-.. _schema_request_op_kind_element_set_range:
-
-:ref:`element_set_range <ops_range_adjust_element>`
-  Symmetrically or asymmetrically shrinks or grows :ref:`Elements <compound_element>` by specified integer parameter(s).
-
-.. _schema_request_op_kind_interaction_set_range:
-
-:ref:`interaction_set_range <ops_interaction_range>`
-  Symmetrically or asymmetrically shrinks or grows a component of an :ref:`Interaction <compound_interaction>` in a larger :ref:`Set <compound_set>`.
-
 .. _schema_request_op_kind_element_set_filter_score:
 
 :ref:`element_set_filter_score <ops_filter_score>`
@@ -59,10 +49,20 @@ The following are short descriptions of the JSON keywords used to describe opera
 :ref:`element_set_filter_chromosome <ops_filter_chromosome>`
   Filters :ref:`Elements <compound_element>` with a :ref:`Range <base_range>` component by the specified, exact chromosome string name.
 
-.. _schema_request_op_kind_element_set_filter_component:
+.. _schema_request_op_kind_element_set_range:
+
+:ref:`element_set_range <ops_range_adjust_element>`
+  Symmetrically or asymmetrically shrinks or grows :ref:`Elements <compound_element>` by specified integer parameter(s).
+
+.. _schema_request_op_kind_interaction_set_filter_component:
 
 :ref:`interaction_set_filter_component <ops_filter_component>`
   Filters an :ref:`Interaction <compound_interaction>` to return either the first or second :ref:`Element <compound_element>` :ref:`Set <compound_set>`.
+
+.. _schema_request_op_kind_interaction_set_range:
+
+:ref:`interaction_set_range <ops_interaction_range>`
+  Symmetrically or asymmetrically shrinks or grows a component of an :ref:`Interaction <compound_interaction>` in a larger :ref:`Set <compound_set>`.
 
 ::
 

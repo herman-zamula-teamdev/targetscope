@@ -76,14 +76,6 @@
 <div class="section" id="kinds">
 <span id="schema-request-op-kind"></span><h4>Kinds<a class="headerlink" href="#kinds" title="Permalink to this headline">¶</a></h4>
 <p>The following are short descriptions of the JSON keywords used to describe operation-kinds. View the linked operation document for the full description and parameter list.</p>
-<dl class="docutils" id="schema-request-op-kind-element-set-range">
-<dt><a class="reference internal" href="../operations/range.html#ops-range-adjust-element"><em>element_set_range</em></a></dt>
-<dd>Symmetrically or asymmetrically shrinks or grows <a class="reference internal" href="../data/compound.html#compound-element"><em>Elements</em></a> by specified integer parameter(s).</dd>
-</dl>
-<dl class="docutils" id="schema-request-op-kind-interaction-set-range">
-<dt><a class="reference internal" href="../operations/interaction.html#ops-interaction-range"><em>interaction_set_range</em></a></dt>
-<dd>Symmetrically or asymmetrically shrinks or grows a component of an <a class="reference internal" href="../data/compound.html#compound-interaction"><em>Interaction</em></a> in a larger <a class="reference internal" href="../data/compound.html#compound-set"><em>Set</em></a>.</dd>
-</dl>
 <dl class="docutils" id="schema-request-op-kind-element-set-filter-score">
 <dt><a class="reference internal" href="../operations/filter.html#ops-filter-score"><em>element_set_filter_score</em></a></dt>
 <dd>Filters <a class="reference internal" href="../data/compound.html#compound-element"><em>Elements</em></a> with <a class="reference internal" href="../data/base.html#base-score"><em>Score</em></a> components by the specified numerical value and relational operator.</dd>
@@ -100,9 +92,17 @@
 <dt><a class="reference internal" href="../operations/filter.html#ops-filter-chromosome"><em>element_set_filter_chromosome</em></a></dt>
 <dd>Filters <a class="reference internal" href="../data/compound.html#compound-element"><em>Elements</em></a> with a <a class="reference internal" href="../data/base.html#base-range"><em>Range</em></a> component by the specified, exact chromosome string name.</dd>
 </dl>
-<dl class="docutils" id="schema-request-op-kind-element-set-filter-component">
+<dl class="docutils" id="schema-request-op-kind-element-set-range">
+<dt><a class="reference internal" href="../operations/range.html#ops-range-adjust-element"><em>element_set_range</em></a></dt>
+<dd>Symmetrically or asymmetrically shrinks or grows <a class="reference internal" href="../data/compound.html#compound-element"><em>Elements</em></a> by specified integer parameter(s).</dd>
+</dl>
+<dl class="docutils" id="schema-request-op-kind-interaction-set-filter-component">
 <dt><a class="reference internal" href="../operations/filter.html#ops-filter-component"><em>interaction_set_filter_component</em></a></dt>
 <dd>Filters an <a class="reference internal" href="../data/compound.html#compound-interaction"><em>Interaction</em></a> to return either the first or second <a class="reference internal" href="../data/compound.html#compound-element"><em>Element</em></a> <a class="reference internal" href="../data/compound.html#compound-set"><em>Set</em></a>.</dd>
+</dl>
+<dl class="docutils" id="schema-request-op-kind-interaction-set-range">
+<dt><a class="reference internal" href="../operations/interaction.html#ops-interaction-range"><em>interaction_set_range</em></a></dt>
+<dd>Symmetrically or asymmetrically shrinks or grows a component of an <a class="reference internal" href="../data/compound.html#compound-interaction"><em>Interaction</em></a> in a larger <a class="reference internal" href="../data/compound.html#compound-set"><em>Set</em></a>.</dd>
 </dl>
 <div class="highlight-python"><div class="highlight"><pre><span class="s">&quot;element_set_union&quot;</span><span class="p">,</span>
 <span class="s">&quot;element_set_merge&quot;</span><span class="p">,</span>
