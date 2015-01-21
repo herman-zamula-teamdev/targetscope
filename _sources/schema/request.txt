@@ -29,6 +29,10 @@ Kinds
 
 The following are short descriptions of the JSON keywords used to describe an operation-kind. View the linked operation document for the full description and parameter list.
 
+_______
+Element
+_______
+
 .. _schema_request_op_kind_element_set_filter_chromosome:
 
 :ref:`element_set_filter_chromosome <ops_filter_chromosome>`
@@ -63,6 +67,10 @@ The following are short descriptions of the JSON keywords used to describe an op
 
 :ref:`element_set_union <ops_set_union>`
   Takes union of :ref:`Elements <compound_element>` in one or more :ref:`Sets <compound_set>`, returning one :ref:`Set <compound_set>` containing all elements.
+
+___________
+Interaction
+___________
 
 .. _schema_request_op_kind_interaction_set_filter_component:
 

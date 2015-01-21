@@ -76,6 +76,8 @@
 <div class="section" id="kinds">
 <span id="schema-request-op-kind"></span><h4>Kinds<a class="headerlink" href="#kinds" title="Permalink to this headline">¶</a></h4>
 <p>The following are short descriptions of the JSON keywords used to describe an operation-kind. View the linked operation document for the full description and parameter list.</p>
+<div class="section" id="element">
+<h5>Element<a class="headerlink" href="#element" title="Permalink to this headline">¶</a></h5>
 <dl class="docutils" id="schema-request-op-kind-element-set-filter-chromosome">
 <dt><a class="reference internal" href="../operations/filter.html#ops-filter-chromosome"><em>element_set_filter_chromosome</em></a></dt>
 <dd>Filters <a class="reference internal" href="../data/compound.html#compound-element"><em>Elements</em></a> with a <a class="reference internal" href="../data/base.html#base-range"><em>Range</em></a> component by the specified, exact chromosome string name.</dd>
@@ -104,6 +106,9 @@
 <dt><a class="reference internal" href="../operations/set.html#ops-set-union"><em>element_set_union</em></a></dt>
 <dd>Takes union of <a class="reference internal" href="../data/compound.html#compound-element"><em>Elements</em></a> in one or more <a class="reference internal" href="../data/compound.html#compound-set"><em>Sets</em></a>, returning one <a class="reference internal" href="../data/compound.html#compound-set"><em>Set</em></a> containing all elements.</dd>
 </dl>
+</div>
+<div class="section" id="interaction">
+<h5>Interaction<a class="headerlink" href="#interaction" title="Permalink to this headline">¶</a></h5>
 <dl class="docutils" id="schema-request-op-kind-interaction-set-filter-component">
 <dt><a class="reference internal" href="../operations/filter.html#ops-filter-component"><em>interaction_set_filter_component</em></a></dt>
 <dd>Filters an <a class="reference internal" href="../data/compound.html#compound-interaction"><em>Interaction</em></a> to return either the first or second <a class="reference internal" href="../data/compound.html#compound-element"><em>Element</em></a> <a class="reference internal" href="../data/compound.html#compound-set"><em>Set</em></a>.</dd>
@@ -123,6 +128,7 @@
 <span class="s">&quot;element_set_attributes&quot;</span><span class="p">,</span>
 <span class="s">&quot;interaction_set_union&quot;</span>
 </pre></div>
+</div>
 </div>
 </div>
 <div class="section" id="options">
@@ -196,7 +202,11 @@ Type &quot;help&quot;, &quot;copyright&quot;, &quot;credits&quot; or &quot;licen
 <li><a class="reference internal" href="#">Request</a><ul>
 <li><a class="reference internal" href="#json-schema">JSON Schema</a><ul>
 <li><a class="reference internal" href="#operations">Operations</a><ul>
-<li><a class="reference internal" href="#kinds">Kinds</a></li>
+<li><a class="reference internal" href="#kinds">Kinds</a><ul>
+<li><a class="reference internal" href="#element">Element</a></li>
+<li><a class="reference internal" href="#interaction">Interaction</a></li>
+</ul>
+</li>
 <li><a class="reference internal" href="#options">Options</a></li>
 </ul>
 </li>
