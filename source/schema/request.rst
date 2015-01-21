@@ -23,17 +23,17 @@ Operation components of the request payload are split into two descriptors: *kin
 Kinds
 +++++
 
-.. _schema_request_op_kind_element_set_range
+.. _schema_request_op_kind_element_set_range:
 
 :ref:`element_set_range <ops_range_adjust_element>`
   Symmetrically or asymmetrically shrinks or grows :ref:`Elements <compound_element>` by specified integer parameter(s).
 
-.. _schema_request_op_kind_interaction_set_range
+.. _schema_request_op_kind_interaction_set_range:
 
 :ref:`interaction_set_range <ops_interaction_range>`
   Symmetrically or asymmetrically shrinks or grows a component of an :ref:`Interaction <compound_interaction>` in a larger :ref:`Set <compound_set>`.
 
-.. _schema_request_op_kind_element_set_filter_score
+.. _schema_request_op_kind_element_set_filter_score:
 
 :ref:`element_set_filter_score <ops_filter_score>`
   Filters :ref:`Elements <compound_element>` with :ref:`Score <base_score>` components by the specified numerical value and relational operator.
