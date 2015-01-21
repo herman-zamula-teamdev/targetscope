@@ -57,22 +57,22 @@ Inclusive filter
 **CLI example**
       ``bedops --element-of -1 foo.bed bar1.bed bar2.bed ... > inclusive_filter.bed``
 
-This filter creates a new :ref:`set <compound_set>` from :ref:`elements <compound_element>` in the first set, where :ref:`range <base_range>` components of elements in the second (and subsequent) sets overlap the first set's elements by the specified integer or float value. 
+This filter creates a new :ref:`Set <compound_set>` from :ref:`Elements <compound_element>` in the first Set, where :ref:`Range <base_range>` components of Elements in the second (and subsequent) Sets overlap the first Set's elements by the specified integer or float value. 
 
-If that value is an integer, overlap is calculated as a measure of required overlap of bases in the elements' :ref:`range <base_range>` components. If that value is a percentage, overlap is calculated as a required minimum fraction of overlap between ranges.
+If that value is an integer, overlap is calculated as a measure of required overlap of bases in the Elements' :ref:`Range <base_range>` components. If that value is a percentage, overlap is calculated as a required minimum fraction of overlap between ranges.
 
-If there are more than two :ref:`sets <compound_set>` specified as input, the second and subsequent :ref:`sets <compound_set>` are first merged into an intermediate set. The first set is then filtered against this intermediate set using the specified overlap threshold.
+If there are more than two :ref:`Sets <compound_set>` specified as input, the second and subsequent :ref:`Sets <compound_set>` are first merged into an intermediate Set. The first Set is then filtered against this intermediate set using the specified overlap threshold.
 
-Because the output set is made up of elements from the first set, those :ref:`elements <compound_element>` should preserve all additional attributes (:ref:`Name <base_name>`, :ref:`Score <base_score>`, *etc.*) where applicable.
+Because the output set is made up of elements from the first Set, those :ref:`Elements <compound_element>` should preserve all additional attributes (:ref:`Name <base_name>`, :ref:`Score <base_score>`, *etc.*) where applicable.
 
-The ordering of sets in this operation matters; *e.g.*, compare these two inclusion operations, where the two sets are in different order.
+The ordering of Sets in this operation matters; *e.g.*, compare these two inclusion operations, where the two Sets are in different order.
 
-In the first example, we filter set A against set B:
+In the first example, we filter Set A against Set B:
 
 .. image:: ../../_static/ops_set_inclusive_filter_ab.png
    :width: 99%
 
-In the second example, we filter set B against set A:
+In the second example, we filter Set B against Set A:
 
 .. image:: ../../_static/ops_set_inclusive_filter_ba.png
    :width: 99%
@@ -92,13 +92,13 @@ Exclusive filter
 **CLI example**
       ``bedops --not-element-of -1 foo.bed bar1.bed bar2.bed ... > exclusive_filter.bed``
 
-This filter creates a new :ref:`set <compound_set>` from elements in the first :ref:`set <compound_set>`, where :ref:`range <base_range>` components of :ref:`elements <compound_element>` in the second (and subsequent) sets do not overlap the first set's elements by the specified integer or float value. 
+This filter creates a new :ref:`Set <compound_set>` from elements in the first :ref:`Set <compound_set>`, where :ref:`Range <base_range>` components of :ref:`Elements <compound_element>` in the second (and subsequent) Sets do not overlap the first Set's Elements by the specified integer or float value. 
 
-If that value is an integer, overlap is calculated as a measure of required overlap of bases in the elements' range components. If that value is a percentage, overlap is calculated as a required minimum fraction of overlap between ranges.
+If that value is an integer, overlap is calculated as a measure of required overlap of bases in the Elements' Range components. If that value is a percentage, overlap is calculated as a required minimum fraction of overlap between Ranges.
 
-If there are more than two sets specified as input, the second and subsequent sets are first merged into an intermediate set. The first set is then filtered against this intermediate set using the specified overlap threshold.
+If there are more than two Sets specified as input, the second and subsequent Sets are first merged into an intermediate Set. The first Set is then filtered against this intermediate Set using the specified overlap threshold.
 
-Because the output set is made up of elements from the first set, those elements should preserve all additional attributes (:ref:`Name <base_name>`, :ref:`Score <base_score>`, etc.) where applicable.
+Because the output Set is made up of Elements from the first Set, those elements should preserve all additional attributes (:ref:`Name <base_name>`, :ref:`Score <base_score>`, etc.) where applicable.
 
 .. image:: ../../_static/ops_set_exclusive_filter_ab.png
    :width: 99%

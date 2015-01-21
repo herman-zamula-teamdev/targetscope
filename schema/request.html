@@ -78,6 +78,10 @@
 <p>The following are short descriptions of the JSON keywords used to describe an operation-kind. View the linked operation document for the full description and parameter list.</p>
 <div class="section" id="element">
 <h5>Element<a class="headerlink" href="#element" title="Permalink to this headline">¶</a></h5>
+<dl class="docutils" id="schema-request-op-kind-element-set-element-of">
+<dt><a class="reference internal" href="../operations/set.html#ops-set-inclusive-filter"><em>element_set_element_of</em></a></dt>
+<dd>Creates a new <a class="reference internal" href="../data/compound.html#compound-set"><em>Set</em></a> from <a class="reference internal" href="../data/compound.html#compound-element"><em>Elements</em></a> in the first set, where <a class="reference internal" href="../data/base.html#base-range"><em>Range</em></a> components of Elements in the second (and subsequent) Sets overlap the first Set&#8217;s Elements by the specified integer or float value.</dd>
+</dl>
 <dl class="docutils" id="schema-request-op-kind-element-set-filter-chromosome">
 <dt><a class="reference internal" href="../operations/filter.html#ops-filter-chromosome"><em>element_set_filter_chromosome</em></a></dt>
 <dd>Filters <a class="reference internal" href="../data/compound.html#compound-element"><em>Elements</em></a> with a <a class="reference internal" href="../data/base.html#base-range"><em>Range</em></a> component by the specified, exact chromosome string name.</dd>
@@ -98,6 +102,10 @@
 <dt><a class="reference internal" href="../operations/set.html#ops-set-merge"><em>element_set_merge</em></a></dt>
 <dd>Takes merge of <a class="reference internal" href="../data/base.html#base-range"><em>Ranges</em></a> of input <a class="reference internal" href="../data/compound.html#compound-element"><em>Elements</em></a> in one or more <a class="reference internal" href="../data/compound.html#compound-set"><em>Sets</em></a>.</dd>
 </dl>
+<dl class="docutils" id="schema-request-op-kind-element-set-not-element-of">
+<dt><a class="reference internal" href="../operations/set.html#ops-set-exclusive-filter"><em>element_set_not_element_of</em></a></dt>
+<dd>Creates a new <a class="reference internal" href="../data/compound.html#compound-set"><em>Set</em></a> from elements in the first <a class="reference internal" href="../data/compound.html#compound-set"><em>Set</em></a>, where <a class="reference internal" href="../data/base.html#base-range"><em>Range</em></a> components of <a class="reference internal" href="../data/compound.html#compound-element"><em>Elements</em></a> in the second (and subsequent) Sets do not overlap the first Set&#8217;s Elements by the specified integer or float value.</dd>
+</dl>
 <dl class="docutils" id="schema-request-op-kind-element-set-range">
 <dt><a class="reference internal" href="../operations/range.html#ops-range-adjust-element"><em>element_set_range</em></a></dt>
 <dd>Symmetrically or asymmetrically shrinks or grows <a class="reference internal" href="../data/compound.html#compound-element"><em>Elements</em></a> by specified integer parameter(s).</dd>
@@ -111,14 +119,13 @@
 <h5>Interaction<a class="headerlink" href="#interaction" title="Permalink to this headline">¶</a></h5>
 <dl class="docutils" id="schema-request-op-kind-interaction-set-filter-component">
 <dt><a class="reference internal" href="../operations/filter.html#ops-filter-component"><em>interaction_set_filter_component</em></a></dt>
-<dd>Filters an <a class="reference internal" href="../data/compound.html#compound-interaction"><em>Interaction</em></a> to return either the first or second <a class="reference internal" href="../data/compound.html#compound-element"><em>Element</em></a> <a class="reference internal" href="../data/compound.html#compound-set"><em>Set</em></a>.</dd>
+<dd>Filters an <a class="reference internal" href="../data/compound.html#compound-interaction"><em>Interaction</em></a> <a class="reference internal" href="../data/compound.html#compound-set"><em>Set</em></a> to return either the first or second component as an <a class="reference internal" href="../data/compound.html#compound-element"><em>Element</em></a> <a class="reference internal" href="../data/compound.html#compound-set"><em>Set</em></a>.</dd>
 </dl>
 <dl class="docutils" id="schema-request-op-kind-interaction-set-range">
 <dt><a class="reference internal" href="../operations/interaction.html#ops-interaction-range"><em>interaction_set_range</em></a></dt>
 <dd>Symmetrically or asymmetrically shrinks or grows a component of an <a class="reference internal" href="../data/compound.html#compound-interaction"><em>Interaction</em></a> in a larger <a class="reference internal" href="../data/compound.html#compound-set"><em>Set</em></a>.</dd>
 </dl>
-<div class="highlight-python"><div class="highlight"><pre><span class="s">&quot;element_set_element_of&quot;</span><span class="p">,</span>
-<span class="s">&quot;element_set_not_element_of&quot;</span><span class="p">,</span>
+<div class="highlight-python"><div class="highlight"><pre><span class="s">&quot;element_set_not_element_of&quot;</span><span class="p">,</span>
 <span class="s">&quot;element_set_component&quot;</span><span class="p">,</span>
 <span class="s">&quot;element_set_difference&quot;</span><span class="p">,</span>
 <span class="s">&quot;element_set_symmetric_difference&quot;</span><span class="p">,</span>

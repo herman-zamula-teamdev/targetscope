@@ -33,6 +33,11 @@ _______
 Element
 _______
 
+.. _schema_request_op_kind_element_set_element_of:
+
+:ref:`element_set_element_of <ops_set_inclusive_filter>`
+  Creates a new :ref:`Set <compound_set>` from :ref:`Elements <compound_element>` in the first set, where :ref:`Range <base_range>` components of Elements in the second (and subsequent) Sets overlap the first Set's Elements by the specified integer or float value. 
+
 .. _schema_request_op_kind_element_set_filter_chromosome:
 
 :ref:`element_set_filter_chromosome <ops_filter_chromosome>`
@@ -58,6 +63,11 @@ _______
 :ref:`element_set_merge <ops_set_merge>`
   Takes merge of :ref:`Ranges <base_range>` of input :ref:`Elements <compound_element>` in one or more :ref:`Sets <compound_set>`.
 
+.. _schema_request_op_kind_element_set_not_element_of:
+
+:ref:`element_set_not_element_of <ops_set_exclusive_filter>`
+  Creates a new :ref:`Set <compound_set>` from elements in the first :ref:`Set <compound_set>`, where :ref:`Range <base_range>` components of :ref:`Elements <compound_element>` in the second (and subsequent) Sets do not overlap the first Set's Elements by the specified integer or float value. 
+
 .. _schema_request_op_kind_element_set_range:
 
 :ref:`element_set_range <ops_range_adjust_element>`
@@ -75,7 +85,7 @@ ___________
 .. _schema_request_op_kind_interaction_set_filter_component:
 
 :ref:`interaction_set_filter_component <ops_filter_component>`
-  Filters an :ref:`Interaction <compound_interaction>` to return either the first or second :ref:`Element <compound_element>` :ref:`Set <compound_set>`.
+  Filters an :ref:`Interaction <compound_interaction>` :ref:`Set <compound_set>` to return either the first or second component as an :ref:`Element <compound_element>` :ref:`Set <compound_set>`.
 
 .. _schema_request_op_kind_interaction_set_range:
 
@@ -84,7 +94,6 @@ ___________
 
 ::
 
-  "element_set_element_of",
   "element_set_not_element_of",
   "element_set_component",
   "element_set_difference",
