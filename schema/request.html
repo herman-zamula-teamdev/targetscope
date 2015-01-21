@@ -92,6 +92,23 @@ Type &quot;help&quot;, &quot;copyright&quot;, &quot;credits&quot; or &quot;licen
 </div>
 </div>
 <p>In this example, if validation fails (some field is missing or of the incorrect type), a <code class="docutils literal"><span class="pre">ValidationError</span></code> exception is thrown with errors that point to the offending object.</p>
+<p>For example, if the request contains an invalid <code class="docutils literal"><span class="pre">version</span></code> key value, then the validation script will throw a detailed exception report:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">Traceback</span> <span class="p">(</span><span class="n">most</span> <span class="n">recent</span> <span class="n">call</span> <span class="n">last</span><span class="p">):</span>
+  <span class="n">File</span> <span class="s">&quot;./target_gene_request_validation.py&quot;</span><span class="p">,</span> <span class="n">line</span> <span class="mi">10</span><span class="p">,</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+    <span class="n">validate</span><span class="p">(</span><span class="n">test_request</span><span class="p">,</span> <span class="n">schema</span><span class="p">)</span>
+  <span class="n">File</span> <span class="s">&quot;/Library/Python/2.7/site-packages/jsonschema-2.3.0-py2.7.egg/jsonschema/validators.py&quot;</span><span class="p">,</span> <span class="n">line</span> <span class="mi">428</span><span class="p">,</span> <span class="ow">in</span> <span class="n">validate</span>
+    <span class="n">cls</span><span class="p">(</span><span class="n">schema</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span><span class="o">.</span><span class="n">validate</span><span class="p">(</span><span class="n">instance</span><span class="p">)</span>
+  <span class="n">File</span> <span class="s">&quot;/Library/Python/2.7/site-packages/jsonschema-2.3.0-py2.7.egg/jsonschema/validators.py&quot;</span><span class="p">,</span> <span class="n">line</span> <span class="mi">117</span><span class="p">,</span> <span class="ow">in</span> <span class="n">validate</span>
+    <span class="k">raise</span> <span class="n">error</span>
+<span class="n">jsonschema</span><span class="o">.</span><span class="n">exceptions</span><span class="o">.</span><span class="n">ValidationError</span><span class="p">:</span> <span class="s">u&#39;v1.2.0&#39;</span> <span class="ow">is</span> <span class="ow">not</span> <span class="n">one</span> <span class="n">of</span> <span class="p">[</span><span class="s">u&#39;v1.0.0&#39;</span><span class="p">,</span> <span class="s">u&#39;v1.1.0&#39;</span><span class="p">]</span>
+
+<span class="n">Failed</span> <span class="n">validating</span> <span class="s">u&#39;enum&#39;</span> <span class="ow">in</span> <span class="n">schema</span><span class="p">[</span><span class="s">u&#39;properties&#39;</span><span class="p">][</span><span class="s">u&#39;version&#39;</span><span class="p">]:</span>
+    <span class="p">{</span><span class="s">u&#39;enum&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s">u&#39;v1.0.0&#39;</span><span class="p">,</span> <span class="s">u&#39;v1.1.0&#39;</span><span class="p">]}</span>
+
+<span class="n">On</span> <span class="n">instance</span><span class="p">[</span><span class="s">u&#39;version&#39;</span><span class="p">]:</span>
+    <span class="s">u&#39;v1.2.0&#39;</span>
+</pre></div>
+</div>
 </div>
 </div>
 

@@ -37,3 +37,22 @@ We include a test web request that follows the schema (``target_gene_test_reques
      >>>
 
 In this example, if validation fails (some field is missing or of the incorrect type), a ``ValidationError`` exception is thrown with errors that point to the offending object.
+
+For example, if the request contains an invalid ``version`` key value, then the validation script will throw a detailed exception report: 
+
+.. code-block:: python
+
+  Traceback (most recent call last):
+    File "./target_gene_request_validation.py", line 10, in <module>
+      validate(test_request, schema)
+    File "/Library/Python/2.7/site-packages/jsonschema-2.3.0-py2.7.egg/jsonschema/validators.py", line 428, in validate
+      cls(schema, *args, **kwargs).validate(instance)
+    File "/Library/Python/2.7/site-packages/jsonschema-2.3.0-py2.7.egg/jsonschema/validators.py", line 117, in validate
+      raise error
+  jsonschema.exceptions.ValidationError: u'v1.2.0' is not one of [u'v1.0.0', u'v1.1.0']
+
+  Failed validating u'enum' in schema[u'properties'][u'version']:
+      {u'enum': [u'v1.0.0', u'v1.1.0']}
+
+  On instance[u'version']:
+      u'v1.2.0'
