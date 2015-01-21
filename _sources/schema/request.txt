@@ -90,7 +90,7 @@ _______
 
 .. _schema_request_op_kind_element_set_symmetric_difference:
 
-:ref:`element_set_symmetric_difference <ops_set_symdiff>`
+:ref:`element_set_symmetric_difference <ops_set_symmdiff>`
   Creates a new :ref:`Set <compound_set>` from :ref:`Ranges <base_range>` found in the first input Set, excluding overlaps with Ranges in the second and subsequent input Sets, unionized with Ranges found in the second input Set, excluding overlaps with Ranges in all other input Sets, etc.
 
 .. _schema_request_op_kind_element_set_union:
