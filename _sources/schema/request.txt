@@ -35,8 +35,8 @@ _______
 
 .. _schema_request_op_kind_element_set_component:
 
-:ref:`element_set_component <ops_set_component>`
-  Creates a new :ref:`Set <compound_set>` of :ref:`Elements <compound_element>` from gaps between the contiguous :ref:`Ranges <base_range>` defined by one or more input Sets.
+:ref:`element_set_component <ops_filter_component>`
+  Filters an :ref:`Interaction <compound_interaction>` to return either the first or second :ref:`Element <compound_element>` :ref:`Set <compound_set>` (promoter or DHS component).
 
 .. _schema_request_op_kind_element_set_difference:
 
