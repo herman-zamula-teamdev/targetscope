@@ -13,11 +13,15 @@ JSON Schema
 
 Refer to the ``target_gene_schema.json`` file (`GitHub link <https://github.com/alexpreynolds/targetscope/blob/master/target_gene_schema.json>`__) for the current *targetscope* schema.
 
+.. _schema_request_op:
+
 ----------
 Operations
 ----------
 
 Operation components of the request payload are split into two descriptors: *kind* and *option*. The *kind* describes the type or kind of operation, while *option* describes options or parameters for that operation.
+
+.. _schema_request_op_kind:
 
 +++++
 Kinds
