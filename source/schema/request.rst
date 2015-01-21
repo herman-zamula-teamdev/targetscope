@@ -29,25 +29,25 @@ Kinds
 
 The following are short descriptions of the JSON keywords used to describe operation-kinds. View the linked operation document for the full description and parameter list.
 
-.. _schema_request_op_kind_element_set_filter_score:
+.. _schema_request_op_kind_element_set_filter_chromosome:
 
-:ref:`element_set_filter_score <ops_filter_score>`
-  Filters :ref:`Elements <compound_element>` with :ref:`Score <base_score>` components by the specified numerical value and relational operator.
+:ref:`element_set_filter_chromosome <ops_filter_chromosome>`
+  Filters :ref:`Elements <compound_element>` with a :ref:`Range <base_range>` component by the specified, exact chromosome string name.
 
 .. _schema_request_op_kind_element_set_filter_name:
 
 :ref:`element_set_filter_name <ops_filter_name>`
   Filters :ref:`Elements <compound_element>` with :ref:`Name <base_name>` components by the specified string value.
 
+.. _schema_request_op_kind_element_set_filter_score:
+
+:ref:`element_set_filter_score <ops_filter_score>`
+  Filters :ref:`Elements <compound_element>` with :ref:`Score <base_score>` components by the specified numerical value and relational operator.
+
 .. _schema_request_op_kind_element_set_filter_strand:
 
 :ref:`element_set_filter_strand <ops_filter_strand>`
   Filters :ref:`Elements <compound_element>` with :ref:`Name <base_name>` components by the specified :ref:`Strand <base_strand>` value.
-
-.. _schema_request_op_kind_element_set_filter_chromosome:
-
-:ref:`element_set_filter_chromosome <ops_filter_chromosome>`
-  Filters :ref:`Elements <compound_element>` with a :ref:`Range <base_range>` component by the specified, exact chromosome string name.
 
 .. _schema_request_op_kind_element_set_range:
 
