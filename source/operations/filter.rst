@@ -67,9 +67,7 @@ Chromosome
 **CLI example**
       ``bedextract chr17 foo.bed > foo_chr17.bed``
 
-This operation filters :ref:`Elements <compound_element>` with a :ref:`Range <base_range>` component by the specified, exact chromosome string name. A false Boolean value allows specifying the inverse of the result set (all elements but those on the specified chromosome).
-
-After filtering, the output set should either be a proper subset of the input, the empty set, or the input itself.
+This operation filters :ref:`Elements <compound_element>` by the specified, exact chromosome string name. A false Boolean value allows specifying the inverse of the result set (all elements but those on the specified chromosome).
 
 .. _ops_filter_component:
 

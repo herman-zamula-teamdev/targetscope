@@ -27,7 +27,7 @@ Operation components of the request payload are split into two descriptors: *kin
 Kinds
 +++++
 
-The following are short descriptions of the JSON keywords used to describe operation-kinds. View the linked operation document for the full description and parameter list.
+The following are short descriptions of the JSON keywords used to describe an operation-kind. View the linked operation document for the full description and parameter list.
 
 .. _schema_request_op_kind_element_set_filter_chromosome:
 
@@ -49,10 +49,20 @@ The following are short descriptions of the JSON keywords used to describe opera
 :ref:`element_set_filter_strand <ops_filter_strand>`
   Filters :ref:`Elements <compound_element>` with :ref:`Name <base_name>` components by the specified :ref:`Strand <base_strand>` value.
 
+.. _schema_request_op_kind_element_set_merge:
+
+:ref:`element_set_merge <ops_set_merge>`
+  Takes merge of :ref:`Ranges <base_range>` of input :ref:`Elements <compound_element>` in one or more :ref:`Sets <compound_set>`.
+
 .. _schema_request_op_kind_element_set_range:
 
 :ref:`element_set_range <ops_range_adjust_element>`
   Symmetrically or asymmetrically shrinks or grows :ref:`Elements <compound_element>` by specified integer parameter(s).
+
+.. _schema_request_op_kind_element_set_union:
+
+:ref:`element_set_union <ops_set_union>`
+  Takes union of :ref:`Elements <compound_element>` in one or more :ref:`Sets <compound_set>`, returning one :ref:`Set <compound_set>` containing all elements.
 
 .. _schema_request_op_kind_interaction_set_filter_component:
 
@@ -66,8 +76,6 @@ The following are short descriptions of the JSON keywords used to describe opera
 
 ::
 
-  "element_set_union",
-  "element_set_merge",
   "element_set_element_of",
   "element_set_not_element_of",
   "element_set_component",
