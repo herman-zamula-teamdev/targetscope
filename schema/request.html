@@ -75,6 +75,7 @@
 <p>Operation components of the request payload are split into two descriptors: <em>kind</em> and <em>option</em>. The <em>kind</em> describes the type or kind of operation, while <em>option</em> describes options or parameters for that operation.</p>
 <div class="section" id="kinds">
 <span id="schema-request-op-kind"></span><h4>Kinds<a class="headerlink" href="#kinds" title="Permalink to this headline">¶</a></h4>
+<p>The following are short descriptions of the JSON keywords used to describe operation-kinds. View the linked operation document for the full description and parameter list.</p>
 <dl class="docutils" id="schema-request-op-kind-element-set-range">
 <dt><a class="reference internal" href="../operations/range.html#ops-range-adjust-element"><em>element_set_range</em></a></dt>
 <dd>Symmetrically or asymmetrically shrinks or grows <a class="reference internal" href="../data/compound.html#compound-element"><em>Elements</em></a> by specified integer parameter(s).</dd>
@@ -87,12 +88,23 @@
 <dt><a class="reference internal" href="../operations/filter.html#ops-filter-score"><em>element_set_filter_score</em></a></dt>
 <dd>Filters <a class="reference internal" href="../data/compound.html#compound-element"><em>Elements</em></a> with <a class="reference internal" href="../data/base.html#base-score"><em>Score</em></a> components by the specified numerical value and relational operator.</dd>
 </dl>
-<div class="highlight-python"><div class="highlight"><pre><span class="s">&quot;element_set_filter_score&quot;</span><span class="p">,</span>
-<span class="s">&quot;element_set_filter_name&quot;</span><span class="p">,</span>
-<span class="s">&quot;element_set_filter_strand&quot;</span><span class="p">,</span>
-<span class="s">&quot;element_set_filter_chromosome&quot;</span><span class="p">,</span>
-<span class="s">&quot;interaction_set_filter_component&quot;</span><span class="p">,</span>
-<span class="s">&quot;element_set_union&quot;</span><span class="p">,</span>
+<dl class="docutils" id="schema-request-op-kind-element-set-filter-name">
+<dt><a class="reference internal" href="../operations/filter.html#ops-filter-name"><em>element_set_filter_name</em></a></dt>
+<dd>Filters <a class="reference internal" href="../data/compound.html#compound-element"><em>Elements</em></a> with <a class="reference internal" href="../data/base.html#base-name"><em>Name</em></a> components by the specified string value.</dd>
+</dl>
+<dl class="docutils" id="schema-request-op-kind-element-set-filter-strand">
+<dt><a class="reference internal" href="../operations/filter.html#ops-filter-strand"><em>element_set_filter_strand</em></a></dt>
+<dd>Filters <a class="reference internal" href="../data/compound.html#compound-element"><em>Elements</em></a> with <a class="reference internal" href="../data/base.html#base-name"><em>Name</em></a> components by the specified <a class="reference internal" href="../data/base.html#base-strand"><em>Strand</em></a> value.</dd>
+</dl>
+<dl class="docutils" id="schema-request-op-kind-element-set-filter-chromosome">
+<dt><a class="reference internal" href="../operations/filter.html#ops-filter-chromosome"><em>element_set_filter_chromosome</em></a></dt>
+<dd>Filters <a class="reference internal" href="../data/compound.html#compound-element"><em>Elements</em></a> with a <a class="reference internal" href="../data/base.html#base-range"><em>Range</em></a> component by the specified, exact chromosome string name.</dd>
+</dl>
+<dl class="docutils" id="schema-request-op-kind-element-set-filter-component">
+<dt><a class="reference internal" href="../operations/filter.html#ops-filter-component"><em>interaction_set_filter_component</em></a></dt>
+<dd>Filters an <a class="reference internal" href="../data/compound.html#compound-interaction"><em>Interaction</em></a> to return either the first or second <a class="reference internal" href="../data/compound.html#compound-element"><em>Element</em></a> <a class="reference internal" href="../data/compound.html#compound-set"><em>Set</em></a>.</dd>
+</dl>
+<div class="highlight-python"><div class="highlight"><pre><span class="s">&quot;element_set_union&quot;</span><span class="p">,</span>
 <span class="s">&quot;element_set_merge&quot;</span><span class="p">,</span>
 <span class="s">&quot;element_set_element_of&quot;</span><span class="p">,</span>
 <span class="s">&quot;element_set_not_element_of&quot;</span><span class="p">,</span>
