@@ -13,6 +13,56 @@ JSON Schema
 
 Refer to the ``target_gene_schema.json`` file (`GitHub link <https://github.com/alexpreynolds/targetscope/blob/master/target_gene_schema.json>`__) for the current *targetscope* schema.
 
+----------
+Operations
+----------
+
+Operation components of the request payload are split into two descriptors: *kind* and *option*. The *kind* describes the type or kind of operation, while *option* describes options or parameters for that operation.
+
++++++
+Kinds
++++++
+
+:ref:`**element_set_range** <ops_range_adjust_element>`
+        This operation symmetrically or asymmetrically shrinks or grows :ref:`Elements <compound_element>` by specified integer parameter(s).
+
+::
+
+  "interaction_set_range",
+  "element_set_filter_score",
+  "element_set_filter_name",
+  "element_set_filter_strand",
+  "element_set_filter_chromosome",
+  "interaction_set_filter_component",
+  "element_set_union",
+  "element_set_merge",
+  "element_set_element_of",
+  "element_set_not_element_of",
+  "element_set_component",
+  "element_set_difference",
+  "element_set_symmetric_difference",
+  "element_set_partition",
+  "element_set_map_on_element_set",
+  "element_set_map_on_interaction_set",
+  "element_set_attributes",
+  "interaction_set_union"
+
++++++++
+Options
++++++++
+
+::
+
+  "range_start",
+  "range_stop",
+  "filter_score",
+  "filter_name",
+  "filter_strand",
+  "filter_chromosome",
+  "filter_interaction_component",
+  "set_range_left",
+  "set_range_right"
+
 ==========
 Validation
 ==========

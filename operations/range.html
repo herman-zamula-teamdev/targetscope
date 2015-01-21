@@ -79,23 +79,6 @@
 <p>Positive values expand elements; negative values shrink elements. Any <a class="reference internal" href="../data/compound.html#compound-element"><em>Element</em></a> with a processed <a class="reference internal" href="../data/base.html#base-range"><em>Range</em></a> with a length 0 or less is discarded.</p>
 <p>If the values of L and R are equal and positive, the element grows symmetrically. If the values of L and R are equal and negative, the element shrinks symmetrically.</p>
 </div>
-<div class="section" id="adjust-interaction">
-<span id="ops-range-adjust-interaction"></span><h2>Adjust interaction<a class="headerlink" href="#adjust-interaction" title="Permalink to this headline">¶</a></h2>
-<dl class="docutils">
-<dt><strong>Input</strong></dt>
-<dd>1 or 2 integers for promoter <a class="reference internal" href="../data/base.html#base-range"><em>range(s)</em></a>; 1 or 2 integers for DHS peak <a class="reference internal" href="../data/base.html#base-range"><em>range(s)</em></a>; <a class="reference internal" href="../data/compound.html#compound-interaction"><em>Interaction</em></a> <a class="reference internal" href="../data/compound.html#compound-set"><em>Set</em></a></dd>
-<dt><strong>Output</strong></dt>
-<dd><a class="reference internal" href="../data/compound.html#compound-interaction"><em>Interaction</em></a> <a class="reference internal" href="../data/compound.html#compound-set"><em>Set</em></a></dd>
-<dt><strong>CLI example</strong></dt>
-<dd>NA</dd>
-</dl>
-<p>This operation shrinks or grows either or both of the promoter and DHS components of specified <a class="reference internal" href="../data/compound.html#compound-interaction"><em>Interactions</em></a> by specified integer values.</p>
-<p>Positive values for the promoter expand promoter elements; negative values shrink promoter elements. A positive left value expands the promoter on the left edge of its <a class="reference internal" href="../data/base.html#base-range"><em>range</em></a>; conversely, a negative left value shrinks the promoter on its left edge. The same applies for the right value, to the right edge of the element’s range.</p>
-<p>Any promoter <a class="reference internal" href="../data/compound.html#compound-element"><em>Element</em></a> with a post-processed <a class="reference internal" href="../data/base.html#base-range"><em>Range</em></a> with a length 0 or less causes the entire <a class="reference internal" href="../data/compound.html#compound-interaction"><em>Interaction</em></a> to be discarded.</p>
-<p>Similar rules are applied to the DHS peak component of the <a class="reference internal" href="../data/compound.html#compound-interaction"><em>Interaction</em></a>.</p>
-<p>If the values of L and R are equal and positive, the promoter or peak component grows symmetrically. If the values of L and R are equal and negative, the promoter or peak component shrinks symmetrically.</p>
-<p>The command-line equivalent would likely be a combination of two <a class="reference internal" href="../glossary.html#glossary-bedops"><em>BEDOPS</em></a> <code class="docutils literal"><span class="pre">bedops</span> <span class="pre">--range</span></code> operations on each component.</p>
-</div>
 </div>
 
 
@@ -111,7 +94,6 @@
   <ul>
 <li><a class="reference internal" href="#">Range</a><ul>
 <li><a class="reference internal" href="#adjust-element">Adjust element</a></li>
-<li><a class="reference internal" href="#adjust-interaction">Adjust interaction</a></li>
 </ul>
 </li>
 </ul>

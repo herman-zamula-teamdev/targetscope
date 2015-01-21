@@ -70,6 +70,51 @@
 <div class="section" id="json-schema">
 <h2>JSON Schema<a class="headerlink" href="#json-schema" title="Permalink to this headline">¶</a></h2>
 <p>Refer to the <code class="docutils literal"><span class="pre">target_gene_schema.json</span></code> file (<a class="reference external" href="https://github.com/alexpreynolds/targetscope/blob/master/target_gene_schema.json">GitHub link</a>) for the current <em>targetscope</em> schema.</p>
+<div class="section" id="operations">
+<h3>Operations<a class="headerlink" href="#operations" title="Permalink to this headline">¶</a></h3>
+<p>Operation components of the request payload are split into two descriptors: <em>kind</em> and <em>option</em>. The <em>kind</em> describes the type or kind of operation, while <em>option</em> describes options or parameters for that operation.</p>
+<div class="section" id="kinds">
+<h4>Kinds<a class="headerlink" href="#kinds" title="Permalink to this headline">¶</a></h4>
+<dl class="docutils">
+<dt><a class="reference internal" href="../operations/range.html#ops-range-adjust-element"><em>**element_set_range**</em></a></dt>
+<dd>This operation symmetrically or asymmetrically shrinks or grows <a class="reference internal" href="../data/compound.html#compound-element"><em>Elements</em></a> by specified integer parameter(s).</dd>
+</dl>
+<div class="highlight-python"><div class="highlight"><pre><span class="s">&quot;interaction_set_range&quot;</span><span class="p">,</span>
+<span class="s">&quot;element_set_filter_score&quot;</span><span class="p">,</span>
+<span class="s">&quot;element_set_filter_name&quot;</span><span class="p">,</span>
+<span class="s">&quot;element_set_filter_strand&quot;</span><span class="p">,</span>
+<span class="s">&quot;element_set_filter_chromosome&quot;</span><span class="p">,</span>
+<span class="s">&quot;interaction_set_filter_component&quot;</span><span class="p">,</span>
+<span class="s">&quot;element_set_union&quot;</span><span class="p">,</span>
+<span class="s">&quot;element_set_merge&quot;</span><span class="p">,</span>
+<span class="s">&quot;element_set_element_of&quot;</span><span class="p">,</span>
+<span class="s">&quot;element_set_not_element_of&quot;</span><span class="p">,</span>
+<span class="s">&quot;element_set_component&quot;</span><span class="p">,</span>
+<span class="s">&quot;element_set_difference&quot;</span><span class="p">,</span>
+<span class="s">&quot;element_set_symmetric_difference&quot;</span><span class="p">,</span>
+<span class="s">&quot;element_set_partition&quot;</span><span class="p">,</span>
+<span class="s">&quot;element_set_map_on_element_set&quot;</span><span class="p">,</span>
+<span class="s">&quot;element_set_map_on_interaction_set&quot;</span><span class="p">,</span>
+<span class="s">&quot;element_set_attributes&quot;</span><span class="p">,</span>
+<span class="s">&quot;interaction_set_union&quot;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="options">
+<h4>Options<a class="headerlink" href="#options" title="Permalink to this headline">¶</a></h4>
+<div class="highlight-python"><div class="highlight"><pre><span class="s">&quot;range_start&quot;</span><span class="p">,</span>
+<span class="s">&quot;range_stop&quot;</span><span class="p">,</span>
+<span class="s">&quot;filter_score&quot;</span><span class="p">,</span>
+<span class="s">&quot;filter_name&quot;</span><span class="p">,</span>
+<span class="s">&quot;filter_strand&quot;</span><span class="p">,</span>
+<span class="s">&quot;filter_chromosome&quot;</span><span class="p">,</span>
+<span class="s">&quot;filter_interaction_component&quot;</span><span class="p">,</span>
+<span class="s">&quot;set_range_left&quot;</span><span class="p">,</span>
+<span class="s">&quot;set_range_right&quot;</span>
+</pre></div>
+</div>
+</div>
+</div>
 </div>
 <div class="section" id="validation">
 <h2>Validation<a class="headerlink" href="#validation" title="Permalink to this headline">¶</a></h2>
@@ -124,7 +169,14 @@ Type &quot;help&quot;, &quot;copyright&quot;, &quot;credits&quot; or &quot;licen
   <h3><a href="../index.html">Table Of Contents</a></h3>
   <ul>
 <li><a class="reference internal" href="#">Request</a><ul>
-<li><a class="reference internal" href="#json-schema">JSON Schema</a></li>
+<li><a class="reference internal" href="#json-schema">JSON Schema</a><ul>
+<li><a class="reference internal" href="#operations">Operations</a><ul>
+<li><a class="reference internal" href="#kinds">Kinds</a></li>
+<li><a class="reference internal" href="#options">Options</a></li>
+</ul>
+</li>
+</ul>
+</li>
 <li><a class="reference internal" href="#validation">Validation</a></li>
 </ul>
 </li>

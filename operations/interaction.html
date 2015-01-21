@@ -65,6 +65,20 @@
             
   <div class="section" id="interaction">
 <span id="ops-interaction"></span><h1>Interaction<a class="headerlink" href="#interaction" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="range">
+<span id="ops-interaction-range"></span><h2>Range<a class="headerlink" href="#range" title="Permalink to this headline">¶</a></h2>
+<dl class="docutils">
+<dt><strong>Input</strong></dt>
+<dd>1 or 2 integers for promoter or DHS peak component <a class="reference internal" href="../data/base.html#base-range"><em>range(s)</em></a>; <a class="reference internal" href="../data/compound.html#compound-interaction"><em>Interaction</em></a> <a class="reference internal" href="../data/compound.html#compound-set"><em>Set</em></a>; index of desired interaction component (0/promoter or 1/peak)</dd>
+<dt><strong>Output</strong></dt>
+<dd><a class="reference internal" href="../data/compound.html#compound-interaction"><em>Interaction</em></a> <a class="reference internal" href="../data/compound.html#compound-set"><em>Set</em></a></dd>
+</dl>
+<p>This operation shrinks or grows either the promoter or DHS component of specified <a class="reference internal" href="../data/compound.html#compound-interaction"><em>Interactions</em></a> by specified integer values.</p>
+<p>Positive values for the range component expand elements; negative values shrink elements. A positive left value expands the element on the left edge of its <a class="reference internal" href="../data/base.html#base-range"><em>range</em></a>; conversely, a negative left value shrinks the element on its left edge. The same applies for the right value, to the right edge of the element’s range.</p>
+<p>Any <a class="reference internal" href="../data/compound.html#compound-element"><em>Element</em></a> with a post-processed <a class="reference internal" href="../data/base.html#base-range"><em>Range</em></a> with a length 0 or less causes the entire <a class="reference internal" href="../data/compound.html#compound-interaction"><em>Interaction</em></a> to be discarded.</p>
+<p>If the values of L and R are equal and positive, the promoter or peak component grows symmetrically. If the values of L and R are equal and negative, the promoter or peak component shrinks symmetrically.</p>
+<p>The command-line equivalent would likely be a <a class="reference internal" href="../glossary.html#glossary-bedops"><em>BEDOPS</em></a> <code class="docutils literal"><span class="pre">bedops</span> <span class="pre">--range</span></code> operation on the specified component.</p>
+</div>
 <div class="section" id="union">
 <span id="ops-interaction-union"></span><h2>Union<a class="headerlink" href="#union" title="Permalink to this headline">¶</a></h2>
 <dl class="docutils">
@@ -89,6 +103,7 @@
   <h3><a href="../index.html">Table Of Contents</a></h3>
   <ul>
 <li><a class="reference internal" href="#">Interaction</a><ul>
+<li><a class="reference internal" href="#range">Range</a></li>
 <li><a class="reference internal" href="#union">Union</a></li>
 </ul>
 </li>
