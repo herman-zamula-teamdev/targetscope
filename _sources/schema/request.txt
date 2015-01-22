@@ -183,12 +183,12 @@ Options
 .. _schema_request_op_option_range_start:
 
 :ref:`range_start <ops_range_adjust_element>`
-  In conjunction with :ref:`element_set_range <schema_request_op_kind_element_set_range>` this parameter adjusts the left or start edge of :ref:`Elements <compound_element>` by the specified integer value. 
+  In conjunction with :ref:`element_set_range <schema_request_op_kind_element_set_range>` this parameter adjusts the left or start edge of an :ref:`Element <compound_element>` by the specified integer value. 
 
 .. _schema_request_op_option_range_stop:
 
 :ref:`range_stop <ops_range_adjust_element>`
-  In conjunction with :ref:`element_set_range <schema_request_op_kind_element_set_range>` this parameter adjusts the right or stop edge of :ref:`Elements <compound_element>` by the specified integer value. 
+  In conjunction with :ref:`element_set_range <schema_request_op_kind_element_set_range>` this parameter adjusts the right or stop edge of an :ref:`Element <compound_element>` by the specified integer value. 
 
 .. _schema_request_op_option_filter_score:
 
@@ -217,7 +217,6 @@ Options
 
 ::
 
-  "filter_interaction_component",
   "set_range_left",
   "set_range_right"
   "set_overlap_bases",
