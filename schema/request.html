@@ -237,6 +237,18 @@
 </pre></div>
 </div>
 </div>
+<div class="section" id="id2">
+<h5>Sets<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h5>
+<p>The <em>sets</em> array contains objects with <em>id</em> and <em>kind</em> key-value pairings.</p>
+<dl class="docutils">
+<dt><em>id</em></dt>
+<dd>String. Should match one of the ID values listed in the overall <a class="reference internal" href="#schema-request-sets"><em>Sets</em></a> array.</dd>
+</dl>
+<dl class="docutils">
+<dt><em>kind</em></dt>
+<dd>String. Specifies type of set. One of <code class="docutils literal"><span class="pre">input</span></code>, <code class="docutils literal"><span class="pre">input_reference</span></code>, <code class="docutils literal"><span class="pre">input_map</span></code> and <code class="docutils literal"><span class="pre">output</span></code>. An <code class="docutils literal"><span class="pre">input*</span></code> type indicates an existing set, while the <code class="docutils literal"><span class="pre">output</span></code> type indicates the set is an intermediate or final result yet to be generated.</dd>
+</dl>
+</div>
 </div>
 </div>
 </div>
@@ -304,6 +316,7 @@ Type &quot;help&quot;, &quot;copyright&quot;, &quot;credits&quot; or &quot;licen
 </li>
 <li><a class="reference internal" href="#arguments">Arguments</a><ul>
 <li><a class="reference internal" href="#options">Options</a></li>
+<li><a class="reference internal" href="#id2">Sets</a></li>
 </ul>
 </li>
 </ul>

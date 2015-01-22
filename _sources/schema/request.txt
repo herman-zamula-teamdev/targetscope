@@ -236,6 +236,22 @@ Options specify an array of *kind* and *value* key-value pairings. The following
   "set_overlap_range_start",
   "set_overlap_range_stop"
 
+____
+Sets
+____
+
+The *sets* array contains objects with *id* and *kind* key-value pairings.
+
+.. _schema_request_op_sets_id
+
+*id*
+  String. Should match one of the ID values listed in the overall :ref:`Sets <schema_request_sets>` array.
+
+.. _schema_request_op_sets_kind
+
+*kind*
+  String. Specifies type of set. One of ``input``, ``input_reference``, ``input_map`` and ``output``. An ``input*`` type indicates an existing set, while the ``output`` type indicates the set is an intermediate or final result yet to be generated.
+
 ==========
 Validation
 ==========
