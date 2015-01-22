@@ -223,11 +223,28 @@ Options specify an array of *kind* and *value* key-value pairings. The following
 :ref:`filter_interaction_component <ops_filter_component>`
   In conjunction with :ref:`interaction_set_filter_component <schema_request_op_kind_interaction_set_filter_component>` this parameter filters an :ref:`Interaction <compound_interaction>` :ref:`Set <compound_set>` to return either the first or second component as an :ref:`Element <compound_element>` :ref:`Set <compound_set>`, using the specified integer string value ``"0"`` or ``"1"``.
 
+.. _schema_request_op_option_set_range_left:
+
+:ref:`set_range_left <ops_range_adjust_element>`
+  In conjunction with :ref:`element_set_range <schema_request_op_kind_element_set_range>` this parameter adjusts the left or start edge of a :ref:`Set <compound_set>` of :ref:`Elements <compound_element>` by the specified integer value.
+
+.. _schema_request_op_option_set_range_right:
+
+:ref:`set_range_right <ops_range_adjust_element>`
+  In conjunction with :ref:`element_set_range <schema_request_op_kind_element_set_range>` this parameter adjusts the right or stop edge of a :ref:`Set <compound_set>` of :ref:`Elements <compound_element>` by the specified integer value.
+
+.. _schema_request_op_option_set_overlap_bases:
+
+*set_overlap_bases* (multiple operations)
+  In conjunction with :ref:`element_set_element_of <schema_request_op_kind_element_set_element_of>`, :ref:`element_set_not_element_of <schema_request_op_kind_element_set_not_element_of>`, :ref:`element_set_map_on_element_set <schema_request_op_kind_element_set_map_on_element_set>` and :ref:`element_set_map_on_interaction_set <schema_request_op_kind_element_set_map_on_interaction_set>` operations, this parameter sets the minimum overlap criteria in bases, as an integer value in string format. The default value is ``"1"`` base.
+
+.. _schema_request_op_option_set_overlap_fraction_both:
+
+*set_overlap_fraction_both* (multiple operations)
+  In conjunction with :ref:`element_set_map_on_element_set <schema_request_op_kind_element_set_map_on_element_set>` and :ref:`element_set_map_on_interaction_set <schema_request_op_kind_element_set_map_on_interaction_set>` operations, this parameter sets the minimum overlap criteria as a fractional value *0 < n <= 1* that is applied to both the reference and map :ref:`Sets <compound_set>` within the operation.
+
 ::
 
-  "set_range_left",
-  "set_range_right"
-  "set_overlap_bases",
   "set_overlap_fraction_both",
   "set_overlap_fraction_either",
   "set_overlap_fraction_map",
