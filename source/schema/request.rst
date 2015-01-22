@@ -266,12 +266,12 @@ Options specify an array of *kind* and *value* key-value pairings. The following
 .. _schema_request_op_option_set_overlap_range_start:
 
 *set_overlap_range_start* (multiple operations)
-  In conjunction with the :ref:`element_set_map_on_element_set <schema_request_op_kind_element_set_map_on_element_set>` and :ref:`element_set_map_on_interaction_set <schema_request_op_kind_element_set_map_on_interaction_set>` operations, this parameter selects map Elements overlapping within the specified number of bases to the left/start position of the reference Set's Elements.
+  In conjunction with the :ref:`element_set_map_on_element_set <schema_request_op_kind_element_set_map_on_element_set>` and :ref:`element_set_map_on_interaction_set <schema_request_op_kind_element_set_map_on_interaction_set>` operations, this parameter selects map :ref:`Elements <compound_element>` overlapping within the specified number of bases to the left/start position of the reference :ref:`Set <compound_set>`.
 
 .. _schema_request_op_option_set_overlap_range_stop:
 
 *set_overlap_range_stop* (multiple operations)
-  In conjunction with the :ref:`element_set_map_on_element_set <schema_request_op_kind_element_set_map_on_element_set>` and :ref:`element_set_map_on_interaction_set <schema_request_op_kind_element_set_map_on_interaction_set>` operations, this parameter selects map Elements overlapping within the specified number of bases to the right/stop position of the reference Set's Elements.
+  In conjunction with the :ref:`element_set_map_on_element_set <schema_request_op_kind_element_set_map_on_element_set>` and :ref:`element_set_map_on_interaction_set <schema_request_op_kind_element_set_map_on_interaction_set>` operations, this parameter selects map :ref:`Elements <compound_element>` overlapping within the specified number of bases to the right/stop position of the reference :ref:`Set <compound_set>`.
 
 ____
 Sets
