@@ -191,6 +191,14 @@ Options
   "filter_interaction_component",
   "set_range_left",
   "set_range_right"
+  "set_overlap_bases",
+  "set_overlap_fraction_both",
+  "set_overlap_fraction_either",
+  "set_overlap_fraction_map",
+  "set_overlap_fraction_ref",
+  "set_overlap_exact",
+  "set_overlap_range_start",
+  "set_overlap_range_stop"
 
 ==========
 Validation
