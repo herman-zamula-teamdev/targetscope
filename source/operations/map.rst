@@ -16,7 +16,7 @@ Element set onto element set
 **CLI example**
       ``bedmap --echo --echo-map --bp-ovr 1 ref.bed map.bed > ref_with_mapped_map.bed``
 
-This operation maps elements in one "map" :ref:`set <compound_set>` to :ref:`elements <compound_element>` in another "reference" set, if mapped elements meet the specified overlap criteria. 
+This operation maps elements in one "map" :ref:`Set <compound_set>` to :ref:`Elements <compound_element>` in another "reference" set, if mapped Elements meet the specified overlap criteria. 
 
 For instance, take the following command:
 
@@ -55,7 +55,7 @@ Element set onto interaction set
 **Output**
       :ref:`Interaction <compound_interaction>` :ref:`Set <compound_set>`
 
-This is identical to mapping an :ref:`Element <compound_element>` :ref:`Set <compound_set>` against another element set, with the same default overlap criteria, except that we specify which of the two components of the :ref:`Interaction <compound_interaction>` we would like to treat as the reference set to map our input element set against.
+This is identical to mapping an :ref:`Element <compound_element>` :ref:`Set <compound_set>` against another Element Set, with the same default overlap criteria, except that we specify which of the two components of the :ref:`Interaction <compound_interaction>` we would like to treat as the reference Set to map our input Element Set against.
 
 For instance, let's say we want a list of :ref:`Interactions <compound_interaction>`, whose promoter components overlap with some genes of interest.
 

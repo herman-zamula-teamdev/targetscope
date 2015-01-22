@@ -33,6 +33,11 @@ _______
 Element
 _______
 
+.. _scheme_request_op_kind_element_set_attributes:
+
+:ref:`element_set_attributes <ops_map_summary>`
+  Summarizes attributes of an :ref:`Element <compound_element>` :ref:`Set <compound_set>`. This summary could be the result of a numerical calculation on :ref:`Score <base_score>` data, or a listing of :ref:`Name <base_name>` values.
+
 .. _schema_request_op_kind_element_set_component:
 
 :ref:`element_set_component <ops_filter_component>`
@@ -67,6 +72,16 @@ _______
 
 :ref:`element_set_filter_strand <ops_filter_strand>`
   Filters :ref:`Elements <compound_element>` with :ref:`Name <base_name>` components by the specified :ref:`Strand <base_strand>` value.
+
+.. _schema_request_op_kind_element_set_map_on_element_set:
+
+:ref:`element_set_map_on_element_set <ops_map_element_onto_element>`
+  Maps elements in one "map" :ref:`Set <compound_set>` to :ref:`Elements <compound_element>` in another "reference" set, if mapped Elements meet the specified overlap criteria. 
+
+.. _schema_request_op_kind_element_set_map_on_interaction_set:
+
+:ref:`element_set_map_on_interaction_set <ops_map_element_onto_interaction>
+  Identical to mapping an :ref:`Element <compound_element>` :ref:`Set <compound_set>` against another Element Set, with the same default overlap criteria, except that we specify which of the two components of the :ref:`Interaction <compound_interaction>` we would like to treat as the reference Set to map our input Element Set against.
 
 .. _schema_request_op_kind_element_set_merge:
 
@@ -116,12 +131,6 @@ ___________
 
 :ref:`interaction_set_union <ops_interaction_union>`
   Takes the union of :ref:`Interactions <compound_interaction>` in a :ref:`Set <compound_set>`, yielding one :ref:`Set <compound_set>` made up of each of the input Interactions.
-
-::
-
-  "element_set_map_on_element_set",
-  "element_set_map_on_interaction_set",
-  "element_set_attributes",
 
 +++++++
 Options

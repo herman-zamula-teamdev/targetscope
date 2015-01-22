@@ -78,6 +78,10 @@
 <p>The following are short descriptions of the JSON keywords used to describe an operation-kind. View the linked operation document for the full description and parameter list.</p>
 <div class="section" id="element">
 <h5>Element<a class="headerlink" href="#element" title="Permalink to this headline">¶</a></h5>
+<dl class="docutils" id="scheme-request-op-kind-element-set-attributes">
+<dt><a class="reference internal" href="../operations/map.html#ops-map-summary"><em>element_set_attributes</em></a></dt>
+<dd>Summarizes attributes of an <a class="reference internal" href="../data/compound.html#compound-element"><em>Element</em></a> <a class="reference internal" href="../data/compound.html#compound-set"><em>Set</em></a>. This summary could be the result of a numerical calculation on <a class="reference internal" href="../data/base.html#base-score"><em>Score</em></a> data, or a listing of <a class="reference internal" href="../data/base.html#base-name"><em>Name</em></a> values.</dd>
+</dl>
 <dl class="docutils" id="schema-request-op-kind-element-set-component">
 <dt><a class="reference internal" href="../operations/filter.html#ops-filter-component"><em>element_set_component</em></a></dt>
 <dd>Filters an <a class="reference internal" href="../data/compound.html#compound-interaction"><em>Interaction</em></a> to return either the first or second <a class="reference internal" href="../data/compound.html#compound-element"><em>Element</em></a> <a class="reference internal" href="../data/compound.html#compound-set"><em>Set</em></a> (promoter or DHS component).</dd>
@@ -105,6 +109,14 @@
 <dl class="docutils" id="schema-request-op-kind-element-set-filter-strand">
 <dt><a class="reference internal" href="../operations/filter.html#ops-filter-strand"><em>element_set_filter_strand</em></a></dt>
 <dd>Filters <a class="reference internal" href="../data/compound.html#compound-element"><em>Elements</em></a> with <a class="reference internal" href="../data/base.html#base-name"><em>Name</em></a> components by the specified <a class="reference internal" href="../data/base.html#base-strand"><em>Strand</em></a> value.</dd>
+</dl>
+<dl class="docutils" id="schema-request-op-kind-element-set-map-on-element-set">
+<dt><a class="reference internal" href="../operations/map.html#ops-map-element-onto-element"><em>element_set_map_on_element_set</em></a></dt>
+<dd>Maps elements in one &#8220;map&#8221; <a class="reference internal" href="../data/compound.html#compound-set"><em>Set</em></a> to <a class="reference internal" href="../data/compound.html#compound-element"><em>Elements</em></a> in another &#8220;reference&#8221; set, if mapped Elements meet the specified overlap criteria.</dd>
+</dl>
+<dl class="docutils" id="schema-request-op-kind-element-set-map-on-interaction-set">
+<dt>:ref:<a href="#id1"><span class="problematic" id="id2">`</span></a>element_set_map_on_interaction_set &lt;ops_map_element_onto_interaction&gt;</dt>
+<dd>Identical to mapping an <a class="reference internal" href="../data/compound.html#compound-element"><em>Element</em></a> <a class="reference internal" href="../data/compound.html#compound-set"><em>Set</em></a> against another Element Set, with the same default overlap criteria, except that we specify which of the two components of the <a class="reference internal" href="../data/compound.html#compound-interaction"><em>Interaction</em></a> we would like to treat as the reference Set to map our input Element Set against.</dd>
 </dl>
 <dl class="docutils" id="schema-request-op-kind-element-set-merge">
 <dt><a class="reference internal" href="../operations/set.html#ops-set-merge"><em>element_set_merge</em></a></dt>
@@ -145,11 +157,6 @@
 <dt><a class="reference internal" href="../operations/interaction.html#ops-interaction-union"><em>interaction_set_union</em></a></dt>
 <dd>Takes the union of <a class="reference internal" href="../data/compound.html#compound-interaction"><em>Interactions</em></a> in a <a class="reference internal" href="../data/compound.html#compound-set"><em>Set</em></a>, yielding one <a class="reference internal" href="../data/compound.html#compound-set"><em>Set</em></a> made up of each of the input Interactions.</dd>
 </dl>
-<div class="highlight-python"><div class="highlight"><pre><span class="s">&quot;element_set_map_on_element_set&quot;</span><span class="p">,</span>
-<span class="s">&quot;element_set_map_on_interaction_set&quot;</span><span class="p">,</span>
-<span class="s">&quot;element_set_attributes&quot;</span><span class="p">,</span>
-</pre></div>
-</div>
 </div>
 </div>
 <div class="section" id="options">
