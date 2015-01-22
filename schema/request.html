@@ -71,7 +71,7 @@
 <h2>JSON Schema<a class="headerlink" href="#json-schema" title="Permalink to this headline">¶</a></h2>
 <p>Refer to the <code class="docutils literal"><span class="pre">target_gene_schema.json</span></code> file (<a class="reference external" href="https://github.com/alexpreynolds/targetscope/blob/master/target_gene_schema.json">GitHub link</a>) for the current <em>targetscope</em> schema.</p>
 <div class="section" id="base">
-<span id="schema-request-op"></span><h3>Base<a class="headerlink" href="#base" title="Permalink to this headline">¶</a></h3>
+<span id="schema-request-base"></span><h3>Base<a class="headerlink" href="#base" title="Permalink to this headline">¶</a></h3>
 <dl class="docutils" id="schema-request-base-version">
 <dt><em>version</em></dt>
 <dd>String. Specifies version of web request payload. One of <code class="docutils literal"><span class="pre">v1.0.0</span></code> or <code class="docutils literal"><span class="pre">v1.1.0</span></code>.</dd>
@@ -89,8 +89,20 @@
 <dd>String (date-time). <a class="reference external" href="http://tools.ietf.org/html/rfc3339">RFC3339-formatted</a> submission timestamp (UTC).</dd>
 </dl>
 </div>
+<div class="section" id="sets">
+<span id="schema-request-sets"></span><h3>Sets<a class="headerlink" href="#sets" title="Permalink to this headline">¶</a></h3>
+<p>Array of <em>id</em> and <em>kind</em> elements for each <a class="reference internal" href="../data/compound.html#compound-set"><em>Set</em></a>.</p>
+<dl class="docutils" id="schema-request-sets-id">
+<dt><em>id</em></dt>
+<dd>String. A unique identifier for the Set (<em>e.g.</em>, <a class="reference external" href="http://en.wikipedia.org/wiki/Globally_unique_identifier">GUID</a>).</dd>
+</dl>
+<dl class="docutils" id="schema-request-sets-kind">
+<dt><em>kind</em></dt>
+<dd>String. Specified member type of Set. One of <code class="docutils literal"><span class="pre">element</span></code> or <code class="docutils literal"><span class="pre">interaction</span></code>.</dd>
+</dl>
+</div>
 <div class="section" id="operations">
-<h3>Operations<a class="headerlink" href="#operations" title="Permalink to this headline">¶</a></h3>
+<span id="schema-request-op"></span><h3>Operations<a class="headerlink" href="#operations" title="Permalink to this headline">¶</a></h3>
 <p>Operation components of the request payload are split into two descriptors: <em>kind</em> and <em>option</em>. The <em>kind</em> describes the type or kind of operation, while <em>option</em> describes options or parameters for that operation.</p>
 <div class="section" id="kinds">
 <span id="schema-request-op-kind"></span><h4>Kinds<a class="headerlink" href="#kinds" title="Permalink to this headline">¶</a></h4>
@@ -249,6 +261,7 @@ Type &quot;help&quot;, &quot;copyright&quot;, &quot;credits&quot; or &quot;licen
 <li><a class="reference internal" href="#">Request</a><ul>
 <li><a class="reference internal" href="#json-schema">JSON Schema</a><ul>
 <li><a class="reference internal" href="#base">Base</a></li>
+<li><a class="reference internal" href="#sets">Sets</a></li>
 <li><a class="reference internal" href="#operations">Operations</a><ul>
 <li><a class="reference internal" href="#kinds">Kinds</a><ul>
 <li><a class="reference internal" href="#element">Element</a></li>

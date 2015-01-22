@@ -13,7 +13,7 @@ JSON Schema
 
 Refer to the ``target_gene_schema.json`` file (`GitHub link <https://github.com/alexpreynolds/targetscope/blob/master/target_gene_schema.json>`__) for the current *targetscope* schema.
 
-.. _schema_request_op:
+.. _schema_request_base:
 
 ----
 Base
@@ -38,6 +38,26 @@ Base
 
 *dtsubmission*
   String (date-time). `RFC3339-formatted <http://tools.ietf.org/html/rfc3339>`_ submission timestamp (UTC).
+
+.. _schema_request_sets:
+
+----
+Sets
+----
+
+Array of *id* and *kind* elements for each :ref:`Set <compound_set>`.
+
+.. _schema_request_sets_id:
+
+*id*
+  String. A unique identifier for the Set (*e.g.*, `GUID <http://en.wikipedia.org/wiki/Globally_unique_identifier>`_).
+
+.. _schema_request_sets_kind:
+
+*kind*
+  String. Specified member type of Set. One of ``element`` or ``interaction``.
+
+.. _schema_request_op:
 
 ----------
 Operations
