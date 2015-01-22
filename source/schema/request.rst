@@ -80,7 +80,7 @@ _______
 
 .. _schema_request_op_kind_element_set_map_on_interaction_set:
 
-:ref:`element_set_map_on_interaction_set <ops_map_element_onto_interaction>
+:ref:`element_set_map_on_interaction_set <ops_map_element_onto_interaction>`
   Identical to mapping an :ref:`Element <compound_element>` :ref:`Set <compound_set>` against another Element Set, with the same default overlap criteria, except that we specify which of the two components of the :ref:`Interaction <compound_interaction>` we would like to treat as the reference Set to map our input Element Set against.
 
 .. _schema_request_op_kind_element_set_merge:
