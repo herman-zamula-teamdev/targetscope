@@ -189,12 +189,24 @@ Options
 
 :ref:`range_stop <ops_range_adjust_element>`
   In conjunction with :ref:`element_set_range <schema_request_op_kind_element_set_range>` this parameter adjusts the right or stop edge of :ref:`Elements <compound_element>` by the specified integer value. 
-  
+
+.. _schema_request_op_option_filter_score:
+
+:ref:`filter_score <ops_filter_score>`
+  In conjunction with :ref:`element_set_filter_score <schema_request_op_kind_element_set_filter_score>` this parameter filters :ref:`Elements <compound_element>` by the specified numerical value and relational operator. This value is a semi-colon-delimited string specifying the value and operator, *e.g.* "5.12;<", "0.0000298;>=" etc.
+
+.. _schema_request_op_option_filter_name:
+
+:ref:`filter_name <ops_filter_name>`
+  In conjunction with :ref:`element_set_filter_name <schema_request_op_kind_element_set_filter_name>` this parameter filters :ref:`Elements <compound_element>` by an exact match with the specified name value.
+
+.. _schema_request_op_option_filter_strand:
+
+:ref:`filter_strand <ops_filter_strand>`
+  In conjunction with :ref:`element_set_filter_strand <schema_request_op_kind_element_set_filter_strand>` this parameter filters :ref:`Elements <compound_element>` by an exact match with the specified :ref:`Strand <base_strand>` value.
 
 ::
 
-  "filter_score",
-  "filter_name",
   "filter_strand",
   "filter_chromosome",
   "filter_interaction_component",

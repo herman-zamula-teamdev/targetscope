@@ -200,9 +200,19 @@
 <dt><a class="reference internal" href="../operations/range.html#ops-range-adjust-element"><em>range_stop</em></a></dt>
 <dd>In conjunction with <a class="reference internal" href="#schema-request-op-kind-element-set-range"><em>element_set_range</em></a> this parameter adjusts the right or stop edge of <a class="reference internal" href="../data/compound.html#compound-element"><em>Elements</em></a> by the specified integer value.</dd>
 </dl>
-<div class="highlight-python"><div class="highlight"><pre><span class="s">&quot;filter_score&quot;</span><span class="p">,</span>
-<span class="s">&quot;filter_name&quot;</span><span class="p">,</span>
-<span class="s">&quot;filter_strand&quot;</span><span class="p">,</span>
+<dl class="docutils" id="schema-request-op-option-filter-score">
+<dt><a class="reference internal" href="../operations/filter.html#ops-filter-score"><em>filter_score</em></a></dt>
+<dd>In conjunction with <a class="reference internal" href="#schema-request-op-kind-element-set-filter-score"><em>element_set_filter_score</em></a> this parameter filters <a class="reference internal" href="../data/compound.html#compound-element"><em>Elements</em></a> by the specified numerical value and relational operator. This value is a semi-colon-delimited string specifying the value and operator, <em>e.g.</em> &#8220;5.12;&lt;&#8221;, &#8220;0.0000298;&gt;=&#8221; etc.</dd>
+</dl>
+<dl class="docutils" id="schema-request-op-option-filter-name">
+<dt><a class="reference internal" href="../operations/filter.html#ops-filter-name"><em>filter_name</em></a></dt>
+<dd>In conjunction with <a class="reference internal" href="#schema-request-op-kind-element-set-filter-name"><em>element_set_filter_name</em></a> this parameter filters <a class="reference internal" href="../data/compound.html#compound-element"><em>Elements</em></a> by an exact match with the specified name value.</dd>
+</dl>
+<dl class="docutils" id="schema-request-op-option-filter-strand">
+<dt><a class="reference internal" href="../operations/filter.html#ops-filter-strand"><em>filter_strand</em></a></dt>
+<dd>In conjunction with <a class="reference internal" href="#schema-request-op-kind-element-set-filter-strand"><em>element_set_filter_strand</em></a> this parameter filters <a class="reference internal" href="../data/compound.html#compound-element"><em>Elements</em></a> by an exact match with the specified <a class="reference internal" href="../data/base.html#base-strand"><em>Strand</em></a> value.</dd>
+</dl>
+<div class="highlight-python"><div class="highlight"><pre><span class="s">&quot;filter_strand&quot;</span><span class="p">,</span>
 <span class="s">&quot;filter_chromosome&quot;</span><span class="p">,</span>
 <span class="s">&quot;filter_interaction_component&quot;</span><span class="p">,</span>
 <span class="s">&quot;set_range_left&quot;</span><span class="p">,</span>
