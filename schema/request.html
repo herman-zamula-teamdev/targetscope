@@ -226,11 +226,11 @@
 </dl>
 <dl class="docutils" id="schema-request-op-option-set-range-left">
 <dt><a class="reference internal" href="../operations/range.html#ops-range-adjust-element"><em>set_range_left</em></a></dt>
-<dd>In conjunction with <a class="reference internal" href="#schema-request-op-kind-element-set-range"><em>element_set_range</em></a> this parameter adjusts the left or start edge of a <a class="reference internal" href="../data/compound.html#compound-set"><em>Set</em></a> of <a class="reference internal" href="../data/compound.html#compound-element"><em>Elements</em></a> by the specified integer value.</dd>
+<dd>In conjunction with <a class="reference internal" href="#schema-request-op-kind-element-set-range"><em>element_set_range</em></a> this parameter adjusts the left or start edge of a <a class="reference internal" href="../data/compound.html#compound-set"><em>Set</em></a> of <a class="reference internal" href="../data/compound.html#compound-element"><em>Elements</em></a> by the specified integer string value.</dd>
 </dl>
 <dl class="docutils" id="schema-request-op-option-set-range-right">
 <dt><a class="reference internal" href="../operations/range.html#ops-range-adjust-element"><em>set_range_right</em></a></dt>
-<dd>In conjunction with <a class="reference internal" href="#schema-request-op-kind-element-set-range"><em>element_set_range</em></a> this parameter adjusts the right or stop edge of a <a class="reference internal" href="../data/compound.html#compound-set"><em>Set</em></a> of <a class="reference internal" href="../data/compound.html#compound-element"><em>Elements</em></a> by the specified integer value.</dd>
+<dd>In conjunction with <a class="reference internal" href="#schema-request-op-kind-element-set-range"><em>element_set_range</em></a> this parameter adjusts the right or stop edge of a <a class="reference internal" href="../data/compound.html#compound-set"><em>Set</em></a> of <a class="reference internal" href="../data/compound.html#compound-element"><em>Elements</em></a> by the specified integer string value.</dd>
 </dl>
 <dl class="docutils" id="schema-request-op-option-set-overlap-bases">
 <dt><em>set_overlap_bases</em> (multiple operations)</dt>
@@ -238,13 +238,21 @@
 </dl>
 <dl class="docutils" id="schema-request-op-option-set-overlap-fraction-both">
 <dt><em>set_overlap_fraction_both</em> (multiple operations)</dt>
-<dd>In conjunction with <a class="reference internal" href="#schema-request-op-kind-element-set-map-on-element-set"><em>element_set_map_on_element_set</em></a> and <a class="reference internal" href="#schema-request-op-kind-element-set-map-on-interaction-set"><em>element_set_map_on_interaction_set</em></a> operations, this parameter sets the minimum overlap criteria as a fractional value <em>0 &lt; n &lt;= 1</em> that is applied to both the reference and map <a class="reference internal" href="../data/compound.html#compound-set"><em>Sets</em></a> within the operation.</dd>
+<dd>In conjunction with <a class="reference internal" href="#schema-request-op-kind-element-set-map-on-element-set"><em>element_set_map_on_element_set</em></a> and <a class="reference internal" href="#schema-request-op-kind-element-set-map-on-interaction-set"><em>element_set_map_on_interaction_set</em></a> operations, this parameter sets the minimum overlap criteria as a fractional value <em>0 &lt; n &lt;= 1</em> (string-formatted) that is applied to <em>both</em> the reference and map <a class="reference internal" href="../data/compound.html#compound-set"><em>Sets</em></a> within the operation.</dd>
 </dl>
-<div class="highlight-python"><div class="highlight"><pre><span class="s">&quot;set_overlap_fraction_both&quot;</span><span class="p">,</span>
-<span class="s">&quot;set_overlap_fraction_either&quot;</span><span class="p">,</span>
-<span class="s">&quot;set_overlap_fraction_map&quot;</span><span class="p">,</span>
-<span class="s">&quot;set_overlap_fraction_ref&quot;</span><span class="p">,</span>
-<span class="s">&quot;set_overlap_exact&quot;</span><span class="p">,</span>
+<dl class="docutils" id="schema-request-op-option-set-overlap-fraction-either">
+<dt><em>set_overlap_fraction_either</em> (multiple operations)</dt>
+<dd>In conjunction with <a class="reference internal" href="#schema-request-op-kind-element-set-map-on-element-set"><em>element_set_map_on_element_set</em></a> and <a class="reference internal" href="#schema-request-op-kind-element-set-map-on-interaction-set"><em>element_set_map_on_interaction_set</em></a> operations, this parameter sets the minimum overlap criteria as a fractional value <em>0 &lt; n &lt;= 1</em> (string-formatted) that is applied to <em>either</em> of the reference and map <a class="reference internal" href="../data/compound.html#compound-set"><em>Sets</em></a> within the operation.</dd>
+</dl>
+<dl class="docutils" id="schema-request-op-option-set-overlap-fraction-map">
+<dt><em>set_overlap_fraction_map</em> (multiple operations)</dt>
+<dd>In conjunction with <a class="reference internal" href="#schema-request-op-kind-element-set-map-on-element-set"><em>element_set_map_on_element_set</em></a> and <a class="reference internal" href="#schema-request-op-kind-element-set-map-on-interaction-set"><em>element_set_map_on_interaction_set</em></a> operations, this parameter sets the minimum overlap criteria as a fractional value <em>0 &lt; n &lt;= 1</em> (string-formatted) that is applied to map <a class="reference internal" href="../data/compound.html#compound-set"><em>Set</em></a> within the operation.</dd>
+</dl>
+<dl class="docutils" id="schema-request-op-option-set-overlap-fraction-ref">
+<dt><em>set_overlap_fraction_ref</em> (multiple operations)</dt>
+<dd>In conjunction with <a class="reference internal" href="#schema-request-op-kind-element-set-map-on-element-set"><em>element_set_map_on_element_set</em></a> and <a class="reference internal" href="#schema-request-op-kind-element-set-map-on-interaction-set"><em>element_set_map_on_interaction_set</em></a> operations, this parameter sets the minimum overlap criteria as a fractional value <em>0 &lt; n &lt;= 1</em> (string-formatted) that is applied to reference <a class="reference internal" href="../data/compound.html#compound-set"><em>Set</em></a> within the operation.</dd>
+</dl>
+<div class="highlight-python"><div class="highlight"><pre><span class="s">&quot;set_overlap_exact&quot;</span><span class="p">,</span>
 <span class="s">&quot;set_overlap_range_start&quot;</span><span class="p">,</span>
 <span class="s">&quot;set_overlap_range_stop&quot;</span>
 </pre></div>
