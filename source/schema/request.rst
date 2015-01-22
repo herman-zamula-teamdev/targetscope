@@ -63,7 +63,7 @@ Array of *id* and *kind* elements for each :ref:`Set <compound_set>`.
 Operations
 ----------
 
-Operation components of the request payload are split into two descriptors: *kind* and *option*. The *kind* describes the type or kind of operation, while *option* describes options or parameters for that operation.
+Operations in the request payload are made up of an array of objects containing two objects: *kind* and *option*. The *kind* is a key-value pair that describes the type or kind of operation, while *option* describes an array of option or parameter key-value pairings for that operation.
 
 .. _schema_request_op_kind:
 
@@ -180,10 +180,19 @@ ___________
 Options
 +++++++
 
+.. _schema_request_op_option_range_start:
+
+:ref:`range_start <ops_range_adjust_element>`
+  In conjunction with :ref:`element_set_range <schema_request_op_kind_element_set_range>` this parameter adjusts the left or start edge of :ref:`Elements <compound_element>` by the specified integer value. 
+
+.. _schema_request_op_option_range_stop:
+
+:ref:`range_stop <ops_range_adjust_element>`
+  In conjunction with :ref:`element_set_range <schema_request_op_kind_element_set_range>` this parameter adjusts the right or stop edge of :ref:`Elements <compound_element>` by the specified integer value. 
+  
+
 ::
 
-  "range_start",
-  "range_stop",
   "filter_score",
   "filter_name",
   "filter_strand",

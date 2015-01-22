@@ -103,7 +103,7 @@
 </div>
 <div class="section" id="operations">
 <span id="schema-request-op"></span><h3>Operations<a class="headerlink" href="#operations" title="Permalink to this headline">¶</a></h3>
-<p>Operation components of the request payload are split into two descriptors: <em>kind</em> and <em>option</em>. The <em>kind</em> describes the type or kind of operation, while <em>option</em> describes options or parameters for that operation.</p>
+<p>Operations in the request payload are made up of an array of objects containing two objects: <em>kind</em> and <em>option</em>. The <em>kind</em> is a key-value pair that describes the type or kind of operation, while <em>option</em> describes an array of option or parameter key-value pairings for that operation.</p>
 <div class="section" id="kinds">
 <span id="schema-request-op-kind"></span><h4>Kinds<a class="headerlink" href="#kinds" title="Permalink to this headline">¶</a></h4>
 <p>The following are short descriptions of the JSON keywords used to describe an operation-kind. View the linked operation document for the full description and parameter list.</p>
@@ -192,9 +192,15 @@
 </div>
 <div class="section" id="options">
 <h4>Options<a class="headerlink" href="#options" title="Permalink to this headline">¶</a></h4>
-<div class="highlight-python"><div class="highlight"><pre><span class="s">&quot;range_start&quot;</span><span class="p">,</span>
-<span class="s">&quot;range_stop&quot;</span><span class="p">,</span>
-<span class="s">&quot;filter_score&quot;</span><span class="p">,</span>
+<dl class="docutils" id="schema-request-op-option-range-start">
+<dt><a class="reference internal" href="../operations/range.html#ops-range-adjust-element"><em>range_start</em></a></dt>
+<dd>In conjunction with <a class="reference internal" href="#schema-request-op-kind-element-set-range"><em>element_set_range</em></a> this parameter adjusts the left or start edge of <a class="reference internal" href="../data/compound.html#compound-element"><em>Elements</em></a> by the specified integer value.</dd>
+</dl>
+<dl class="docutils" id="schema-request-op-option-range-stop">
+<dt><a class="reference internal" href="../operations/range.html#ops-range-adjust-element"><em>range_stop</em></a></dt>
+<dd>In conjunction with <a class="reference internal" href="#schema-request-op-kind-element-set-range"><em>element_set_range</em></a> this parameter adjusts the right or stop edge of <a class="reference internal" href="../data/compound.html#compound-element"><em>Elements</em></a> by the specified integer value.</dd>
+</dl>
+<div class="highlight-python"><div class="highlight"><pre><span class="s">&quot;filter_score&quot;</span><span class="p">,</span>
 <span class="s">&quot;filter_name&quot;</span><span class="p">,</span>
 <span class="s">&quot;filter_strand&quot;</span><span class="p">,</span>
 <span class="s">&quot;filter_chromosome&quot;</span><span class="p">,</span>
