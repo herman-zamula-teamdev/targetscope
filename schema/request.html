@@ -252,11 +252,18 @@
 <dt><em>set_overlap_fraction_ref</em> (multiple operations)</dt>
 <dd>In conjunction with the <a class="reference internal" href="#schema-request-op-kind-element-set-map-on-element-set"><em>element_set_map_on_element_set</em></a> and <a class="reference internal" href="#schema-request-op-kind-element-set-map-on-interaction-set"><em>element_set_map_on_interaction_set</em></a> operations, this parameter sets the minimum overlap criteria as a fractional value <em>0 &lt; n &lt;= 1</em> (string-formatted) that is applied to reference <a class="reference internal" href="../data/compound.html#compound-set"><em>Set</em></a> within the operation.</dd>
 </dl>
-<div class="highlight-python"><div class="highlight"><pre><span class="s">&quot;set_overlap_exact&quot;</span><span class="p">,</span>
-<span class="s">&quot;set_overlap_range_start&quot;</span><span class="p">,</span>
-<span class="s">&quot;set_overlap_range_stop&quot;</span>
-</pre></div>
-</div>
+<dl class="docutils" id="schema-request-op-option-set-overlap-exact">
+<dt><em>set_overlap_exact</em> (multiple operations)</dt>
+<dd>In conjunction with the <a class="reference internal" href="#schema-request-op-kind-element-set-map-on-element-set"><em>element_set_map_on_element_set</em></a> and <a class="reference internal" href="#schema-request-op-kind-element-set-map-on-interaction-set"><em>element_set_map_on_interaction_set</em></a> operations, this parameter sets the overlap criteria as full overlap between reference and map <a class="reference internal" href="../data/compound.html#compound-set"><em>Sets</em></a> within the operation.</dd>
+</dl>
+<dl class="docutils" id="schema-request-op-option-set-overlap-range-start">
+<dt><em>set_overlap_range_start</em> (multiple operations)</dt>
+<dd>In conjunction with the <a class="reference internal" href="#schema-request-op-kind-element-set-map-on-element-set"><em>element_set_map_on_element_set</em></a> and <a class="reference internal" href="#schema-request-op-kind-element-set-map-on-interaction-set"><em>element_set_map_on_interaction_set</em></a> operations, this parameter selects map Elements overlapping within the specified number of bases to the left/start position of the reference Set&#8217;s Elements.</dd>
+</dl>
+<dl class="docutils" id="schema-request-op-option-set-overlap-range-stop">
+<dt><em>set_overlap_range_stop</em> (multiple operations)</dt>
+<dd>In conjunction with the <a class="reference internal" href="#schema-request-op-kind-element-set-map-on-element-set"><em>element_set_map_on_element_set</em></a> and <a class="reference internal" href="#schema-request-op-kind-element-set-map-on-interaction-set"><em>element_set_map_on_interaction_set</em></a> operations, this parameter selects map Elements overlapping within the specified number of bases to the right/stop position of the reference Set&#8217;s Elements.</dd>
+</dl>
 </div>
 <div class="section" id="id2">
 <h5>Sets<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h5>

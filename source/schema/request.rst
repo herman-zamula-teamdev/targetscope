@@ -258,11 +258,20 @@ Options specify an array of *kind* and *value* key-value pairings. The following
 *set_overlap_fraction_ref* (multiple operations)
   In conjunction with the :ref:`element_set_map_on_element_set <schema_request_op_kind_element_set_map_on_element_set>` and :ref:`element_set_map_on_interaction_set <schema_request_op_kind_element_set_map_on_interaction_set>` operations, this parameter sets the minimum overlap criteria as a fractional value *0 < n <= 1* (string-formatted) that is applied to reference :ref:`Set <compound_set>` within the operation.
 
-::
+.. _schema_request_op_option_set_overlap_exact:
 
-  "set_overlap_exact",
-  "set_overlap_range_start",
-  "set_overlap_range_stop"
+*set_overlap_exact* (multiple operations)
+  In conjunction with the :ref:`element_set_map_on_element_set <schema_request_op_kind_element_set_map_on_element_set>` and :ref:`element_set_map_on_interaction_set <schema_request_op_kind_element_set_map_on_interaction_set>` operations, this parameter sets the overlap criteria as full overlap between reference and map :ref:`Sets <compound_set>` within the operation.
+
+.. _schema_request_op_option_set_overlap_range_start:
+
+*set_overlap_range_start* (multiple operations)
+  In conjunction with the :ref:`element_set_map_on_element_set <schema_request_op_kind_element_set_map_on_element_set>` and :ref:`element_set_map_on_interaction_set <schema_request_op_kind_element_set_map_on_interaction_set>` operations, this parameter selects map Elements overlapping within the specified number of bases to the left/start position of the reference Set's Elements.
+
+.. _schema_request_op_option_set_overlap_range_stop:
+
+*set_overlap_range_stop* (multiple operations)
+  In conjunction with the :ref:`element_set_map_on_element_set <schema_request_op_kind_element_set_map_on_element_set>` and :ref:`element_set_map_on_interaction_set <schema_request_op_kind_element_set_map_on_interaction_set>` operations, this parameter selects map Elements overlapping within the specified number of bases to the right/stop position of the reference Set's Elements.
 
 ____
 Sets
