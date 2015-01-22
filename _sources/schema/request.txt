@@ -15,6 +15,24 @@ Refer to the ``target_gene_schema.json`` file (`GitHub link <https://github.com/
 
 .. _schema_request_op:
 
+-------------------
+Required properties
+-------------------
+
+.. _schema_request_required_props_version:
+
+*version*
+  String. Specifies version of web request payload. One of ``v1.0.0`` or ``v1.1.0``.
+
+*id*
+  String. A unique server-side identifier for the web request (*e.g.*, `GUID <http://en.wikipedia.org/wiki/Globally_unique_identifier>`_)
+
+*name*
+  String. Nickname for request.
+
+*dtsubmission*
+  String (date-time). `RFC3339-formatted <http://tools.ietf.org/html/rfc3339>`_ submission timestamp (UTC).
+
 ----------
 Operations
 ----------
@@ -33,7 +51,7 @@ _______
 Element
 _______
 
-.. _scheme_request_op_kind_element_set_attributes:
+.. _schema_request_op_kind_element_set_attributes:
 
 :ref:`element_set_attributes <ops_map_summary>`
   Summarizes attributes of an :ref:`Element <compound_element>` :ref:`Set <compound_set>`. This summary could be the result of a numerical calculation on :ref:`Score <base_score>` data, or a listing of :ref:`Name <base_name>` values.

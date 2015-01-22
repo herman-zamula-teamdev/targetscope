@@ -70,15 +70,28 @@
 <div class="section" id="json-schema">
 <h2>JSON Schema<a class="headerlink" href="#json-schema" title="Permalink to this headline">¶</a></h2>
 <p>Refer to the <code class="docutils literal"><span class="pre">target_gene_schema.json</span></code> file (<a class="reference external" href="https://github.com/alexpreynolds/targetscope/blob/master/target_gene_schema.json">GitHub link</a>) for the current <em>targetscope</em> schema.</p>
+<div class="section" id="required-properties">
+<span id="schema-request-op"></span><h3>Required properties<a class="headerlink" href="#required-properties" title="Permalink to this headline">¶</a></h3>
+<dl class="docutils" id="schema-request-required-props-version">
+<dt><em>version</em></dt>
+<dd>String. Specifies version of web request payload. One of <code class="docutils literal"><span class="pre">v1.0.0</span></code> or <code class="docutils literal"><span class="pre">v1.1.0</span></code>.</dd>
+<dt><em>id</em></dt>
+<dd>String. A unique server-side identifier for the web request (<em>e.g.</em>, <a class="reference external" href="http://en.wikipedia.org/wiki/Globally_unique_identifier">GUID</a>)</dd>
+<dt><em>name</em></dt>
+<dd>String. Nickname for request.</dd>
+<dt><em>dtsubmission</em></dt>
+<dd>String (date-time). <a class="reference external" href="http://tools.ietf.org/html/rfc3339">RFC3339-formatted</a> submission timestamp (UTC).</dd>
+</dl>
+</div>
 <div class="section" id="operations">
-<span id="schema-request-op"></span><h3>Operations<a class="headerlink" href="#operations" title="Permalink to this headline">¶</a></h3>
+<h3>Operations<a class="headerlink" href="#operations" title="Permalink to this headline">¶</a></h3>
 <p>Operation components of the request payload are split into two descriptors: <em>kind</em> and <em>option</em>. The <em>kind</em> describes the type or kind of operation, while <em>option</em> describes options or parameters for that operation.</p>
 <div class="section" id="kinds">
 <span id="schema-request-op-kind"></span><h4>Kinds<a class="headerlink" href="#kinds" title="Permalink to this headline">¶</a></h4>
 <p>The following are short descriptions of the JSON keywords used to describe an operation-kind. View the linked operation document for the full description and parameter list.</p>
 <div class="section" id="element">
 <h5>Element<a class="headerlink" href="#element" title="Permalink to this headline">¶</a></h5>
-<dl class="docutils" id="scheme-request-op-kind-element-set-attributes">
+<dl class="docutils" id="schema-request-op-kind-element-set-attributes">
 <dt><a class="reference internal" href="../operations/map.html#ops-map-summary"><em>element_set_attributes</em></a></dt>
 <dd>Summarizes attributes of an <a class="reference internal" href="../data/compound.html#compound-element"><em>Element</em></a> <a class="reference internal" href="../data/compound.html#compound-set"><em>Set</em></a>. This summary could be the result of a numerical calculation on <a class="reference internal" href="../data/base.html#base-score"><em>Score</em></a> data, or a listing of <a class="reference internal" href="../data/base.html#base-name"><em>Name</em></a> values.</dd>
 </dl>
@@ -229,6 +242,7 @@ Type &quot;help&quot;, &quot;copyright&quot;, &quot;credits&quot; or &quot;licen
   <ul>
 <li><a class="reference internal" href="#">Request</a><ul>
 <li><a class="reference internal" href="#json-schema">JSON Schema</a><ul>
+<li><a class="reference internal" href="#required-properties">Required properties</a></li>
 <li><a class="reference internal" href="#operations">Operations</a><ul>
 <li><a class="reference internal" href="#kinds">Kinds</a><ul>
 <li><a class="reference internal" href="#element">Element</a></li>
