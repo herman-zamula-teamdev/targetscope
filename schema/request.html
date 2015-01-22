@@ -70,15 +70,21 @@
 <div class="section" id="json-schema">
 <h2>JSON Schema<a class="headerlink" href="#json-schema" title="Permalink to this headline">¶</a></h2>
 <p>Refer to the <code class="docutils literal"><span class="pre">target_gene_schema.json</span></code> file (<a class="reference external" href="https://github.com/alexpreynolds/targetscope/blob/master/target_gene_schema.json">GitHub link</a>) for the current <em>targetscope</em> schema.</p>
-<div class="section" id="required-properties">
-<span id="schema-request-op"></span><h3>Required properties<a class="headerlink" href="#required-properties" title="Permalink to this headline">¶</a></h3>
-<dl class="docutils" id="schema-request-required-props-version">
+<div class="section" id="base">
+<span id="schema-request-op"></span><h3>Base<a class="headerlink" href="#base" title="Permalink to this headline">¶</a></h3>
+<dl class="docutils" id="schema-request-base-version">
 <dt><em>version</em></dt>
 <dd>String. Specifies version of web request payload. One of <code class="docutils literal"><span class="pre">v1.0.0</span></code> or <code class="docutils literal"><span class="pre">v1.1.0</span></code>.</dd>
+</dl>
+<dl class="docutils" id="schema-request-base-id">
 <dt><em>id</em></dt>
-<dd>String. A unique server-side identifier for the web request (<em>e.g.</em>, <a class="reference external" href="http://en.wikipedia.org/wiki/Globally_unique_identifier">GUID</a>)</dd>
+<dd>String. A unique server-side identifier for the web request (<em>e.g.</em>, <a class="reference external" href="http://en.wikipedia.org/wiki/Globally_unique_identifier">GUID</a>).</dd>
+</dl>
+<dl class="docutils" id="schema-request-base-name">
 <dt><em>name</em></dt>
 <dd>String. Nickname for request.</dd>
+</dl>
+<dl class="docutils" id="schema-request-base-dtsubmission">
 <dt><em>dtsubmission</em></dt>
 <dd>String (date-time). <a class="reference external" href="http://tools.ietf.org/html/rfc3339">RFC3339-formatted</a> submission timestamp (UTC).</dd>
 </dl>
@@ -242,7 +248,7 @@ Type &quot;help&quot;, &quot;copyright&quot;, &quot;credits&quot; or &quot;licen
   <ul>
 <li><a class="reference internal" href="#">Request</a><ul>
 <li><a class="reference internal" href="#json-schema">JSON Schema</a><ul>
-<li><a class="reference internal" href="#required-properties">Required properties</a></li>
+<li><a class="reference internal" href="#base">Base</a></li>
 <li><a class="reference internal" href="#operations">Operations</a><ul>
 <li><a class="reference internal" href="#kinds">Kinds</a><ul>
 <li><a class="reference internal" href="#element">Element</a></li>

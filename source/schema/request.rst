@@ -15,20 +15,26 @@ Refer to the ``target_gene_schema.json`` file (`GitHub link <https://github.com/
 
 .. _schema_request_op:
 
--------------------
-Required properties
--------------------
+----
+Base
+----
 
-.. _schema_request_required_props_version:
+.. _schema_request_base_version:
 
 *version*
   String. Specifies version of web request payload. One of ``v1.0.0`` or ``v1.1.0``.
 
+.. _schema_request_base_id:
+
 *id*
-  String. A unique server-side identifier for the web request (*e.g.*, `GUID <http://en.wikipedia.org/wiki/Globally_unique_identifier>`_)
+  String. A unique server-side identifier for the web request (*e.g.*, `GUID <http://en.wikipedia.org/wiki/Globally_unique_identifier>`_).
+
+.. _schema_request_base_name:
 
 *name*
   String. Nickname for request.
+
+.. _schema_request_base_dtsubmission:
 
 *dtsubmission*
   String (date-time). `RFC3339-formatted <http://tools.ietf.org/html/rfc3339>`_ submission timestamp (UTC).
