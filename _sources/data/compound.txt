@@ -99,7 +99,7 @@ Set
 ===
 
 **Data**
-        1+ :ref:`Name <base_name>`; 0+ ref:`Metadata <base_metadata>`, 0+ *Elements*, *Interactions*, or *Sets*
+        1+ :ref:`Name <base_name>`; 0+ :ref:`Metadata <base_metadata>`, 0+ *Elements*, *Interactions*, or *Sets*
 **Examples**
         DHS peaks for a particular cell type or sequencing experiment, promoters, transcription factor binding sites, other sets
 
