@@ -191,72 +191,72 @@ Options specify an array of *kind* and *value* key-value pairings. The following
 .. _schema_request_op_option_range_start:
 
 :ref:`range_start <ops_range_adjust_element>`
-  In conjunction with :ref:`element_set_range <schema_request_op_kind_element_set_range>` this parameter adjusts the left or start edge of an :ref:`Element <compound_element>` by the specified integer value. 
+  In conjunction with the :ref:`element_set_range <schema_request_op_kind_element_set_range>` operation, this parameter adjusts the left or start edge of an :ref:`Element <compound_element>` by the specified integer value. 
 
 .. _schema_request_op_option_range_stop:
 
 :ref:`range_stop <ops_range_adjust_element>`
-  In conjunction with :ref:`element_set_range <schema_request_op_kind_element_set_range>` this parameter adjusts the right or stop edge of an :ref:`Element <compound_element>` by the specified integer value. 
+  In conjunction with the :ref:`element_set_range <schema_request_op_kind_element_set_range>` operation, this parameter adjusts the right or stop edge of an :ref:`Element <compound_element>` by the specified integer value. 
 
 .. _schema_request_op_option_filter_score:
 
 :ref:`filter_score <ops_filter_score>`
-  In conjunction with :ref:`element_set_filter_score <schema_request_op_kind_element_set_filter_score>` this parameter filters :ref:`Elements <compound_element>` by the specified numerical value, relational operator, and Boolean value. The Boolean value specifies This value is a semi-colon-delimited string specifying the value and operator, *e.g.* ``5.12;<;true``, ``0.0000298;>=;false``, etc.
+  In conjunction with the :ref:`element_set_filter_score <schema_request_op_kind_element_set_filter_score>` operation, this parameter filters :ref:`Elements <compound_element>` by the specified numerical value, relational operator, and Boolean value. The Boolean value specifies This value is a semi-colon-delimited string specifying the value and operator, *e.g.* ``5.12;<;true``, ``0.0000298;>=;false``, etc.
 
 .. _schema_request_op_option_filter_name:
 
 :ref:`filter_name <ops_filter_name>`
-  In conjunction with :ref:`element_set_filter_name <schema_request_op_kind_element_set_filter_name>` this parameter filters :ref:`Elements <compound_element>` by a match with the specified :ref:`Name <base_name>` and two Boolean values (``true`` or ``false``). The first Boolean value specifies an exact (``true``) or partial (``false``) match on the :ref:`Name <base_name>` parameter. The second Boolean value specifies if the operation is inverted (``true`` specifies all elements match the Name, while ``false`` includes all elements *except* those which match the :ref:`Name <base_name>`). The parameter string value is a semi-colon-delimited string specifying the Name and Boolean values, *e.g.* ``RARA;true;false`` or ``CTCF;true;true``, etc.
+  In conjunction with the :ref:`element_set_filter_name <schema_request_op_kind_element_set_filter_name>` operation, this parameter filters :ref:`Elements <compound_element>` by a match with the specified :ref:`Name <base_name>` and two Boolean values (``true`` or ``false``). The first Boolean value specifies an exact (``true``) or partial (``false``) match on the :ref:`Name <base_name>` parameter. The second Boolean value specifies if the operation is inverted (``true`` specifies all elements match the Name, while ``false`` includes all elements *except* those which match the :ref:`Name <base_name>`). The parameter string value is a semi-colon-delimited string specifying the Name and Boolean values, *e.g.* ``RARA;true;false`` or ``CTCF;true;true``, etc.
 
 .. _schema_request_op_option_filter_strand:
 
 :ref:`filter_strand <ops_filter_strand>`
-  In conjunction with :ref:`element_set_filter_strand <schema_request_op_kind_element_set_filter_strand>` this parameter filters :ref:`Elements <compound_element>` by a match with the specified :ref:`Strand <base_strand>` and Boolean value (``true`` or ``false``). The Boolean value specifies if the operation is inverted (``true`` includes all Elements which match the Strand value, while ``false`` excludes Elements which match the Strand value). The parameter string value is a semi-colon-delimited string specifying the value and Boolean value, *e.g.* ``+;true`` or ``.;false``, etc.
+  In conjunction with the :ref:`element_set_filter_strand <schema_request_op_kind_element_set_filter_strand>` operation, this parameter filters :ref:`Elements <compound_element>` by a match with the specified :ref:`Strand <base_strand>` and Boolean value (``true`` or ``false``). The Boolean value specifies if the operation is inverted (``true`` includes all Elements which match the Strand value, while ``false`` excludes Elements which match the Strand value). The parameter string value is a semi-colon-delimited string specifying the value and Boolean value, *e.g.* ``+;true`` or ``.;false``, etc.
 
 .. _schema_request_op_option_filter_chromosome:
 
 :ref:`filter_chromosome <ops_filter_chromosome>`
-  In conjunction with :ref:`element_set_filter_chromosome <schema_request_op_kind_element_set_filter_chromosome>` this parameter filters :ref:`Elements <compound_element>` by an exact match with the specified chromosome string name and Boolean value. A false Boolean value allows specifying the inverse of the result set (all elements but those on the specified chromosome). The parameter string value is a semi-colon-delimited string specifying the value and Boolean value, *e.g.* ``chr17;true`` or ``chrX;false``, etc.
+  In conjunction with the :ref:`element_set_filter_chromosome <schema_request_op_kind_element_set_filter_chromosome>` operation, this parameter filters :ref:`Elements <compound_element>` by an exact match with the specified chromosome string name and Boolean value. A false Boolean value allows specifying the inverse of the result set (all elements but those on the specified chromosome). The parameter string value is a semi-colon-delimited string specifying the value and Boolean value, *e.g.* ``chr17;true`` or ``chrX;false``, etc.
 
 .. _schema_request_op_option_filter_interaction_component:
 
 :ref:`filter_interaction_component <ops_filter_component>`
-  In conjunction with :ref:`interaction_set_filter_component <schema_request_op_kind_interaction_set_filter_component>` this parameter filters an :ref:`Interaction <compound_interaction>` :ref:`Set <compound_set>` to return either the first or second component as an :ref:`Element <compound_element>` :ref:`Set <compound_set>`, using the specified integer string value ``"0"`` or ``"1"``.
+  In conjunction with the :ref:`interaction_set_filter_component <schema_request_op_kind_interaction_set_filter_component>` operation, this parameter filters an :ref:`Interaction <compound_interaction>` :ref:`Set <compound_set>` to return either the first or second component as an :ref:`Element <compound_element>` :ref:`Set <compound_set>`, using the specified integer string value ``"0"`` or ``"1"``.
 
 .. _schema_request_op_option_set_range_left:
 
 :ref:`set_range_left <ops_range_adjust_element>`
-  In conjunction with :ref:`element_set_range <schema_request_op_kind_element_set_range>` this parameter adjusts the left or start edge of a :ref:`Set <compound_set>` of :ref:`Elements <compound_element>` by the specified integer string value.
+  In conjunction with the :ref:`element_set_range <schema_request_op_kind_element_set_range>` operation, this parameter adjusts the left or start edge of a :ref:`Set <compound_set>` of :ref:`Elements <compound_element>` by the specified integer string value.
 
 .. _schema_request_op_option_set_range_right:
 
 :ref:`set_range_right <ops_range_adjust_element>`
-  In conjunction with :ref:`element_set_range <schema_request_op_kind_element_set_range>` this parameter adjusts the right or stop edge of a :ref:`Set <compound_set>` of :ref:`Elements <compound_element>` by the specified integer string value.
+  In conjunction with the :ref:`element_set_range <schema_request_op_kind_element_set_range>` operation, this parameter adjusts the right or stop edge of a :ref:`Set <compound_set>` of :ref:`Elements <compound_element>` by the specified integer string value.
 
 .. _schema_request_op_option_set_overlap_bases:
 
 *set_overlap_bases* (multiple operations)
-  In conjunction with :ref:`element_set_element_of <schema_request_op_kind_element_set_element_of>`, :ref:`element_set_not_element_of <schema_request_op_kind_element_set_not_element_of>`, :ref:`element_set_map_on_element_set <schema_request_op_kind_element_set_map_on_element_set>` and :ref:`element_set_map_on_interaction_set <schema_request_op_kind_element_set_map_on_interaction_set>` operations, this parameter sets the minimum overlap criteria in bases, as an integer value in string format. The default value is ``"1"`` base.
+  In conjunction with the :ref:`element_set_element_of <schema_request_op_kind_element_set_element_of>`, :ref:`element_set_not_element_of <schema_request_op_kind_element_set_not_element_of>`, :ref:`element_set_map_on_element_set <schema_request_op_kind_element_set_map_on_element_set>` and :ref:`element_set_map_on_interaction_set <schema_request_op_kind_element_set_map_on_interaction_set>` operations, this parameter sets the minimum overlap criteria in bases, as an integer value in string format. The default value is ``"1"`` base.
 
 .. _schema_request_op_option_set_overlap_fraction_both:
 
 *set_overlap_fraction_both* (multiple operations)
-  In conjunction with :ref:`element_set_map_on_element_set <schema_request_op_kind_element_set_map_on_element_set>` and :ref:`element_set_map_on_interaction_set <schema_request_op_kind_element_set_map_on_interaction_set>` operations, this parameter sets the minimum overlap criteria as a fractional value *0 < n <= 1* (string-formatted) that is applied to *both* the reference and map :ref:`Sets <compound_set>` within the operation.
+  In conjunction with the :ref:`element_set_map_on_element_set <schema_request_op_kind_element_set_map_on_element_set>` and :ref:`element_set_map_on_interaction_set <schema_request_op_kind_element_set_map_on_interaction_set>` operations, this parameter sets the minimum overlap criteria as a fractional value *0 < n <= 1* (string-formatted) that is applied to *both* the reference and map :ref:`Sets <compound_set>` within the operation.
 
 .. _schema_request_op_option_set_overlap_fraction_either:
 
 *set_overlap_fraction_either* (multiple operations)
-  In conjunction with :ref:`element_set_map_on_element_set <schema_request_op_kind_element_set_map_on_element_set>` and :ref:`element_set_map_on_interaction_set <schema_request_op_kind_element_set_map_on_interaction_set>` operations, this parameter sets the minimum overlap criteria as a fractional value *0 < n <= 1* (string-formatted) that is applied to *either* of the reference and map :ref:`Sets <compound_set>` within the operation.
+  In conjunction with the :ref:`element_set_map_on_element_set <schema_request_op_kind_element_set_map_on_element_set>` and :ref:`element_set_map_on_interaction_set <schema_request_op_kind_element_set_map_on_interaction_set>` operations, this parameter sets the minimum overlap criteria as a fractional value *0 < n <= 1* (string-formatted) that is applied to *either* of the reference and map :ref:`Sets <compound_set>` within the operation.
 
 .. _schema_request_op_option_set_overlap_fraction_map:
 
 *set_overlap_fraction_map* (multiple operations)
-  In conjunction with :ref:`element_set_map_on_element_set <schema_request_op_kind_element_set_map_on_element_set>` and :ref:`element_set_map_on_interaction_set <schema_request_op_kind_element_set_map_on_interaction_set>` operations, this parameter sets the minimum overlap criteria as a fractional value *0 < n <= 1* (string-formatted) that is applied to map :ref:`Set <compound_set>` within the operation.
+  In conjunction with the :ref:`element_set_map_on_element_set <schema_request_op_kind_element_set_map_on_element_set>` and :ref:`element_set_map_on_interaction_set <schema_request_op_kind_element_set_map_on_interaction_set>` operations, this parameter sets the minimum overlap criteria as a fractional value *0 < n <= 1* (string-formatted) that is applied to map :ref:`Set <compound_set>` within the operation.
 
 .. _schema_request_op_option_set_overlap_fraction_ref:
 
 *set_overlap_fraction_ref* (multiple operations)
-  In conjunction with :ref:`element_set_map_on_element_set <schema_request_op_kind_element_set_map_on_element_set>` and :ref:`element_set_map_on_interaction_set <schema_request_op_kind_element_set_map_on_interaction_set>` operations, this parameter sets the minimum overlap criteria as a fractional value *0 < n <= 1* (string-formatted) that is applied to reference :ref:`Set <compound_set>` within the operation.
+  In conjunction with the :ref:`element_set_map_on_element_set <schema_request_op_kind_element_set_map_on_element_set>` and :ref:`element_set_map_on_interaction_set <schema_request_op_kind_element_set_map_on_interaction_set>` operations, this parameter sets the minimum overlap criteria as a fractional value *0 < n <= 1* (string-formatted) that is applied to reference :ref:`Set <compound_set>` within the operation.
 
 ::
 
