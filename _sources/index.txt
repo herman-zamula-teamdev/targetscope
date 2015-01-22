@@ -10,7 +10,7 @@ We provide a specification for *targetscope* entities and predicates, which help
 The :ref:`TFBS example <example_tfbs>` describes a complete pipeline of predicates and data entities used to find the binding sites of a transcription factor. This example describes one way (in broad terms) how the components of this specification document could be used to construct and perform tasks in the *targetscope* application.
 
 .. toctree::
-   :maxdepth: 3
+   :maxdepth: 4
 
    schema/index.rst
    example/index.rst
