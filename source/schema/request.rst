@@ -63,7 +63,7 @@ Array of *id* and *kind* elements for each :ref:`Set <compound_set>`.
 Operations
 ----------
 
-Operations in the request payload are made up of an array of objects containing two objects: *kind* and *option*. The *kind* is a key-value pair that describes the type or kind of operation, while *option* describes an array of option or parameter key-value pairings for that operation.
+Operations in the request payload are made up of an array of objects containing two objects: *kind* and *arguments*. The *kind* is a key-value pair that describes the type or kind of operation, while *arguments* describes an array of options/parameters and input/output sets for that operation.
 
 .. _schema_request_op_kind:
 
@@ -176,9 +176,17 @@ ___________
 :ref:`interaction_set_union <ops_interaction_union>`
   Takes the union of :ref:`Interactions <compound_interaction>` in a :ref:`Set <compound_set>`, yielding one :ref:`Set <compound_set>` made up of each of the input Interactions.
 
-+++++++
++++++++++
+Arguments
++++++++++
+
+Arguments are made up of *options* and *sets* arrays.
+
+_______
 Options
-+++++++
+_______
+
+Options specify an array of *kind* and *value* key-value pairings. The following list of keywords specifies the *kind* of option and the format of its string *value*.
 
 .. _schema_request_op_option_range_start:
 

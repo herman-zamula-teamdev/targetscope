@@ -103,7 +103,7 @@
 </div>
 <div class="section" id="operations">
 <span id="schema-request-op"></span><h3>Operations<a class="headerlink" href="#operations" title="Permalink to this headline">¶</a></h3>
-<p>Operations in the request payload are made up of an array of objects containing two objects: <em>kind</em> and <em>option</em>. The <em>kind</em> is a key-value pair that describes the type or kind of operation, while <em>option</em> describes an array of option or parameter key-value pairings for that operation.</p>
+<p>Operations in the request payload are made up of an array of objects containing two objects: <em>kind</em> and <em>arguments</em>. The <em>kind</em> is a key-value pair that describes the type or kind of operation, while <em>arguments</em> describes an array of options/parameters and input/output sets for that operation.</p>
 <div class="section" id="kinds">
 <span id="schema-request-op-kind"></span><h4>Kinds<a class="headerlink" href="#kinds" title="Permalink to this headline">¶</a></h4>
 <p>The following are short descriptions of the JSON keywords used to describe an operation-kind. View the linked operation document for the full description and parameter list.</p>
@@ -190,8 +190,12 @@
 </dl>
 </div>
 </div>
+<div class="section" id="arguments">
+<h4>Arguments<a class="headerlink" href="#arguments" title="Permalink to this headline">¶</a></h4>
+<p>Arguments are made up of <em>options</em> and <em>sets</em> arrays.</p>
 <div class="section" id="options">
-<h4>Options<a class="headerlink" href="#options" title="Permalink to this headline">¶</a></h4>
+<h5>Options<a class="headerlink" href="#options" title="Permalink to this headline">¶</a></h5>
+<p>Options specify an array of <em>kind</em> and <em>value</em> key-value pairings. The following list of keywords specifies the <em>kind</em> of option and the format of its string <em>value</em>.</p>
 <dl class="docutils" id="schema-request-op-option-range-start">
 <dt><a class="reference internal" href="../operations/range.html#ops-range-adjust-element"><em>range_start</em></a></dt>
 <dd>In conjunction with <a class="reference internal" href="#schema-request-op-kind-element-set-range"><em>element_set_range</em></a> this parameter adjusts the left or start edge of an <a class="reference internal" href="../data/compound.html#compound-element"><em>Element</em></a> by the specified integer value.</dd>
@@ -231,6 +235,7 @@
 <span class="s">&quot;set_overlap_range_start&quot;</span><span class="p">,</span>
 <span class="s">&quot;set_overlap_range_stop&quot;</span>
 </pre></div>
+</div>
 </div>
 </div>
 </div>
@@ -297,7 +302,10 @@ Type &quot;help&quot;, &quot;copyright&quot;, &quot;credits&quot; or &quot;licen
 <li><a class="reference internal" href="#interaction">Interaction</a></li>
 </ul>
 </li>
+<li><a class="reference internal" href="#arguments">Arguments</a><ul>
 <li><a class="reference internal" href="#options">Options</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
