@@ -105,7 +105,7 @@ _______
 .. _schema_request_op_kind_element_set_filter_name:
 
 :ref:`element_set_filter_name <ops_filter_name>`
-  Filters :ref:`Elements <compound_element>` with :ref:`Name <base_name>` components by the specified string value.
+  Filters :ref:`Elements <compound_element>` with :ref:`Name <base_name>` components by the specified string and Boolean values.
 
 .. _schema_request_op_kind_element_set_filter_score:
 
@@ -193,22 +193,30 @@ Options
 .. _schema_request_op_option_filter_score:
 
 :ref:`filter_score <ops_filter_score>`
-  In conjunction with :ref:`element_set_filter_score <schema_request_op_kind_element_set_filter_score>` this parameter filters :ref:`Elements <compound_element>` by the specified numerical value and relational operator. This value is a semi-colon-delimited string specifying the value and operator, *e.g.* "5.12;<", "0.0000298;>=" etc.
+  In conjunction with :ref:`element_set_filter_score <schema_request_op_kind_element_set_filter_score>` this parameter filters :ref:`Elements <compound_element>` by the specified numerical value, relational operator, and Boolean value. The Boolean value specifies This value is a semi-colon-delimited string specifying the value and operator, *e.g.* ``5.12;<;true``, ``0.0000298;>=;false``, etc.
 
 .. _schema_request_op_option_filter_name:
 
 :ref:`filter_name <ops_filter_name>`
-  In conjunction with :ref:`element_set_filter_name <schema_request_op_kind_element_set_filter_name>` this parameter filters :ref:`Elements <compound_element>` by an exact match with the specified name value.
+  In conjunction with :ref:`element_set_filter_name <schema_request_op_kind_element_set_filter_name>` this parameter filters :ref:`Elements <compound_element>` by a match with the specified :ref:`Name <base_name>` and two Boolean values (``true`` or ``false``). The first Boolean value specifies an exact (``true``) or partial (``false``) match on the :ref:`Name <base_name>` parameter. The second Boolean value specifies if the operation is inverted (``true`` specifies all elements match the Name, while ``false`` includes all elements *except* those which match the :ref:`Name <base_name>`). The parameter string value is a semi-colon-delimited string specifying the Name and Boolean values, *e.g.* ``RARA;true;false`` or ``CTCF;true;true``, etc.
 
 .. _schema_request_op_option_filter_strand:
 
 :ref:`filter_strand <ops_filter_strand>`
-  In conjunction with :ref:`element_set_filter_strand <schema_request_op_kind_element_set_filter_strand>` this parameter filters :ref:`Elements <compound_element>` by an exact match with the specified :ref:`Strand <base_strand>` value.
+  In conjunction with :ref:`element_set_filter_strand <schema_request_op_kind_element_set_filter_strand>` this parameter filters :ref:`Elements <compound_element>` by a match with the specified :ref:`Strand <base_strand>` and Boolean value (``true`` or ``false``). The Boolean value specifies if the operation is inverted (``true`` includes all Elements which match the Strand value, while ``false`` excludes Elements which match the Strand value). The parameter string value is a semi-colon-delimited string specifying the value and Boolean value, *e.g.* ``+;true`` or ``.;false``, etc.
+
+.. _schema_request_op_option_filter_chromosome:
+
+:ref:`filter_chromosome <ops_filter_chromosome>`
+  In conjunction with :ref:`element_set_filter_chromosome <schema_request_op_kind_element_set_filter_chromosome>` this parameter filters :ref:`Elements <compound_element>` by an exact match with the specified chromosome string name and Boolean value. A false Boolean value allows specifying the inverse of the result set (all elements but those on the specified chromosome). The parameter string value is a semi-colon-delimited string specifying the value and Boolean value, *e.g.* ``chr17;true`` or ``chrX;false``, etc.
+
+.. _schema_request_op_option_filter_interaction_component:
+
+:ref:`filter_interaction_component <ops_filter_component>`
+  In conjunction with :ref:`interaction_set_filter_component <schema_request_op_kind_interaction_set_filter_component>` this parameter filters an :ref:`Interaction <compound_interaction>` :ref:`Set <compound_set>` to return either the first or second component as an :ref:`Element <compound_element>` :ref:`Set <compound_set>`, using the specified integer string value ``"0"`` or ``"1"``.
 
 ::
 
-  "filter_strand",
-  "filter_chromosome",
   "filter_interaction_component",
   "set_range_left",
   "set_range_right"
