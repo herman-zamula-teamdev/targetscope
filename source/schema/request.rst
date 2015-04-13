@@ -22,7 +22,7 @@ Base
 .. _schema_request_base_version:
 
 *version*
-  String. Specifies version of web request payload. One of ``v1.0.0`` or ``v1.1.0``.
+  String. Specifies version of web request payload. One of ``v1.0.0``, ``v1.1.0``, or ``v1.2.0``.
 
 .. _schema_request_base_id:
 
@@ -33,6 +33,11 @@ Base
 
 *name*
   String. Nickname for request.
+
+.. _schema_request_base_client_id:
+
+*client_id*
+  String. Unique identifier for client making request (*e.g.*, "scope.stamlab.org" or some other unique identifier).
 
 .. _schema_request_base_dtsubmission:
 
@@ -289,9 +294,9 @@ The *sets* array contains objects with *id* and *kind* key-value pairings.
 *kind*
   String. Specifies type of set. One of ``input``, ``input_reference``, ``input_map`` and ``output``. An ``input*`` type indicates an existing set, while the ``output`` type indicates the set is an intermediate or final result yet to be generated.
 
-==========
-Validation
-==========
+=================
+Schema validation
+=================
 
 We include a test web request that follows the schema (``target_gene_test_request.json``, `GitHub link <https://github.com/alexpreynolds/targetscope/blob/master/target_gene_test_request.json>`__) which can be validated with the included Python script (``target_gene_request_validation.py``, `GitHub link <https://github.com/alexpreynolds/targetscope/blob/master/target_gene_request_validation.py>`__) with the installation of the `jsonschema <http://json-schema.org>`_ Python package.
 

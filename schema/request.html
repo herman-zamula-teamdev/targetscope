@@ -27,7 +27,7 @@
     <link rel="top" title="Targetscope API" href="../index.html" />
     <link rel="up" title="Schema" href="index.html" />
     <link rel="next" title="Example" href="../example/index.html" />
-    <link rel="prev" title="Schema" href="index.html" />
+    <link rel="prev" title="Authentication" href="authentication.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <link rel="stylesheet" href="../_static/custom_style.css" type="text/css" />
   </head>
@@ -40,7 +40,7 @@
     <ul>
         <li>
           &larr;
-          <a href="index.html" title="Previous document">Schema</a>
+          <a href="authentication.html" title="Previous document">Authentication</a>
         </li>
         <li>
           <a href="../example/index.html" title="Next document">Example</a>
@@ -74,7 +74,7 @@
 <span id="schema-request-base"></span><h3>Base<a class="headerlink" href="#base" title="Permalink to this headline">¶</a></h3>
 <dl class="docutils" id="schema-request-base-version">
 <dt><em>version</em></dt>
-<dd>String. Specifies version of web request payload. One of <code class="docutils literal"><span class="pre">v1.0.0</span></code> or <code class="docutils literal"><span class="pre">v1.1.0</span></code>.</dd>
+<dd>String. Specifies version of web request payload. One of <code class="docutils literal"><span class="pre">v1.0.0</span></code>, <code class="docutils literal"><span class="pre">v1.1.0</span></code>, or <code class="docutils literal"><span class="pre">v1.2.0</span></code>.</dd>
 </dl>
 <dl class="docutils" id="schema-request-base-id">
 <dt><em>id</em></dt>
@@ -83,6 +83,10 @@
 <dl class="docutils" id="schema-request-base-name">
 <dt><em>name</em></dt>
 <dd>String. Nickname for request.</dd>
+</dl>
+<dl class="docutils" id="schema-request-base-client-id">
+<dt><em>client_id</em></dt>
+<dd>String. Unique identifier for client making request (<em>e.g.</em>, &#8220;scope.stamlab.org&#8221; or some other unique identifier).</dd>
 </dl>
 <dl class="docutils" id="schema-request-base-dtsubmission">
 <dt><em>dtsubmission</em></dt>
@@ -280,8 +284,8 @@
 </div>
 </div>
 </div>
-<div class="section" id="validation">
-<h2>Validation<a class="headerlink" href="#validation" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="schema-validation">
+<h2>Schema validation<a class="headerlink" href="#schema-validation" title="Permalink to this headline">¶</a></h2>
 <p>We include a test web request that follows the schema (<code class="docutils literal"><span class="pre">target_gene_test_request.json</span></code>, <a class="reference external" href="https://github.com/alexpreynolds/targetscope/blob/master/target_gene_test_request.json">GitHub link</a>) which can be validated with the included Python script (<code class="docutils literal"><span class="pre">target_gene_request_validation.py</span></code>, <a class="reference external" href="https://github.com/alexpreynolds/targetscope/blob/master/target_gene_request_validation.py">GitHub link</a>) with the installation of the <a class="reference external" href="http://json-schema.org">jsonschema</a> Python package.</p>
 <div class="topic">
 <p class="topic-title first">Example</p>
@@ -351,14 +355,14 @@ Type &quot;help&quot;, &quot;copyright&quot;, &quot;credits&quot; or &quot;licen
 </li>
 </ul>
 </li>
-<li><a class="reference internal" href="#validation">Validation</a></li>
+<li><a class="reference internal" href="#schema-validation">Schema validation</a></li>
 </ul>
 </li>
 </ul>
 
   <h4>Previous topic</h4>
-  <p class="topless"><a href="index.html"
-                        title="previous chapter">Schema</a></p>
+  <p class="topless"><a href="authentication.html"
+                        title="previous chapter">Authentication</a></p>
   <h4>Next topic</h4>
   <p class="topless"><a href="../example/index.html"
                         title="next chapter">Example</a></p>
@@ -390,7 +394,7 @@ Type &quot;help&quot;, &quot;copyright&quot;, &quot;credits&quot; or &quot;licen
     <ul>
         <li>
           &larr;
-          <a href="index.html" title="Previous document">Schema</a>
+          <a href="authentication.html" title="Previous document">Authentication</a>
         </li>
         <li>
           <a href="../example/index.html" title="Next document">Example</a>

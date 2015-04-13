@@ -1,0 +1,199 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Authentication &mdash; Targetscope API</title>
+    
+    <link rel="stylesheet" href="../_static/better.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     'v1.1.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="https://c328740.ssl.cf1.rackcdn.com/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="top" title="Targetscope API" href="../index.html" />
+    <link rel="up" title="Schema" href="index.html" />
+    <link rel="next" title="Request" href="request.html" />
+    <link rel="prev" title="Schema" href="index.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="../_static/custom_style.css" type="text/css" />
+  </head>
+  <body role="document">
+    <header id="pageheader"><h1><a href="../index.html ">
+        Targetscope API
+    </a></h1></header>
+  <div class="related top">
+  <nav id="rellinks">
+    <ul>
+        <li>
+          &larr;
+          <a href="index.html" title="Previous document">Schema</a>
+        </li>
+        <li>
+          <a href="request.html" title="Next document">Request</a>
+          &rarr;
+        </li>
+    </ul>
+  </nav>
+  <nav id="breadcrumbs">
+    <ul>
+      <li><a href="../index.html">Home</a></li>
+      <li>
+        <a href="index.html">Schema</a>
+      </li> 
+    </ul>
+  </nav>
+  </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="authentication">
+<span id="schema-authentication"></span><h1>Authentication<a class="headerlink" href="#authentication" title="Permalink to this headline">¶</a></h1>
+<p>We describe a potential method for authenticating <a class="reference internal" href="request.html#schema-request"><em>data store requests</em></a> between web client and front-end and back-end servers.</p>
+<p>There are two steps to authenticating requests: initial authentication and subsequent request validation.</p>
+<div class="section" id="initial-authentication">
+<h2>Initial authentication<a class="headerlink" href="#initial-authentication" title="Permalink to this headline">¶</a></h2>
+<p>The following figure shows the authentication process between the end user&#8217;s web browser, the front-end server (visualization server), and the Targetscope data back-end server:</p>
+<img alt="../_images/schema_authentication_flow.png" src="../_images/schema_authentication_flow.png" />
+<dl class="docutils">
+<dt><strong>Roles</strong></dt>
+<dd><ol class="first last arabic simple">
+<li>The <em>web browser</em> is the end user&#8217;s web client for accessing the <em>front-end</em> server.</li>
+<li>The <em>front-end</em> server provides an interface to the data stored on the <em>back-end</em> server.</li>
+<li>The <em>back-end</em> stores and manipulates datacubes etc. and responds to operation requests from the <em>web browser</em> and <em>front-end</em> clients.</li>
+</ol>
+</dd>
+</dl>
+<p>The <em>front-end</em> and <em>back-end</em> servers share a private key used to sign and validate requests.</p>
+<dl class="docutils">
+<dt><strong>Flow</strong></dt>
+<dd><ol class="first last arabic simple">
+<li>The end user&#8217;s <em>web browser</em> lacks a session ID cookie and is presented with a login view. The end user enters her credentials.</li>
+<li>The <em>front-end</em> web application service validates the credentials against its user database.</li>
+<li>If valid, the <em>front-end</em> passes a <em>session ID</em> cookie back to the <em>web browser</em>, which then presents the end user with an authenticated view. The <em>front-end</em> also stores the <em>session ID</em> and a <em>timestamp</em> in a local session database.</li>
+</ol>
+</dd>
+</dl>
+<p>The session ID is subsequently used to handle signing of requests. The session ID is associated with a timestamp, in order to redirect users to reauthenticate if the session is too old.</p>
+</div>
+<div class="section" id="request-validation">
+<h2>Request validation<a class="headerlink" href="#request-validation" title="Permalink to this headline">¶</a></h2>
+<p>Modeled on <a class="reference external" href="http://www.faqs.org/rfcs/rfc2104.html">Amazon Web Service request authentication</a>, we use <a class="reference external" href="http://en.wikipedia.org/wiki/Hash-based_message_authentication_code">HMAC</a> to sign requests from the <em>web browser</em> with a private key known by the <em>front-end</em> and <em>back-end</em> servers.</p>
+<p>The &#8220;signed request&#8221; is sent from the <em>web browser</em> to the <em>back-end</em>, which compares the request&#8217;s HMAC signature against one it generates. The <em>back-end</em> server responds with data, if the signature and timestamp are valid; or, it responds with an authentication error, if the signature is invalid or the request too dated.</p>
+<img alt="../_images/schema_authentication_request.png" src="../_images/schema_authentication_request.png" />
+<dl class="docutils">
+<dt><strong>Flow</strong></dt>
+<dd><ol class="first last arabic simple">
+<li>The end user&#8217;s <em>web browser</em> sends an unsigned data request with session ID to the <em>front-end</em>.</li>
+<li>The <em>front-end</em> validates the session ID:<ol class="loweralpha">
+<li>The session ID needs to be in the <em>front-end</em> session database. Also, the request timestamp should be within the lifespan of the session ID stored in the FE database. If the session is expired, the end user is redirected to a login view.</li>
+<li>If the session ID is valid/live, the request string is encrypted with the <em>front-end</em> private key, and hashed with SHA256 to generate an &#8220;HMAC signature&#8221;.</li>
+</ol>
+</li>
+<li>The <em>front-end</em> returns the HMAC signature to the <em>web browser</em>.</li>
+<li>The <em>web browser</em> sends the HMAC signature along with the data request&#8217;s JSON string to the <em>back-end</em> server. The HMAC signature is sent as an HTTP header value.</li>
+<li>The <em>back-end</em> server extracts the HMAC signature value from headers in the HTTP request.</li>
+<li>The <em>back-end</em> generates a local HMAC signature from the data request JSON string and the FE private key.</li>
+<li>If the two HMAC signatures are equivalent, and if the request timestamp is reasonably recent, the request is valid and the <em>back-end</em> server sends a response with data results. If the two HMAC messages are different or the request is old, the request is invalid and the <em>back-end</em> server sends an authentication error.</li>
+</ol>
+</dd>
+</dl>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="../index.html">
+              <img class="logo" src="../_static/logo.png" alt="Logo"/>
+            </a></p>
+  <h3><a href="../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Authentication</a><ul>
+<li><a class="reference internal" href="#initial-authentication">Initial authentication</a></li>
+<li><a class="reference internal" href="#request-validation">Request validation</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="index.html"
+                        title="previous chapter">Schema</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="request.html"
+                        title="next chapter">Request</a></p>
+<div class="sourcelink">
+  <a href="../_sources/schema/authentication.txt" rel="nofollow">
+    Show page source
+  </a>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+  <div class="related bottom">
+  <nav id="rellinks">
+    <ul>
+        <li>
+          &larr;
+          <a href="index.html" title="Previous document">Schema</a>
+        </li>
+        <li>
+          <a href="request.html" title="Next document">Request</a>
+          &rarr;
+        </li>
+    </ul>
+  </nav>
+  <nav id="breadcrumbs">
+    <ul>
+      <li><a href="../index.html">Home</a></li>
+      <li>
+        <a href="index.html">Schema</a>
+      </li> 
+    </ul>
+  </nav>
+  </div>
+  <footer id="pagefooter">&copy; 2015, Alex Reynolds.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a>
+      1.3b2
+        with the <a href="http://github.com/irskep/sphinx-better-theme">
+          better</a> theme.
+
+  </footer>
+
+  
+  </body>
+</html>
