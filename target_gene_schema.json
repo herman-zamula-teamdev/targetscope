@@ -8,7 +8,8 @@
       "description" : "Schema version associated with request",
       "enum" : [
         "v1.0.0",
-        "v1.1.0"
+        "v1.1.0",
+        "v1.2.0"
       ]
     },
     "id" : {
@@ -17,6 +18,10 @@
     },
     "name" : {
       "description" : "Name of the operation request graph instance",
+      "type" : "string"
+    },
+    "client_id" : {
+      "description" : "Unique identifier for client making request",
       "type" : "string"
     },
     "dtsubmission" : {
