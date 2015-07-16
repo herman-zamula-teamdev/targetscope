@@ -1,0 +1,61 @@
+﻿{
+    "version" : "v1.2.0",
+    "dtsubmission": "2014-08-13T00:21:17Z",
+    "id": "abcd1234", 
+    "name": "Adjust Interaction Range 100:100 100:100",
+    "client_id": "scope.stamlab.org",
+    "operations": [
+        {
+            "id": "adjust_interaction_range_100_100_100_100",
+            "name": "Adjust Element Range",
+            "parameters": [
+                {
+                    "arguments": [
+                        {
+                            "options": [
+                                {
+                                    "kind": "set_range_left",
+                                    "value": "100"
+                                },
+                                {
+                                    "kind": "set_range_right",
+                                    "value": "100"
+                                },
+                                {
+                                    "kind": "set_dhs_range_left",
+                                    "value": "100"
+                                },
+                                {
+                                    "kind": "set_dhs_range_right",
+                                    "value": "100"
+                                }
+                            ], 
+                            "sets": [
+                                {
+                                    "id": "adjust_interaction_range.bed",
+                                    "kind": "input"
+                                }, 
+                                {
+                                    "id": "adjust_interaction_range_100_100_100_100.bed",
+                                    "kind": "output"
+                                }
+                            ]
+                        }
+                    ], 
+                    "kind": "interaction_set_range"
+                }
+            ], 
+            "summary": ""
+        }
+    ], 
+    "sets": [
+        {
+            "id": "adjust_interaction_range.bed",
+            "kind": "interaction"
+        }, 
+        {
+            "id": "adjust_interaction_range_100_100_100_100.bed",
+            "kind": "interaction"
+        }
+    ]
+}

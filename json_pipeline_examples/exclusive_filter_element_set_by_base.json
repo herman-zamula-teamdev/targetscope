@@ -1,0 +1,57 @@
+﻿{
+  "version": "v1.2.0",
+  "dtsubmission": "2014-08-13T00:21:17Z",
+  "id": "abcd1234",
+  "name": "Exclusive Filter Element Set",
+  "client_id": "scope.stamlab.org",
+  "operations": [
+    {
+      "id": "Exclusive_filter_element_set_two_files_by_base",
+      "name": "Exclusive Filter Element Set",
+      "parameters": [
+        {
+          "arguments": [
+            {
+              "options": [
+                {
+                  "kind": "set_overlap_bases",
+                  "value": "1"
+                }
+              ],
+              "sets": [
+                {
+                  "id": "second.bed",
+                  "kind": "input"
+                },
+                {
+                  "id": "first.bed",
+                  "kind": "input"
+                },
+                {
+                  "id": "exclusive_filter_elemen_set_result_by_base.bed",
+                  "kind": "output"
+                }
+              ]
+            }
+          ],
+          "kind": "element_set_not_element_of"
+        }
+      ],
+      "summary": ""
+    }
+  ],
+  "sets": [
+    {
+      "id": "first.bed",
+      "kind": "element"
+    },
+    {
+      "id": "second.bed",
+      "kind": "element"
+    },
+    {
+      "id": "exclusive_filter_elemen_set_result_by_base.bed",
+      "kind": "element"
+    }
+  ]
+}
