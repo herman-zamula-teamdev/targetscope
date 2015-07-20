@@ -147,8 +147,8 @@
                                 "set_overlap_range_start",
                                 "set_overlap_range_stop",
                                 "summary_report_type",
-                                "kth_report_argument",
-                                "kt_mean_report_low_threshold",
+                                "t_report_argument",
+                                "t_mean_report_low_threshold",
                                 "t_mean_report_high_threshold",
                                 "mad_report_argument"
                               ]
