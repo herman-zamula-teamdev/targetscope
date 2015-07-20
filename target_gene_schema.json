@@ -171,7 +171,7 @@
                   "description" : "Operation kind",
                   "type" : "string",
                   "enum" : [
-                    "elements_set_inclusive_filter",
+                    "element_set_inclusive_filter",
                     "element_set_range",
                     "interaction_set_range",
                     "element_set_filter_score",
