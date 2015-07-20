@@ -1,0 +1,53 @@
+﻿{
+    "version" : "v1.2.0",
+    "dtsubmission": "2014-08-13T00:21:17Z",
+    "id": "abcd1234", 
+    "name": "Adjust Element Range 100:-100",
+    "client_id": "scope.stamlab.org",
+    "operations": [
+        {
+            "id": "adjust_element_range_100_-100",
+            "name": "Adjust Element Range",
+            "parameters": [
+                {
+                    "arguments": [
+                        {
+                            "options": [
+                                {
+                                    "kind": "set_range_left",
+                                    "value": "100"
+                                },
+                                {
+                                    "kind": "set_range_right",
+                                    "value": "-100"
+                                }
+                            ], 
+                            "sets": [
+                                {
+                                    "id": "adjust_element_range.bed",
+                                    "kind": "input"
+                                }, 
+                                {
+                                    "id": "adjust_element_range_100_-100.bed",
+                                    "kind": "output"
+                                }
+                            ]
+                        }
+                    ], 
+                    "kind": "element_set_range"
+                }
+            ], 
+            "summary": ""
+        }
+    ], 
+    "sets": [
+        {
+            "id": "adjust_element_range.bed",
+            "kind": "element"
+        }, 
+        {
+            "id": "adjust_element_range_100_-100.bed",
+            "kind": "element"
+        }
+    ]
+}

@@ -1,0 +1,80 @@
+﻿{
+  "version": "v1.2.0",
+  "dtsubmission": "2014-08-13T00:21:17Z",
+  "id": "abcd1234",
+  "name": "Union Element Set",
+  "client_id": "scope.stamlab.org",
+  "operations": [
+    {
+      "id": "merge_element_set_2_files",
+      "name": "Merge Element Set",
+      "parameters": [
+        {
+          "arguments": [
+            {
+              "options": [],
+              "sets": [
+                {
+                  "id": "union_elemen_set_result.bed",
+                  "kind": "input"
+                },
+                {
+                  "id": "elemen_set_1.bed",
+                  "kind": "input"
+                },
+                {
+                  "id": "union_merge_elemen_set_result.bed",
+                  "kind": "output"
+                }
+              ]
+            }
+          ],
+          "kind": "element_set_merge"
+        }
+      ],
+      "summary": ""
+    },{
+      "id": "union_element_set_2_files",
+      "name": "Union Element Set",
+      "parameters": [
+        {
+          "arguments": [
+            {
+              "options": [],
+              "sets": [
+                {
+                  "id": "elemen_set_1.bed",
+                  "kind": "input"
+                },
+                {
+                  "id": "elemen_set_2.bed",
+                  "kind": "input"
+                },
+                {
+                  "id": "union_elemen_set_result.bed",
+                  "kind": "output"
+                }
+              ]
+            }
+          ],
+          "kind": "element_set_union"
+        }
+      ],
+      "summary": ""
+    }
+  ],
+  "sets": [
+    {
+      "id": "elemen_set_1.bed",
+      "kind": "element"
+    },
+    {
+      "id": "elemen_set_2.bed",
+      "kind": "element"
+    },
+    {
+      "id": "union_merge_elemen_set_result.bed",
+      "kind": "element"
+    }
+  ]
+}

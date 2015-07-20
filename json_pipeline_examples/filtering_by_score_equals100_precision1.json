@@ -1,0 +1,57 @@
+﻿{
+    "version" : "v1.2.0",
+    "dtsubmission": "2014-08-13T00:21:17Z",
+    "id": "abcd1234", 
+    "name": "Filtering Element Set by Score: 100",
+    "client_id": "scope.stamlab.org",
+    "operations": [
+        {
+            "id": "element_filter_by_score",
+            "name": "Filter Element Set by score",
+            "parameters": [
+                {
+                    "arguments": [
+                        {
+                            "options": [
+                                {
+                                    "kind": "filter_score",
+                                    "value": "100"
+                                },
+                                {
+                                    "kind": "equal_operation",
+                                    "value": "true"
+                                },
+                                {
+                                    "kind": "precision",
+                                    "value": "1"
+                                }
+                            ], 
+                            "sets": [
+                                {
+                                    "id": "bed6_file_all_chrs.bed",
+                                    "kind": "input"
+                                }, 
+                                {
+                                    "id": "filtering_by_score_equal100_precision1.bed",
+                                    "kind": "output"
+                                }
+                            ]
+                        }
+                    ], 
+                    "kind": "element_set_filter_score"
+                }
+            ], 
+            "summary": ""
+        }
+    ], 
+    "sets": [
+        {
+            "id": "bed6_file_all_chrs.bed",
+            "kind": "element"
+        }, 
+        {
+            "id": "filtering_by_score_equal100_precision1.bed",
+            "kind": "element"
+        }
+    ]
+}
