@@ -1,0 +1,52 @@
+﻿{
+  "version": "v1.2.0",
+  "dtsubmission": "2014-08-13T00:21:17Z",
+  "id": "abcd1234",
+  "name": "Complement of Element Set",
+  "client_id": "scope.stamlab.org",
+  "operations": [
+    {
+      "id": "complement_of_element_set_2_files",
+      "name": "Complement of Element Set",
+      "parameters": [
+        {
+          "arguments": [
+            {
+              "options": [],
+              "sets": [
+                {
+                  "id": "elemen_set_1.bed",
+                  "kind": "input"
+                },
+                {
+                  "id": "elemen_set_2.bed",
+                  "kind": "input"
+                },
+                {
+                  "id": "complement_of_elemen_set_result.bed",
+                  "kind": "output"
+                }
+              ]
+            }
+          ],
+          "kind": "element_set_complement"
+        }
+      ],
+      "summary": ""
+    }
+  ],
+  "sets": [
+    {
+      "id": "elemen_set_1.bed",
+      "kind": "element"
+    },
+    {
+      "id": "elemen_set_2.bed",
+      "kind": "element"
+    },
+    {
+      "id": "complement_of_elemen_set_result.bed",
+      "kind": "element"
+    }
+  ]
+}
