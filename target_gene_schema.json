@@ -147,9 +147,9 @@
                                 "set_overlap_range_start",
                                 "set_overlap_range_stop",
                                 "summary_report_type",
-                                "t_report_argument",
-                                "t_mean_report_lower_bound",
-                                "t_mean_report_upper_bound",
+                                "kth_report_argument",
+                                "kth_mean_report_lower_bound",
+                                "kth_mean_report_upper_bound",
                                 "mad_report_argument"
                               ]
                             },
