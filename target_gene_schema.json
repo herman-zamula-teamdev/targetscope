@@ -29,6 +29,10 @@
       "type" : "string",
       "format" : "date-time"
     },
+    "save_intermediate": {
+      "description": "Save intermediate results of the pipeline",
+      "type": "boolean"
+    },
     "sets" : {
       "description" : "List of request graph Element and/or Interaction Set components",
       "type" : "array",
